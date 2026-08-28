@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>FIDE Arbiter's Manual – Study & Exam Portal</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<!-- ── Header ────────────────────────────────────────────────────────────── -->
+<header class="site-header">
+  <div class="header-inner">
+    <div class="site-logo">FIDE <span>Arbiter's Manual</span></div>
+    <button class="nav-toggle" aria-label="Toggle navigation">
+      <span></span><span></span><span></span>
+    </button>
+    <nav class="nav-links">
+      <a href="index.html" class="active">Home</a>
+      <a href="chapters.html">Manual</a>
+      <a href="exam.html">Mock Exam</a>
+      <a href="search.html">Search</a>
+      <a href="feedback.html">Feedback</a>
+    </nav>
+  </div>
+</header>
+
+<!-- ── Hero ──────────────────────────────────────────────────────────────── -->
+<section class="hero">
+  <div class="container">
+    <h1>FIDE Arbiter's Manual</h1>
+    <p>Your complete study companion for the FIDE Arbiter examination. Read the manual chapter-by-chapter, test yourself with mock exams, and search any rule instantly.</p>
+    <div style="display:flex;gap:14px;justify-content:center;flex-wrap:wrap;">
+      <a href="chapters.html" class="btn btn-white btn-lg">📖 Read the Manual</a>
+      <a href="exam.html" class="btn btn-outline btn-lg" style="color:#fff;border-color:rgba(255,255,255,.6)">✏️ Take a Mock Exam</a>
+    </div>
+  </div>
+</section>
+
+<!-- ── Chapter Cards ─────────────────────────────────────────────────────── -->
+<section class="section">
+  <div class="container">
+    <div class="section-header">
+      <h2>Chapters</h2>
+      <p>Select a chapter to read the arbiter manual or take the chapter exam.</p>
+    </div>
+    <div class="card-grid" id="chapter-cards">
+      <div class="loading-wrap"><div class="spinner"></div><p>Loading chapters…</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- ── Quick Actions ─────────────────────────────────────────────────────── -->
+<section class="section section-alt">
+  <div class="container">
+    <div class="section-header">
+      <h2>Quick Actions</h2>
+    </div>
+    <div class="card-grid">
+
+      <div class="card" style="text-align:center;">
+        <div style="font-size:2rem;margin-bottom:12px;">🔍</div>
+        <h3 style="margin-bottom:8px;">Search the Manual</h3>
+        <p style="color:var(--muted);font-size:.9rem;margin-bottom:16px;">
+          Find any article, rule or topic instantly across all chapters.
+        </p>
+        <a href="search.html" class="btn btn-primary">Search Now</a>
+      </div>
+
+      <div class="card" style="text-align:center;">
+        <div style="font-size:2rem;margin-bottom:12px;">📝</div>
+        <h3 style="margin-bottom:8px;">Full Mock Exam</h3>
+        <p style="color:var(--muted);font-size:.9rem;margin-bottom:16px;">
+          Take a comprehensive exam covering all chapters with instant results.
+        </p>
+        <a href="exam.html?file=data/exams/exam-full.json&title=Full+Mock+Exam" class="btn btn-primary">Start Exam</a>
+      </div>
+
+      <div class="card" style="text-align:center;">
+        <div style="font-size:2rem;margin-bottom:12px;">💬</div>
+        <h3 style="margin-bottom:8px;">Give Feedback</h3>
+        <p style="color:var(--muted);font-size:.9rem;margin-bottom:16px;">
+          Found an error? Have a suggestion? We'd love to hear from you.
+        </p>
+        <a href="feedback.html" class="btn btn-primary">Send Feedback</a>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ── Footer ────────────────────────────────────────────────────────────── -->
+<footer class="site-footer">
+  <p>FIDE Arbiter's Manual Study Portal &mdash; Free educational resource for aspiring FIDE Arbiters.</p>
+  <p style="margin-top:6px;">Content based on FIDE Laws of Chess and Arbiter's Manual. Not an official FIDE publication.</p>
+</footer>
+
+<script src="js/app.js"></script>
+<script>
+// Load chapter cards dynamically from index.json
+(async function() {
+  const { fetchJSON, escHtml } = window.FideApp;
+  const grid = document.getElementById('chapter-cards');
+  const index = await fetchJSON('data/index.json');
+  grid.innerHTML = index.chapters.map(ch => `
+    <div class="chapter-card">
+      <div class="chapter-num">Chapter ${ch.id}</div>
+      <h3>${escHtml(ch.title)}</h3>
+      <p>${escHtml(ch.description)}</p>
+      <div class="card-actions">
+        <a href="chapters.html?ch=${ch.id}" class="btn btn-secondary btn-sm">📖 Read</a>
+        <a href="exam.html?file=${encodeURIComponent(ch.exam)}&title=${encodeURIComponent(ch.title)}" class="btn btn-primary btn-sm">✏️ Exam</a>
+      </div>
+    </div>
+  `).join('');
+})().catch(e => {
+  document.getElementById('chapter-cards').innerHTML =
+    `<p style="color:var(--danger)">Failed to load chapters: ${e.message}</p>`;
+});
+</script>
+
+</body>
+</html>
