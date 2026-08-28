@@ -1,0 +1,34 @@
+{
+  "site": {
+    "title": "FIDE Arbiter's Manual",
+    "subtitle": "Study Guide & Mock Exam Portal"
+  },
+  "chapters": [
+    {
+      "id": 1,
+      "title": "Laws of Chess",
+      "description": "Basic rules governing the game of chess",
+      "file": "data/chapters/chapter-01.json",
+      "exam": "data/exams/exam-chapter-01.json"
+    },
+    {
+      "id": 2,
+      "title": "Conduct of Players",
+      "description": "Rules on player behaviour, fair play and ethics",
+      "file": "data/chapters/chapter-02.json",
+      "exam": "data/exams/exam-chapter-02.json"
+    },
+    {
+      "id": 3,
+      "title": "The Role of the Arbiter",
+      "description": "Duties, powers and responsibilities of the arbiter",
+      "file": "data/chapters/chapter-03.json",
+      "exam": "data/exams/exam-chapter-03.json"
+    }
+  ],
+  "fullExam": {
+    "title": "Full Mock Exam",
+    "description": "Questions from all chapters",
+    "file": "data/exams/exam-full.json"
+  }
+}
