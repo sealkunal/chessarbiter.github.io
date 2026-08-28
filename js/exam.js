@@ -5,24 +5,32 @@
 
 'use strict';
 
-const { fetchJSON, shuffle, showLoading, saveExamState, escHtml } = window.FideApp;
-
 // ─── DOM refs ────────────────────────────────────────────────────────────────
-const examWrap   = document.getElementById('exam-wrap');
-const examTitle  = document.getElementById('exam-title');
+// Resolved lazily inside init() so app.js is guaranteed to have run first.
+let examWrap  = null;
+let examTitle = null;
 
 // ─── State ───────────────────────────────────────────────────────────────────
-let questions    = [];
-let current      = 0;
-let answers      = {};   // { questionId: chosenOptionId }
-let startTime    = null;
+let questions = [];
+let current   = 0;
+let answers   = {};   // { questionId: chosenOptionId }
+let startTime = null;
 
 // ─── Boot ────────────────────────────────────────────────────────────────────
 async function init() {
-  const params   = new URLSearchParams(location.search);
-  const file     = params.get('file') || 'data/exams/exam-full.json';
-  const title    = params.get('title') || 'Mock Exam';
-  const maxQ     = parseInt(params.get('max') || '0', 10);  // 0 = all
+  // Resolve helpers and DOM refs here — after app.js has definitely run
+  const { fetchJSON, shuffle, showLoading, saveExamState, escHtml } = window.FideApp;
+  examWrap  = document.getElementById('exam-wrap');
+  examTitle = document.getElementById('exam-title');
+
+  const params = new URLSearchParams(location.search);
+  const file   = params.get('file');
+
+  // No file param means the selector is being shown — do not start an exam
+  if (!file) return;
+
+  const title = params.get('title') || 'Mock Exam';
+  const maxQ  = parseInt(params.get('max') || '0', 10);  // 0 = all
 
   showLoading(examWrap, 'Loading exam…');
 
@@ -39,6 +47,7 @@ async function init() {
 
 // ─── Render current question ─────────────────────────────────────────────────
 function renderQuestion() {
+  const { escHtml } = window.FideApp;
   const q   = questions[current];
   const num = current + 1;
   const pct = Math.round((num / questions.length) * 100);
@@ -108,6 +117,7 @@ function renderQuestion() {
   });
 }
 
+// ─── Save current radio selection ────────────────────────────────────────────
 function saveCurrentAnswer() {
   const checked = examWrap.querySelector('input[type="radio"]:checked');
   if (checked) answers[questions[current].id] = checked.value;
@@ -115,6 +125,7 @@ function saveCurrentAnswer() {
 
 // ─── Submit & redirect to results ────────────────────────────────────────────
 function submitExam() {
+  const { saveExamState } = window.FideApp;
   const timeTaken = Math.round((Date.now() - startTime) / 1000);
   const resultData = {
     title:     examTitle.textContent,
@@ -128,5 +139,6 @@ function submitExam() {
 
 // ─── Start ───────────────────────────────────────────────────────────────────
 init().catch(err => {
-  examWrap.innerHTML = `<p style="color:var(--danger);padding:24px">Error: ${err.message}</p>`;
+  const wrap = document.getElementById('exam-wrap');
+  if (wrap) wrap.innerHTML = `<p style="color:var(--danger);padding:24px">Error: ${err.message}</p>`;
 });

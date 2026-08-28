@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Manual – FIDE Arbiter's Manual</title>
+  <link rel="stylesheet" href="css/style.css">
+  <style>
+    /* ── Tab bar ── */
+    .tab-bar {
+      display: flex;
+      gap: 0;
+      border-bottom: 2px solid var(--border);
+      margin-bottom: 28px;
+    }
+    .tab-btn {
+      padding: 10px 22px;
+      border: none;
+      background: none;
+      font-family: var(--font);
+      font-size: .93rem;
+      font-weight: 600;
+      color: var(--muted);
+      cursor: pointer;
+      border-bottom: 3px solid transparent;
+      margin-bottom: -2px;
+      transition: color .15s, border-color .15s;
+    }
+    .tab-btn:hover { color: var(--text); }
+    .tab-btn.tab-active { color: var(--accent); border-bottom-color: var(--accent); }
+
+    /* ── PDF viewer ── */
+    #pdf-panel { display: block; }
+    #chapters-panel { display: none; }
+
+    .pdf-toolbar {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--radius) var(--radius) 0 0;
+      padding: 10px 16px;
+      flex-wrap: wrap;
+    }
+    .pdf-toolbar input[type="number"] {
+      width: 60px;
+      padding: 5px 8px;
+      border: 1px solid var(--border);
+      border-radius: 4px;
+      font-size: .88rem;
+      text-align: center;
+    }
+    #pdf-canvas-wrap {
+      border: 1px solid var(--border);
+      border-top: none;
+      border-radius: 0 0 var(--radius) var(--radius);
+      background: #525659;
+      min-height: 400px;
+      display: flex;
+      justify-content: center;
+      align-items: flex-start;
+      padding: 16px;
+      overflow: auto;
+    }
+    #pdf-canvas {
+      box-shadow: 0 2px 14px rgba(0,0,0,.4);
+      max-width: 100%;
+      height: auto;
+    }
+    #pdf-status {
+      font-size: .82rem;
+      color: var(--muted);
+      margin-left: auto;
+    }
+  </style>
+</head>
+<body>
+
+<!-- ── Header ────────────────────────────────────────────────────────────── -->
+<header class="site-header">
+  <div class="header-inner">
+    <div class="site-logo">
+      <a href="index.html" style="color:#fff;text-decoration:none">FIDE <span>Arbiter's Manual</span></a>
+    </div>
+    <button class="nav-toggle" aria-label="Toggle navigation">
+      <span></span><span></span><span></span>
+    </button>
+    <nav class="nav-links">
+      <a href="index.html">Home</a>
+      <a href="manual.html" class="active">Manual</a>
+      <a href="exam.html">Mock Exam</a>
+      <a href="search.html">Search</a>
+      <a href="feedback.html">Feedback</a>
+    </nav>
+  </div>
+</header>
+
+<!-- ── Page ──────────────────────────────────────────────────────────────── -->
+<main class="container" style="padding-top:32px;padding-bottom:60px;">
+
+  <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:20px;flex-wrap:wrap;gap:10px;">
+    <h1 style="font-size:1.5rem;">FIDE Arbiter's Manual 2025</h1>
+    <div style="display:flex;gap:8px;">
+      <a href="data/Arbiters_Manual_2025.pdf" target="_blank" rel="noopener"
+         class="btn btn-secondary btn-sm">Open PDF ↗</a>
+      <a href="data/Arbiters_Manual_2025.pdf" download
+         class="btn btn-primary btn-sm">Download PDF ↓</a>
+    </div>
+  </div>
+
+  <!-- Mode tabs -->
+  <div class="tab-bar">
+    <button class="tab-btn tab-active" id="tab-pdf-view">📄 Read PDF</button>
+    <button class="tab-btn" id="tab-chapters-view">📑 Browse Articles</button>
+  </div>
+
+  <!-- ── PDF PANEL ── -->
+  <div id="pdf-panel">
+
+    <!-- Toolbar -->
+    <div class="pdf-toolbar">
+      <button class="btn btn-secondary btn-sm" id="btn-prev-page">◀ Prev</button>
+      <span style="font-size:.88rem;">Page</span>
+      <input type="number" id="page-num-input" value="1" min="1">
+      <span id="pdf-total-pages" style="font-size:.88rem;color:var(--muted)">of …</span>
+      <button class="btn btn-secondary btn-sm" id="btn-next-page">Next ▶</button>
+      <button class="btn btn-secondary btn-sm" id="btn-zoom-in">＋ Zoom</button>
+      <button class="btn btn-secondary btn-sm" id="btn-zoom-out">－ Zoom</button>
+      <span id="pdf-status">Loading PDF…</span>
+      <a href="search.html" class="btn btn-outline btn-sm" style="margin-left:auto;">🔍 Search PDF</a>
+    </div>
+
+    <!-- Canvas -->
+    <div id="pdf-canvas-wrap">
+      <canvas id="pdf-canvas"></canvas>
+    </div>
+
+  </div>
+
+  <!-- ── CHAPTERS PANEL ── -->
+  <div id="chapters-panel">
+    <div class="page-layout">
+      <!-- Sidebar -->
+      <nav class="chapter-nav" id="chapter-sidebar">
+        <div class="loading-wrap" style="padding:20px 0;">
+          <div class="spinner"></div>
+        </div>
+      </nav>
+      <!-- Content -->
+      <div id="chapter-content">
+        <div class="loading-wrap"><div class="spinner"></div><p>Loading…</p></div>
+      </div>
+    </div>
+  </div>
+
+</main>
+
+<!-- ── Footer ────────────────────────────────────────────────────────────── -->
+<footer class="site-footer">
+  <p>FIDE Arbiter's Manual Study Portal &mdash; Not an official FIDE publication.</p>
+  <p style="margin-top:4px;">PDF rendered by <a href="https://mozilla.github.io/pdf.js/" target="_blank" rel="noopener">PDF.js</a></p>
+</footer>
+
+<!-- PDF.js from CDN -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.min.js"></script>
+<script src="js/app.js"></script>
+
+<script>
+/* ─── Tab switching ─────────────────────────────────────────────────────── */
+const tabPdfView      = document.getElementById('tab-pdf-view');
+const tabChapView     = document.getElementById('tab-chapters-view');
+const pdfPanel        = document.getElementById('pdf-panel');
+const chaptersPanel   = document.getElementById('chapters-panel');
+let   chaptersLoaded  = false;
+
+tabPdfView.addEventListener('click', () => {
+  tabPdfView.classList.add('tab-active');
+  tabChapView.classList.remove('tab-active');
+  pdfPanel.style.display      = 'block';
+  chaptersPanel.style.display = 'none';
+});
+
+tabChapView.addEventListener('click', () => {
+  tabChapView.classList.add('tab-active');
+  tabPdfView.classList.remove('tab-active');
+  pdfPanel.style.display      = 'none';
+  chaptersPanel.style.display = 'block';
+  if (!chaptersLoaded) {
+    chaptersLoaded = true;
+    initChapters();
+  }
+});
+
+/* ─── PDF Viewer ────────────────────────────────────────────────────────── */
+const PDF_PATH = 'data/Arbiters_Manual_2025.pdf';
+
+pdfjsLib.GlobalWorkerOptions.workerSrc =
+  'https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.worker.min.js';
+
+let pdfDoc      = null;
+let currentPage = 1;
+let scale       = 1.4;
+const canvas    = document.getElementById('pdf-canvas');
+const ctx       = canvas.getContext('2d');
+const status    = document.getElementById('pdf-status');
+const totalEl   = document.getElementById('pdf-total-pages');
+const pageInput = document.getElementById('page-num-input');
+
+async function loadPdf() {
+  try {
+    const task = pdfjsLib.getDocument(PDF_PATH);
+    pdfDoc = await task.promise;
+    totalEl.textContent = `of ${pdfDoc.numPages}`;
+    pageInput.max = pdfDoc.numPages;
+
+    // Jump to page from URL hash e.g. manual.html#page=12
+    const hash = new URLSearchParams(location.hash.replace('#', ''));
+    const hashPage = parseInt(hash.get('page'), 10);
+    if (hashPage && hashPage >= 1 && hashPage <= pdfDoc.numPages) {
+      currentPage = hashPage;
+      pageInput.value = currentPage;
+    }
+
+    renderPage(currentPage);
+  } catch (err) {
+    status.textContent = '';
+    document.getElementById('pdf-canvas-wrap').innerHTML = `
+      <div style="color:#fff;padding:40px;text-align:center;max-width:500px;">
+        <p style="font-size:1rem;margin-bottom:12px;">⚠️ Could not load the PDF.</p>
+        <p style="font-size:.85rem;opacity:.8;">${window.FideApp.escHtml(err.message)}</p>
+        <p style="font-size:.82rem;margin-top:12px;opacity:.7;">
+          Run the site via a local server (<code>python -m http.server 8080</code>)
+          rather than opening the file directly.
+        </p>
+      </div>`;
+  }
+}
+
+async function renderPage(num) {
+  status.textContent = `Rendering page ${num}…`;
+  const page    = await pdfDoc.getPage(num);
+  const viewport = page.getViewport({ scale });
+  canvas.width  = viewport.width;
+  canvas.height = viewport.height;
+  await page.render({ canvasContext: ctx, viewport }).promise;
+  status.textContent = '';
+  pageInput.value    = num;
+}
+
+document.getElementById('btn-prev-page').addEventListener('click', () => {
+  if (currentPage > 1) renderPage(--currentPage);
+});
+document.getElementById('btn-next-page').addEventListener('click', () => {
+  if (pdfDoc && currentPage < pdfDoc.numPages) renderPage(++currentPage);
+});
+document.getElementById('btn-zoom-in').addEventListener('click', () => {
+  scale = Math.min(scale + 0.2, 3.0); renderPage(currentPage);
+});
+document.getElementById('btn-zoom-out').addEventListener('click', () => {
+  scale = Math.max(scale - 0.2, 0.5); renderPage(currentPage);
+});
+pageInput.addEventListener('change', () => {
+  const n = parseInt(pageInput.value, 10);
+  if (pdfDoc && n >= 1 && n <= pdfDoc.numPages) renderPage(currentPage = n);
+});
+
+loadPdf();
+
+/* ─── Chapter JSON viewer (lazy-loaded when tab clicked) ─────────────────── */
+async function initChapters() {
+  const { fetchJSON, showLoading, escHtml } = window.FideApp;
+  const sidebar = document.getElementById('chapter-sidebar');
+  const content = document.getElementById('chapter-content');
+
+  showLoading(content, 'Loading chapters…');
+
+  const index = await fetchJSON('data/index.json');
+
+  sidebar.innerHTML = `<h4>Chapters</h4>` +
+    index.chapters.map(ch =>
+      `<a href="#" data-file="${ch.file}" data-exam="${ch.exam}" data-num="${ch.id}">
+         ${ch.id}. ${ch.title}
+       </a>`
+    ).join('');
+
+  const firstLink = sidebar.querySelector('a');
+  if (firstLink) loadChapter(firstLink);
+
+  sidebar.addEventListener('click', e => {
+    const link = e.target.closest('a[data-file]');
+    if (!link) return;
+    e.preventDefault();
+    sidebar.querySelectorAll('a').forEach(a => a.classList.remove('active'));
+    link.classList.add('active');
+    loadChapter(link);
+  });
+
+  async function loadChapter(link) {
+    showLoading(content, 'Loading chapter…');
+    const chapter = await fetchJSON(link.dataset.file);
+    content.innerHTML = `
+      <div class="section-header">
+        <h2>Chapter ${chapter.chapter}: ${escHtml(chapter.title)}</h2>
+        <p style="margin-top:10px;">
+          <a href="exam.html?file=${encodeURIComponent(link.dataset.exam)}&title=${encodeURIComponent(chapter.title)}"
+             class="btn btn-primary btn-sm">Take Chapter ${chapter.chapter} Exam →</a>
+        </p>
+      </div>
+      <ul class="article-list">
+        ${chapter.articles.map(art => `
+          <li class="article-item" id="art-${art.article.replace('.', '-')}">
+            <div class="article-num">Article ${escHtml(art.article)}</div>
+            <div class="article-heading">${escHtml(art.heading)}</div>
+            <div class="article-content">${escHtml(art.content)}</div>
+          </li>
+        `).join('')}
+      </ul>`;
+  }
+}
+</script>
+
+</body>
+</html>

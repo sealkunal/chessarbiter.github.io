@@ -17,7 +17,7 @@
     </button>
     <nav class="nav-links">
       <a href="index.html" class="active">Home</a>
-      <a href="chapters.html">Manual</a>
+      <a href="manual.html">Manual</a>
       <a href="exam.html">Mock Exam</a>
       <a href="search.html">Search</a>
       <a href="feedback.html">Feedback</a>
@@ -31,7 +31,7 @@
     <h1>FIDE Arbiter's Manual</h1>
     <p>Your complete study companion for the FIDE Arbiter examination. Read the manual chapter-by-chapter, test yourself with mock exams, and search any rule instantly.</p>
     <div style="display:flex;gap:14px;justify-content:center;flex-wrap:wrap;">
-      <a href="chapters.html" class="btn btn-white btn-lg">📖 Read the Manual</a>
+      <a href="manual.html" class="btn btn-white btn-lg">📖 Read the Manual</a>
       <a href="exam.html" class="btn btn-outline btn-lg" style="color:#fff;border-color:rgba(255,255,255,.6)">✏️ Take a Mock Exam</a>
     </div>
   </div>
@@ -108,7 +108,7 @@
       <h3>${escHtml(ch.title)}</h3>
       <p>${escHtml(ch.description)}</p>
       <div class="card-actions">
-        <a href="chapters.html?ch=${ch.id}" class="btn btn-secondary btn-sm">📖 Read</a>
+        <a href="manual.html" class="btn btn-secondary btn-sm">📖 Read</a>
         <a href="exam.html?file=${encodeURIComponent(ch.exam)}&title=${encodeURIComponent(ch.title)}" class="btn btn-primary btn-sm">✏️ Exam</a>
       </div>
     </div>

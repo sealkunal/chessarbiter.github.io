@@ -5,19 +5,62 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Search – FIDE Arbiter's Manual</title>
   <link rel="stylesheet" href="css/style.css">
+  <style>
+    /* ── Tab bar ── */
+    .tab-bar {
+      display: flex;
+      gap: 0;
+      border-bottom: 2px solid var(--border);
+      margin-bottom: 22px;
+    }
+    .tab-btn {
+      padding: 10px 22px;
+      border: none;
+      background: none;
+      font-family: var(--font);
+      font-size: .93rem;
+      font-weight: 600;
+      color: var(--muted);
+      cursor: pointer;
+      border-bottom: 3px solid transparent;
+      margin-bottom: -2px;
+      transition: color .15s, border-color .15s;
+    }
+    .tab-btn:hover { color: var(--text); }
+    .tab-btn.tab-active {
+      color: var(--accent);
+      border-bottom-color: var(--accent);
+    }
+
+    /* ── PDF download banner ── */
+    .pdf-banner {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      background: var(--accent-lt);
+      border: 1px solid #c3d6f0;
+      border-radius: var(--radius);
+      padding: 13px 18px;
+      margin-bottom: 20px;
+      font-size: .88rem;
+    }
+    .pdf-banner a { font-weight: 600; }
+  </style>
 </head>
 <body>
 
 <!-- ── Header ────────────────────────────────────────────────────────────── -->
 <header class="site-header">
   <div class="header-inner">
-    <div class="site-logo"><a href="index.html" style="color:#fff;text-decoration:none">FIDE <span>Arbiter's Manual</span></a></div>
+    <div class="site-logo">
+      <a href="index.html" style="color:#fff;text-decoration:none">FIDE <span>Arbiter's Manual</span></a>
+    </div>
     <button class="nav-toggle" aria-label="Toggle navigation">
       <span></span><span></span><span></span>
     </button>
     <nav class="nav-links">
       <a href="index.html">Home</a>
-      <a href="chapters.html">Manual</a>
+      <a href="manual.html">Manual</a>
       <a href="exam.html">Mock Exam</a>
       <a href="search.html" class="active">Search</a>
       <a href="feedback.html">Feedback</a>
@@ -28,28 +71,63 @@
 <!-- ── Page ──────────────────────────────────────────────────────────────── -->
 <main class="container" style="padding-top:36px;padding-bottom:60px;">
 
-  <div class="section-header" style="margin-bottom:28px;">
+  <div class="section-header" style="margin-bottom:24px;">
     <h1 style="font-size:1.6rem;">Search the Manual</h1>
-    <p>Search across all articles and chapters of the FIDE Arbiter's Manual.</p>
+    <p>Search the full PDF of the FIDE Arbiter's Manual 2025, or browse by article across all chapters.</p>
+  </div>
+
+  <!-- PDF download banner -->
+  <div class="pdf-banner">
+    <span style="font-size:1.4rem;">📄</span>
+    <div>
+      <strong>Arbiters Manual 2025</strong> is available in full —
+      <a href="data/Arbiters_Manual_2025.pdf" target="_blank" rel="noopener">Open PDF ↗</a>
+      &nbsp;·&nbsp;
+      <a href="data/Arbiters_Manual_2025.pdf" download>Download PDF ↓</a>
+    </div>
   </div>
 
   <!-- Search controls -->
   <div class="card" style="margin-bottom:28px;">
+
+    <!-- Tab bar -->
+    <div class="tab-bar">
+      <button class="tab-btn tab-active" id="tab-pdf">
+        🔍 Search PDF
+      </button>
+      <button class="tab-btn" id="tab-json">
+        📑 Search Articles (JSON)
+      </button>
+    </div>
+
+    <!-- Input row -->
     <div class="search-bar">
-      <input type="text" id="search-input" placeholder="e.g. stalemate, mobile phone, late arrival…" autocomplete="off">
-      <select id="chapter-filter" style="padding:11px 14px;border:1px solid var(--border);border-radius:var(--radius);font-family:inherit;font-size:.93rem;outline:none;cursor:pointer;">
-        <option value="">All Chapters</option>
-      </select>
+      <input type="text" id="search-input"
+             placeholder="e.g. stalemate, mobile phone, late arrival…"
+             autocomplete="off">
       <button class="btn btn-primary" id="search-btn">Search</button>
     </div>
-    <p style="font-size:.82rem;color:var(--muted);">
-      Tip: You can also link directly to a search — e.g. <code>search.html?q=stalemate</code>
+
+    <!-- Chapter filter — only shown in JSON mode -->
+    <div id="filter-row" style="display:none;gap:10px;margin-top:10px;align-items:center;">
+      <label style="font-size:.85rem;color:var(--muted);white-space:nowrap;">Filter by chapter:</label>
+      <select id="chapter-filter"
+              style="padding:8px 12px;border:1px solid var(--border);border-radius:var(--radius);
+                     font-family:inherit;font-size:.88rem;outline:none;cursor:pointer;">
+        <option value="">All Chapters</option>
+      </select>
+    </div>
+
+    <p style="font-size:.78rem;color:var(--muted);margin-top:10px;">
+      Tip: Link directly to a search — e.g.
+      <code>search.html?q=stalemate</code> (PDF) or
+      <code>search.html?q=stalemate&amp;mode=json</code> (Articles)
     </p>
   </div>
 
-  <!-- Results -->
+  <!-- Results area -->
   <div id="search-results">
-    <div class="loading-wrap"><div class="spinner"></div><p>Building search index…</p></div>
+    <div class="loading-wrap"><div class="spinner"></div><p>Loading PDF and building index…</p></div>
   </div>
 
 </main>
@@ -57,10 +135,15 @@
 <!-- ── Footer ────────────────────────────────────────────────────────────── -->
 <footer class="site-footer">
   <p>FIDE Arbiter's Manual Study Portal &mdash; Not an official FIDE publication.</p>
-  <p style="margin-top:4px;">Search powered by <a href="https://lunrjs.com" target="_blank" rel="noopener">lunr.js</a>.</p>
+  <p style="margin-top:4px;">
+    PDF parsing by <a href="https://mozilla.github.io/pdf.js/" target="_blank" rel="noopener">PDF.js</a> &middot;
+    Full-text search by <a href="https://lunrjs.com" target="_blank" rel="noopener">lunr.js</a>
+  </p>
 </footer>
 
-<!-- lunr.js from CDN -->
+<!-- PDF.js (must come before lunr & search.js) -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.min.js"></script>
+<!-- lunr.js -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/lunr.js/2.3.9/lunr.min.js"></script>
 <script src="js/app.js"></script>
 <script src="js/search.js"></script>
