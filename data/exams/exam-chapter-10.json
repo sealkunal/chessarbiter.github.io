@@ -1,0 +1,76 @@
+{
+  "chapter": 10,
+  "title": "Chapter 10 – FIDE Arbiter Regulations: Mock Exam",
+  "questions": [
+    {
+      "id": "c10q1",
+      "text": "What are the two FIDE arbiter titles?",
+      "difficulty": "easy",
+      "article": "B06.1.1",
+      "options": [
+        { "id": "a", "text": "National Arbiter (NA) and International Arbiter (IA)" },
+        { "id": "b", "text": "FIDE Arbiter (FA) and International Arbiter (IA)" },
+        { "id": "c", "text": "FIDE Arbiter (FA) and Grand Arbiter (GA)" },
+        { "id": "d", "text": "Club Arbiter (CA) and FIDE Arbiter (FA)" }
+      ],
+      "correct": "b",
+      "explanation": "As per Article B06.1.1, FIDE awards two arbiter titles: FIDE Arbiter (FA) and International Arbiter (IA). Both are awarded for life unless revoked."
+    },
+    {
+      "id": "c10q2",
+      "text": "What minimum exam score must a candidate achieve to qualify for the FA title?",
+      "difficulty": "medium",
+      "article": "B06.1.3",
+      "options": [
+        { "id": "a", "text": "60%" },
+        { "id": "b", "text": "70%" },
+        { "id": "c", "text": "75%" },
+        { "id": "d", "text": "80%" }
+      ],
+      "correct": "d",
+      "explanation": "As per Article B06.1.3, to be awarded the FIDE Arbiter title, a candidate must pass a FIDE Arbiter seminar exam with a score of at least 80%."
+    },
+    {
+      "id": "c10q3",
+      "text": "What is an 'A-norm' for arbiters?",
+      "difficulty": "hard",
+      "article": "B06.1.2",
+      "options": [
+        { "id": "a", "text": "Any norm scored at a national championship" },
+        { "id": "b", "text": "A norm scored at top-level events like Olympiad or World Championship" },
+        { "id": "c", "text": "The first norm achieved by any arbiter" },
+        { "id": "d", "text": "A norm scored by a Category A arbiter" }
+      ],
+      "correct": "b",
+      "explanation": "As per Article B06.1.2, an A-norm is the highest grade of arbiter norm, awarded for serving at top-level events such as the Olympiad, World Championship, or Continental Championship."
+    },
+    {
+      "id": "c10q4",
+      "text": "What additional requirement must an IA candidate meet that an FA candidate does not?",
+      "difficulty": "medium",
+      "article": "B06.1.4",
+      "options": [
+        { "id": "a", "text": "Must hold a FIDE player title" },
+        { "id": "b", "text": "Must demonstrate proficiency in a FIDE official language" },
+        { "id": "c", "text": "Must have organised at least one tournament" },
+        { "id": "d", "text": "Must pass a more difficult written exam" }
+      ],
+      "correct": "b",
+      "explanation": "As per Article B06.1.4, among other requirements, IA candidates must demonstrate proficiency in a FIDE official language. This requirement does not apply to the FA title."
+    },
+    {
+      "id": "c10q5",
+      "text": "What sanctions can the ARB Disciplinary Sub-Committee NOT impose on an arbiter?",
+      "difficulty": "hard",
+      "article": "B06.5.4",
+      "options": [
+        { "id": "a", "text": "Warning" },
+        { "id": "b", "text": "Suspension of the arbiter title" },
+        { "id": "c", "text": "A financial fine payable to the opposing players" },
+        { "id": "d", "text": "Downgrading of classification category" }
+      ],
+      "correct": "c",
+      "explanation": "As per Article B06.5.4, the available sanctions are: warning, suspension from arbiting, downgrading of classification, suspension of title, and revocation of title. A financial fine payable to players is not a listed sanction."
+    }
+  ]
+}

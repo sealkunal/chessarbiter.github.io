@@ -1,0 +1,76 @@
+{
+  "chapter": 12,
+  "title": "Chapter 12 – Sample Arbiter Exam Questions: Mock Exam",
+  "questions": [
+    {
+      "id": "c12q1",
+      "text": "What score must a candidate achieve to pass the FIDE Arbiter seminar exam?",
+      "difficulty": "easy",
+      "article": "12.1",
+      "options": [
+        { "id": "a", "text": "60%" },
+        { "id": "b", "text": "70%" },
+        { "id": "c", "text": "75%" },
+        { "id": "d", "text": "80%" }
+      ],
+      "correct": "d",
+      "explanation": "As per Article 12.1 and B06.1.3, a candidate must pass the FIDE Arbiter seminar exam with a score of at least 80% to qualify for the FA title application."
+    },
+    {
+      "id": "c12q2",
+      "text": "Which topics are covered by Laws of Chess exam questions?",
+      "difficulty": "easy",
+      "article": "12.2",
+      "options": [
+        { "id": "a", "text": "Only Articles 1 to 5" },
+        { "id": "b", "text": "Only the arbiter's powers and penalties" },
+        { "id": "c", "text": "All 12 articles including touch-move, illegal moves, draws, clocks and late arrival" },
+        { "id": "d", "text": "Only rating and title regulations" }
+      ],
+      "correct": "c",
+      "explanation": "As per Article 12.2, exam questions on Laws of Chess cover all 12 articles including touch-move rule, illegal moves, draw claims, clock handling, late arrival, move recording, and arbiter authority."
+    },
+    {
+      "id": "c12q3",
+      "text": "What does an anti-cheating question in the FIDE Arbiter exam typically cover?",
+      "difficulty": "medium",
+      "article": "12.6",
+      "options": [
+        { "id": "a", "text": "How to detect illegal moves during a game" },
+        { "id": "b", "text": "Fair Play Regulations, the Fair Play Officer's role, investigation procedures and sanctions" },
+        { "id": "c", "text": "The procedure for using a chess engine to verify results" },
+        { "id": "d", "text": "How to search players for electronic devices" }
+      ],
+      "correct": "b",
+      "explanation": "As per Article 12.6, anti-cheating questions cover the FIDE Fair Play Regulations including the Fair Play Officer's authority, investigation procedures, use of statistical analysis, and available sanctions."
+    },
+    {
+      "id": "c12q4",
+      "text": "What do practical scenario questions in the arbiter exam test?",
+      "difficulty": "medium",
+      "article": "12.5",
+      "options": [
+        { "id": "a", "text": "Only memorisation of article numbers" },
+        { "id": "b", "text": "Knowledge of chess openings" },
+        { "id": "c", "text": "Both knowledge of rules and sound arbiter judgment in real-life situations" },
+        { "id": "d", "text": "The ability to calculate rating changes manually" }
+      ],
+      "correct": "c",
+      "explanation": "As per Article 12.5, practical scenario questions present real-life arbiting situations and test both rules knowledge and sound judgment. The correct answer must demonstrate both aspects."
+    },
+    {
+      "id": "c12q5",
+      "text": "What must arbiter candidates know about rating and title questions in the exam?",
+      "difficulty": "hard",
+      "article": "12.4",
+      "options": [
+        { "id": "a", "text": "Only the rating of the top 10 players in the world" },
+        { "id": "b", "text": "K-factors, performance rating calculation, norm requirements and reporting procedures" },
+        { "id": "c", "text": "Only how to submit a rating report online" },
+        { "id": "d", "text": "The FIDE rating of each titled player" }
+      ],
+      "correct": "b",
+      "explanation": "As per Article 12.4, rating and title questions test knowledge of K-factors, performance rating calculation, norm requirements, reporting procedures, and the differences between standard, rapid and blitz rating systems."
+    }
+  ]
+}

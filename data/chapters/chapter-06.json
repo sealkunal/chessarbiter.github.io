@@ -1,0 +1,46 @@
+{
+  "chapter": 6,
+  "title": "FIDE Rating Regulations (B02)",
+  "articles": [
+    {
+      "article": "B02.1",
+      "heading": "Rate of Play",
+      "content": "For a game to be rated by FIDE, the rate of play must allow for at least 60 minutes for each player to complete all moves. For rapid chess, each player must have at least 10 minutes but less than 60 minutes. For blitz chess, each player has at least 3 minutes but less than 10 minutes. Games not meeting these time controls are not eligible for FIDE rating."
+    },
+    {
+      "article": "B02.2",
+      "heading": "Laws to be Followed",
+      "content": "All rated games must be played in accordance with the FIDE Laws of Chess. Any game played under conditions that deviate from the Laws of Chess without FIDE authorisation cannot be submitted for rating. The arbiter is responsible for ensuring that the Laws are followed throughout the event."
+    },
+    {
+      "article": "B02.3",
+      "heading": "Hours of Play",
+      "content": "Games must be played at announced times. Deviations require notification to FIDE. The arbiter must record all times of play accurately on the tournament report. Events deviating significantly from scheduled times may be subject to rating restrictions."
+    },
+    {
+      "article": "B02.4",
+      "heading": "Reporting Frequency",
+      "content": "All rated events must be reported to FIDE within two months of the end of the event. Failure to report within this period may result in the event not being rated. The Chief Arbiter is responsible for submitting the rating report in the prescribed format using FIDE-approved software."
+    },
+    {
+      "article": "B02.5",
+      "heading": "Unplayed Games",
+      "content": "Unplayed games (forfeits, byes, withdrawals) are treated differently for rating purposes. A forfeit win counts for rating only if the opponent's result in the tournament is rated. Full-point byes and zero-point byes are not rated. Half-point byes may be rated depending on tournament regulations."
+    },
+    {
+      "article": "B02.8",
+      "heading": "The Working of the FIDE Rating System",
+      "content": "The FIDE rating system is based on the Elo system. A player's performance rating is calculated based on the average rating of opponents and the score achieved. The rating change (delta) is calculated as K × (W - We), where K is the development coefficient, W is the actual score, and We is the expected score based on rating differences. K-factor is 40 for new players, 20 for players below 2400, and 10 for established players above 2400."
+    },
+    {
+      "article": "B02.9",
+      "heading": "Reporting Procedures",
+      "content": "The organiser must submit a complete list of players with FIDE IDs, ratings at the start of the event, all results in prescribed format, and the Chief Arbiter's signature. Reports must be submitted electronically through the FIDE Online Arena or by email to the relevant FIDE office."
+    },
+    {
+      "article": "B02-RB",
+      "heading": "FIDE Rapid and Blitz Rating Regulations",
+      "content": "Rapid and blitz games are rated separately from standard games. A player's rapid and blitz ratings are maintained independently. Effective from 1 December 2024, the minimum number of opponents required for a rating to be published has changed. The K-factor for rapid and blitz ratings follows the same structure as standard ratings. Events must be specifically designated as rapid or blitz events to qualify for those rating lists."
+    }
+  ]
+}

@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Forum – Chess Arbiter</title>
+  <link rel="stylesheet" href="css/style.css">
+  <style>
+    /* ── Forum-specific styles ── */
+    .forum-intro {
+      background: var(--accent-lt);
+      border: 1px solid #c3d6f0;
+      border-radius: var(--radius);
+      padding: 18px 22px;
+      margin-bottom: 32px;
+      font-size: .93rem;
+      line-height: 1.7;
+    }
+    .forum-intro strong { color: var(--accent); }
+
+    .topic-section {
+      margin-bottom: 40px;
+    }
+    .topic-header {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      padding: 14px 20px;
+      background: var(--accent);
+      color: #fff;
+      border-radius: var(--radius) var(--radius) 0 0;
+      cursor: pointer;
+      user-select: none;
+    }
+    .topic-header h2 {
+      font-size: 1rem;
+      font-weight: 600;
+      flex: 1;
+    }
+    .topic-header .topic-icon {
+      font-size: 1.3rem;
+      flex-shrink: 0;
+    }
+    .topic-header .toggle-arrow {
+      font-size: .85rem;
+      opacity: .8;
+      transition: transform .2s;
+    }
+    .topic-header.collapsed .toggle-arrow {
+      transform: rotate(-90deg);
+    }
+
+    .topic-body {
+      border: 1px solid var(--border);
+      border-top: none;
+      border-radius: 0 0 var(--radius) var(--radius);
+      overflow: hidden;
+    }
+    .topic-body.hidden { display: none; }
+
+    .topic-desc {
+      padding: 14px 20px;
+      font-size: .88rem;
+      color: var(--muted);
+      background: var(--surface);
+      border-bottom: 1px solid var(--border);
+    }
+
+    .disqus-wrap {
+      padding: 24px 20px;
+      background: var(--bg);
+    }
+
+    /* Setup banner — shown only when shortname is not configured */
+    .setup-banner {
+      background: var(--warn-lt);
+      border: 1px solid #d4a017;
+      border-radius: var(--radius);
+      padding: 16px 20px;
+      font-size: .88rem;
+      line-height: 1.7;
+    }
+    .setup-banner strong { color: var(--warn); display: block; margin-bottom: 4px; }
+    .setup-banner code {
+      background: rgba(0,0,0,.06);
+      padding: 1px 5px;
+      border-radius: 3px;
+      font-size: .85rem;
+    }
+    .setup-steps { margin: 10px 0 0 16px; }
+    .setup-steps li { margin-bottom: 4px; }
+  </style>
+</head>
+<body>
+
+<!-- ── Header ────────────────────────────────────────────────────────────── -->
+<header class="site-header">
+  <div class="header-inner">
+    <div class="site-logo">
+      <a href="index.html" style="color:#fff;text-decoration:none"><strong>Chess Arbiter</strong></a>
+    </div>
+    <button class="nav-toggle" aria-label="Toggle navigation">
+      <span></span><span></span><span></span>
+    </button>
+    <nav class="nav-links">
+      <a href="index.html">Home</a>
+      <a href="manual.html">Manual</a>
+      <a href="exam.html">Mock Exam</a>
+      <a href="search.html">Search</a>
+      <a href="forum.html" class="active">Forum</a>
+      <a href="feedback.html">Feedback</a>
+    </nav>
+  </div>
+</header>
+
+<!-- ── Page ──────────────────────────────────────────────────────────────── -->
+<main class="container" style="padding-top:36px;padding-bottom:60px;">
+
+  <div class="section-header" style="margin-bottom:20px;">
+    <h1 style="font-size:1.6rem;"><strong>Chess Arbiter</strong> Forum</h1>
+    <p>Ask questions, discuss rules and share your arbiter experience with the community.</p>
+  </div>
+
+  <!-- Setup banner — hidden once DISQUS_SHORTNAME is set -->
+  <div class="setup-banner" id="setup-banner" style="display:none;">
+    <strong>⚙️ One-time Disqus Setup Required</strong>
+    To activate the forum, register a free Disqus account and set your shortname:
+    <ol class="setup-steps">
+      <li>Go to <a href="https://disqus.com/profile/signup/" target="_blank" rel="noopener">disqus.com</a> → Sign up free</li>
+      <li>Click <strong>I want to install Disqus on my site</strong></li>
+      <li>Fill in a site name → your shortname will be shown (e.g. <code>chess-arbiter</code>)</li>
+      <li>Open <code>forum.html</code> and replace <code>YOUR_DISQUS_SHORTNAME</code> on line&nbsp;1 of the script below with your shortname</li>
+    </ol>
+  </div>
+
+  <div class="forum-intro">
+    <strong>Welcome to the Chess Arbiter Community Forum.</strong>
+    Each section below is a separate discussion thread. Click a topic to expand it and join the conversation.
+    You can post questions, share experiences, discuss specific rules or exam scenarios.
+    All posts are moderated — please keep discussions respectful and on-topic.
+  </div>
+
+  <!-- ── TOPIC 1 ── -->
+  <div class="topic-section">
+    <div class="topic-header" data-target="topic-1">
+      <span class="topic-icon">⚖️</span>
+      <h2>Laws of Chess — Rules &amp; Interpretations</h2>
+      <span class="toggle-arrow">▼</span>
+    </div>
+    <div class="topic-body" id="topic-1">
+      <div class="topic-desc">
+        Discuss Articles 1–12 of the FIDE Laws of Chess. Ask about specific rules, grey areas, practical applications and how to apply the laws correctly as an arbiter.
+      </div>
+      <div class="disqus-wrap">
+        <div class="disqus-thread" id="disqus-1"
+             data-disqus-identifier="chess-arbiter-laws-of-chess"
+             data-disqus-title="Laws of Chess — Rules &amp; Interpretations"
+             data-disqus-url="forum.html#laws-of-chess">
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ── TOPIC 2 ── -->
+  <div class="topic-section">
+    <div class="topic-header" data-target="topic-2">
+      <span class="topic-icon">📝</span>
+      <h2>Mock Exam Questions &amp; Explanations</h2>
+      <span class="toggle-arrow">▼</span>
+    </div>
+    <div class="topic-body" id="topic-2">
+      <div class="topic-desc">
+        Discuss mock exam questions, challenge answers, request clarifications on explanations, or suggest new questions for the exam bank.
+      </div>
+      <div class="disqus-wrap">
+        <div class="disqus-thread" id="disqus-2"
+             data-disqus-identifier="chess-arbiter-mock-exams"
+             data-disqus-title="Mock Exam Questions &amp; Explanations"
+             data-disqus-url="forum.html#mock-exams">
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ── TOPIC 3 ── -->
+  <div class="topic-section">
+    <div class="topic-header" data-target="topic-3">
+      <span class="topic-icon">🏆</span>
+      <h2>Tournament Organisation &amp; Swiss Pairings</h2>
+      <span class="toggle-arrow">▼</span>
+    </div>
+    <div class="topic-body" id="topic-3">
+      <div class="topic-desc">
+        Questions and discussions about running tournaments — Swiss systems, pairings, tie-breaks, round robin scheduling, and general tournament management.
+      </div>
+      <div class="disqus-wrap">
+        <div class="disqus-thread" id="disqus-3"
+             data-disqus-identifier="chess-arbiter-tournament-org"
+             data-disqus-title="Tournament Organisation &amp; Swiss Pairings"
+             data-disqus-url="forum.html#tournament-org">
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ── TOPIC 4 ── -->
+  <div class="topic-section">
+    <div class="topic-header" data-target="topic-4">
+      <span class="topic-icon">🎓</span>
+      <h2>FIDE Arbiter Title — FA &amp; IA Requirements</h2>
+      <span class="toggle-arrow">▼</span>
+    </div>
+    <div class="topic-body" id="topic-4">
+      <div class="topic-desc">
+        Ask about the FA and IA title requirements, norms, seminar experience, application process, and share your journey towards becoming a FIDE or International Arbiter.
+      </div>
+      <div class="disqus-wrap">
+        <div class="disqus-thread" id="disqus-4"
+             data-disqus-identifier="chess-arbiter-titles"
+             data-disqus-title="FIDE Arbiter Title — FA &amp; IA Requirements"
+             data-disqus-url="forum.html#arbiter-titles">
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ── TOPIC 5 ── -->
+  <div class="topic-section">
+    <div class="topic-header" data-target="topic-5">
+      <span class="topic-icon">💬</span>
+      <h2>General Discussion</h2>
+      <span class="toggle-arrow">▼</span>
+    </div>
+    <div class="topic-body" id="topic-5">
+      <div class="topic-desc">
+        Anything else chess-arbiting related — introduce yourself, share news, discuss recent events, or talk about anything not covered by the other topics.
+      </div>
+      <div class="disqus-wrap">
+        <div class="disqus-thread" id="disqus-5"
+             data-disqus-identifier="chess-arbiter-general"
+             data-disqus-title="General Discussion"
+             data-disqus-url="forum.html#general">
+        </div>
+      </div>
+    </div>
+  </div>
+
+</main>
+
+<!-- ── Footer ────────────────────────────────────────────────────────────── -->
+<footer class="site-footer">
+  <p>Chess Arbiter Study Portal &mdash; Not an official FIDE publication.</p>
+  <p style="margin-top:4px;">Forum powered by <a href="https://disqus.com" target="_blank" rel="noopener">Disqus</a></p>
+</footer>
+
+<script>
+// ─────────────────────────────────────────────────────────────────────────────
+// CONFIGURATION — Replace YOUR_DISQUS_SHORTNAME with your actual Disqus shortname
+// Get it free at: https://disqus.com → "I want to install Disqus on my site"
+// ─────────────────────────────────────────────────────────────────────────────
+var DISQUS_SHORTNAME = 'YOUR_DISQUS_SHORTNAME';
+
+// ─────────────────────────────────────────────────────────────────────────────
+
+// Mobile nav
+document.querySelector('.nav-toggle').addEventListener('click', function() {
+  document.querySelector('.nav-links').classList.toggle('open');
+});
+
+// Show setup banner if shortname not yet configured
+if (DISQUS_SHORTNAME === 'YOUR_DISQUS_SHORTNAME') {
+  document.getElementById('setup-banner').style.display = 'block';
+}
+
+// Track which Disqus threads have been loaded (lazy load on expand)
+var loadedThreads = {};
+
+// ── Collapsible topic sections ────────────────────────────────────────────────
+document.querySelectorAll('.topic-header').forEach(function(header) {
+  header.addEventListener('click', function() {
+    var targetId = header.getAttribute('data-target');
+    var body     = document.getElementById(targetId);
+    var isHidden = body.classList.contains('hidden');
+
+    if (isHidden) {
+      // Expand
+      body.classList.remove('hidden');
+      header.classList.remove('collapsed');
+      // Lazy-load Disqus thread on first expand
+      var threadDiv = body.querySelector('.disqus-thread');
+      if (threadDiv && !loadedThreads[targetId]) {
+        loadedThreads[targetId] = true;
+        loadDisqusThread(threadDiv);
+      }
+    } else {
+      // Collapse
+      body.classList.add('hidden');
+      header.classList.add('collapsed');
+    }
+  });
+});
+
+// Auto-expand first topic on page load and load its thread
+(function() {
+  var firstHeader = document.querySelector('.topic-header');
+  var firstBody   = document.querySelector('.topic-body');
+  if (firstHeader && firstBody) {
+    var threadDiv = firstBody.querySelector('.disqus-thread');
+    if (threadDiv) {
+      loadedThreads['topic-1'] = true;
+      loadDisqusThread(threadDiv);
+    }
+  }
+})();
+
+// ── Load a single Disqus thread into a container div ─────────────────────────
+function loadDisqusThread(container) {
+  if (DISQUS_SHORTNAME === 'YOUR_DISQUS_SHORTNAME') {
+    container.innerHTML =
+      '<div style="padding:20px;background:var(--surface);border-radius:var(--radius);' +
+      'border:1px solid var(--border);color:var(--muted);font-size:.88rem;">' +
+      '⚙️ Disqus not configured yet. See the setup instructions at the top of this page.' +
+      '</div>';
+    return;
+  }
+
+  var identifier = container.getAttribute('data-disqus-identifier');
+  var title      = container.getAttribute('data-disqus-title');
+  var url        = window.location.origin + '/' + container.getAttribute('data-disqus-url');
+
+  // Each Disqus embed needs a unique div id="disqus_thread"
+  // We rename the container, inject the script, then reset for the next load
+  container.id = 'disqus_thread';
+
+  window.disqus_config = function() {
+    this.page.url        = url;
+    this.page.identifier = identifier;
+    this.page.title      = title;
+  };
+
+  var script    = document.createElement('script');
+  script.src    = 'https://' + DISQUS_SHORTNAME + '.disqus.com/embed.js';
+  script.async  = true;
+  script.setAttribute('data-timestamp', +new Date());
+  (document.head || document.body).appendChild(script);
+}
+
+// ── Handle direct URL hash navigation e.g. forum.html#mock-exams ─────────────
+(function() {
+  var hashMap = {
+    '#laws-of-chess': 'topic-1',
+    '#mock-exams':    'topic-2',
+    '#tournament-org':'topic-3',
+    '#arbiter-titles':'topic-4',
+    '#general':       'topic-5'
+  };
+  var hash   = window.location.hash;
+  var target = hashMap[hash];
+  if (target) {
+    var body   = document.getElementById(target);
+    var header = document.querySelector('[data-target="' + target + '"]');
+    if (body && header) {
+      // All bodies start open except the one matched — collapse others
+      document.querySelectorAll('.topic-body').forEach(function(b) {
+        if (b.id !== target) { b.classList.add('hidden'); }
+      });
+      document.querySelectorAll('.topic-header').forEach(function(h) {
+        if (h.getAttribute('data-target') !== target) { h.classList.add('collapsed'); }
+      });
+      setTimeout(function() { body.scrollIntoView({ behavior: 'smooth' }); }, 200);
+    }
+  }
+})();
+</script>
+
+</body>
+</html>

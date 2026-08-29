@@ -1,0 +1,41 @@
+{
+  "chapter": 4,
+  "title": "Types of Tournaments",
+  "articles": [
+    {
+      "article": "4.1",
+      "heading": "Round Robin System",
+      "content": "In a Round Robin tournament, each player meets every other player once (single round robin) or twice (double round robin). It is the fairest system as all players play the same opponents. The Berger table is used for scheduling pairings in a round robin. In a round robin with an odd number of players, one player receives a bye each round."
+    },
+    {
+      "article": "4.2",
+      "heading": "Swiss Systems",
+      "content": "In a Swiss system tournament, players are paired against opponents with the same or similar scores. No player is eliminated. The system was first used in Zurich in 1895. Swiss tournaments are suitable for large numbers of players where a full round robin is not practical. The number of rounds is typically much less than the number of participants. FIDE uses the Dutch System as the standard Swiss pairing system."
+    },
+    {
+      "article": "4.3",
+      "heading": "Scheveningen System",
+      "content": "In the Scheveningen system, two teams play each other with each member of one team playing each member of the other team. This system is used in team matches. The total number of games is the product of the number of players in each team. It is often used in matches between national teams or club teams."
+    },
+    {
+      "article": "4.4",
+      "heading": "Schiller System",
+      "content": "The Schiller system is a variant of the round robin where players are divided into groups. The winners of each group then play a final round robin. This system is used when a full round robin is not feasible for the total number of participants but a pure Swiss system is not desired."
+    },
+    {
+      "article": "4.5",
+      "heading": "Skalitzka System",
+      "content": "The Skalitzka system is used for team tournaments. Each team member plays one game against the corresponding board player of each opposing team. The results are aggregated by team. This system ensures equal board distribution across all rounds."
+    },
+    {
+      "article": "4.6",
+      "heading": "Matches",
+      "content": "A match is a competition between two players or two teams over a fixed number of games. The result is determined by total points or by the number of games won. Matches may have specific tiebreak procedures such as rapid games, blitz games or Armageddon games if the match is tied after the scheduled games."
+    },
+    {
+      "article": "4.7",
+      "heading": "Knock-out System",
+      "content": "In a knock-out tournament, players are eliminated after losing a match or a game. The winner advances to the next round. This system requires fewer rounds but eliminates players early. It is often used in the later stages of a championship where a small number of qualified players compete."
+    }
+  ]
+}

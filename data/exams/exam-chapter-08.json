@@ -1,0 +1,76 @@
+{
+  "chapter": 8,
+  "title": "Chapter 8 – Tournament Technical Recommendations: Mock Exam",
+  "questions": [
+    {
+      "id": "c8q1",
+      "text": "What is the recommended minimum lighting level for a tournament playing area?",
+      "difficulty": "medium",
+      "article": "C01.1",
+      "options": [
+        { "id": "a", "text": "100 lux" },
+        { "id": "b", "text": "200 lux" },
+        { "id": "c", "text": "500 lux" },
+        { "id": "d", "text": "1000 lux" }
+      ],
+      "correct": "b",
+      "explanation": "As per Article C01.1, a minimum of 200 lux is recommended for the playing area, with no direct light causing glare on the boards. Good lighting is essential for fair play."
+    },
+    {
+      "id": "c8q2",
+      "text": "What is the recommended king height for chess pieces used in FIDE events?",
+      "difficulty": "hard",
+      "article": "C02.1",
+      "options": [
+        { "id": "a", "text": "50mm to 70mm" },
+        { "id": "b", "text": "75mm to 90mm" },
+        { "id": "c", "text": "85mm to 105mm" },
+        { "id": "d", "text": "100mm to 120mm" }
+      ],
+      "correct": "c",
+      "explanation": "As per Article C02.1, the king should be between 85mm and 105mm in height. The diameter of the king's base should be 40-50% of its height. Pieces should be of the Staunton pattern."
+    },
+    {
+      "id": "c8q3",
+      "text": "What type of clock is mandatory in FIDE-rated events?",
+      "difficulty": "easy",
+      "article": "C02.3",
+      "options": [
+        { "id": "a", "text": "Analogue clock" },
+        { "id": "b", "text": "Digital clock" },
+        { "id": "c", "text": "Either analogue or digital" },
+        { "id": "d", "text": "Only mechanical clocks" }
+      ],
+      "correct": "b",
+      "explanation": "As per Article C02.3, digital clocks are mandatory in FIDE-rated events. Analogue clocks may only be used in events without increment and only with specific approval."
+    },
+    {
+      "id": "c8q4",
+      "text": "Where is the clock placed by default?",
+      "difficulty": "medium",
+      "article": "C02.3",
+      "options": [
+        { "id": "a", "text": "To the left of the player with the white pieces" },
+        { "id": "b", "text": "To the right of the player with the black pieces" },
+        { "id": "c", "text": "In the centre of the table between both players" },
+        { "id": "d", "text": "At the discretion of the player with White" }
+      ],
+      "correct": "b",
+      "explanation": "As per Article C02.3, the clock must be placed to the right of the player with the black pieces unless both players agree otherwise or the arbiter decides differently."
+    },
+    {
+      "id": "c8q5",
+      "text": "Who does the scoresheet belong to at the end of a game?",
+      "difficulty": "easy",
+      "article": "C02.4",
+      "options": [
+        { "id": "a", "text": "The winning player" },
+        { "id": "b", "text": "Both players equally" },
+        { "id": "c", "text": "The organiser" },
+        { "id": "d", "text": "The arbiter personally" }
+      ],
+      "correct": "c",
+      "explanation": "As per Article C02.4, the scoresheet belongs to the organiser and must be handed in at the end of the game. Players may request copies of their scoresheets."
+    }
+  ]
+}

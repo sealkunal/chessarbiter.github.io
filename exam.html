@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Mock Exam – FIDE Arbiter's Manual</title>
+  <title>Mock Exam – Chess Arbiter</title>
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
@@ -11,7 +11,7 @@
 <!-- ── Header ────────────────────────────────────────────────────────────── -->
 <header class="site-header">
   <div class="header-inner">
-    <div class="site-logo"><a href="index.html" style="color:#fff;text-decoration:none">FIDE <span>Arbiter's Manual</span></a></div>
+    <div class="site-logo"><a href="index.html" style="color:#fff;text-decoration:none"><strong>Chess Arbiter</strong></a></div>
     <button class="nav-toggle" aria-label="Toggle navigation">
       <span></span><span></span><span></span>
     </button>
@@ -51,7 +51,7 @@
 
 <!-- ── Footer ────────────────────────────────────────────────────────────── -->
 <footer class="site-footer">
-  <p>FIDE Arbiter's Manual Study Portal &mdash; Not an official FIDE publication.</p>
+  <p>Chess Arbiter Study Portal &mdash; Not an official FIDE publication.</p>
 </footer>
 
 <script src="js/app.js"></script>
@@ -67,20 +67,34 @@
     const index = await fetchJSON('data/index.json');
     const grid  = document.getElementById('exam-options');
 
-    const items = [
-      ...index.chapters.map(ch => ({
-        title: `Chapter ${ch.id}: ${ch.title}`,
-        desc:  `Chapter-specific exam — ${ch.description}`,
-        file:  ch.exam
-      })),
+    // ── Chapter exams ──
+    const chapterItems = index.chapters.map(ch => ({
+      type:  'internal',
+      title: `Chapter ${ch.id}: ${ch.title}`,
+      desc:  `Chapter-specific exam — ${ch.description}`,
+      file:  ch.exam
+    }));
+
+    // ── Full Mock Exam sets ──
+    const fullExamSets = [
       {
-        title: index.fullExam.title,
-        desc:  index.fullExam.description,
-        file:  index.fullExam.file
+        type:   'external',
+        set:    'Set 1',
+        title:  'Full Mock Exam — Set 1',
+        desc:   'Comprehensive exam covering all chapters. Opens in a new tab.',
+        url:    'https://share.gemini.google/iFvTOXoz09Ur'
+      },
+      {
+        type:   'internal',
+        set:    'Set 2',
+        title:  'Full Mock Exam — Set 2 (25 Questions)',
+        desc:   '25 questions covering all 12 chapters — comprehensive arbiter exam practice.',
+        file:   index.fullExam.file
       }
     ];
 
-    grid.innerHTML = items.map(item => `
+    // ── Render chapter cards ──
+    const chapterHtml = chapterItems.map(item => `
       <div class="chapter-card">
         <h3>${escHtml(item.title)}</h3>
         <p>${escHtml(item.desc)}</p>
@@ -88,6 +102,39 @@
            class="btn btn-primary btn-sm" style="margin-top:8px;">Start Exam →</a>
       </div>
     `).join('');
+
+    // ── Render Full Mock Exam section ──
+    const fullExamHtml = `
+      <div style="grid-column:1/-1;margin-top:8px;">
+        <h3 style="font-size:1rem;font-weight:600;margin-bottom:16px;padding-bottom:10px;
+                   border-bottom:2px solid var(--accent);color:var(--accent);">
+          📝 Full Mock Exam
+        </h3>
+        <div class="card-grid" style="margin-top:0;">
+          ${fullExamSets.map((set, i) => `
+            <div class="chapter-card" style="border-left:4px solid var(--accent);">
+              <div style="font-size:.75rem;font-weight:700;text-transform:uppercase;
+                          letter-spacing:.8px;color:var(--accent);margin-bottom:6px;">
+                ${escHtml(set.set)}
+              </div>
+              <h3 style="font-size:.95rem;">${escHtml(set.title)}</h3>
+              <p>${escHtml(set.desc)}</p>
+              ${set.type === 'external'
+                ? `<a href="${set.url}" target="_blank" rel="noopener"
+                      class="btn btn-primary btn-sm" style="margin-top:8px;">
+                     Start Exam ↗
+                   </a>`
+                : `<a href="exam.html?file=${encodeURIComponent(set.file)}&title=${encodeURIComponent(set.title)}"
+                      class="btn btn-primary btn-sm" style="margin-top:8px;">
+                     Start Exam →
+                   </a>`
+              }
+            </div>
+          `).join('')}
+        </div>
+      </div>`;
+
+    grid.innerHTML = chapterHtml + fullExamHtml;
   }
 })();
 </script>

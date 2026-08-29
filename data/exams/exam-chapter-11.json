@@ -1,0 +1,76 @@
+{
+  "chapter": 11,
+  "title": "Chapter 11 – FIDE Online Chess Regulations: Mock Exam",
+  "questions": [
+    {
+      "id": "c11q1",
+      "text": "What happens to a player's clock if they are disconnected during an online game?",
+      "difficulty": "medium",
+      "article": "E04.11",
+      "options": [
+        { "id": "a", "text": "The clock is paused until the player reconnects" },
+        { "id": "b", "text": "The clock continues to run" },
+        { "id": "c", "text": "The game is immediately declared a draw" },
+        { "id": "d", "text": "The opponent is given extra time" }
+      ],
+      "correct": "b",
+      "explanation": "As per Article E04.11, if a player is disconnected, the clock continues to run. The player must reconnect as quickly as possible. If the disconnection is prolonged beyond the specified limit, the arbiter may declare the game lost."
+    },
+    {
+      "id": "c11q2",
+      "text": "Does the touch-move rule apply in online chess?",
+      "difficulty": "easy",
+      "article": "E04.3",
+      "options": [
+        { "id": "a", "text": "Yes, the same as over-the-board play" },
+        { "id": "b", "text": "No, a player may select and deselect a piece until the move is confirmed" },
+        { "id": "c", "text": "Only in supervised online competitions" },
+        { "id": "d", "text": "Only if both players agree before the game" }
+      ],
+      "correct": "b",
+      "explanation": "As per Article E04.3, the touch-move rule does not apply in online play. A player may select and deselect a piece without penalty until the move is confirmed on the platform."
+    },
+    {
+      "id": "c11q3",
+      "text": "In a supervised online competition, what must players keep on at all times?",
+      "difficulty": "easy",
+      "article": "E04.9",
+      "options": [
+        { "id": "a", "text": "Their microphone" },
+        { "id": "b", "text": "Their camera, with face clearly visible" },
+        { "id": "c", "text": "Their screen sharing" },
+        { "id": "d", "text": "Their recording software" }
+      ],
+      "correct": "b",
+      "explanation": "As per Article E04.9, in supervised online competitions, players must keep their camera on at all times and ensure their face is clearly visible. Violations may result in the loss of the game."
+    },
+    {
+      "id": "c11q4",
+      "text": "What is a hybrid chess competition?",
+      "difficulty": "medium",
+      "article": "E04.16",
+      "options": [
+        { "id": "a", "text": "A tournament using both standard and rapid time controls" },
+        { "id": "b", "text": "A competition where some players are physically present and others participate remotely" },
+        { "id": "c", "text": "A competition played on electronic boards in person" },
+        { "id": "d", "text": "A team event combining online and over-the-board players on the same team" }
+      ],
+      "correct": "b",
+      "explanation": "As per Article E04.16, a hybrid chess competition is one in which some players are physically present in the playing venue while others participate remotely. The same Laws of Chess apply to all players."
+    },
+    {
+      "id": "c11q5",
+      "text": "Who has authority to pause, resume, or terminate a game in an online competition?",
+      "difficulty": "easy",
+      "article": "E04.10",
+      "options": [
+        { "id": "a", "text": "The platform's automated system only" },
+        { "id": "b", "text": "Either player by mutual agreement" },
+        { "id": "c", "text": "The arbiter" },
+        { "id": "d", "text": "The tournament organiser" }
+      ],
+      "correct": "c",
+      "explanation": "As per Article E04.10, the arbiter monitors all games and has authority to pause, resume, or terminate a game due to technical issues. The arbiter's decisions are final subject to appeal."
+    }
+  ]
+}

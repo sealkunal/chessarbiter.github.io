@@ -1,0 +1,76 @@
+{
+  "chapter": 4,
+  "title": "Chapter 4 – Types of Tournaments: Mock Exam",
+  "questions": [
+    {
+      "id": "c4q1",
+      "text": "In which tournament system does each player meet every other player exactly once?",
+      "difficulty": "easy",
+      "article": "4.1",
+      "options": [
+        { "id": "a", "text": "Swiss System" },
+        { "id": "b", "text": "Round Robin" },
+        { "id": "c", "text": "Knock-out" },
+        { "id": "d", "text": "Scheveningen System" }
+      ],
+      "correct": "b",
+      "explanation": "As per Article 4.1, in a Round Robin tournament each player meets every other player once (single round robin) or twice (double round robin). It is considered the fairest tournament system."
+    },
+    {
+      "id": "c4q2",
+      "text": "Which table is used for scheduling pairings in a Round Robin tournament?",
+      "difficulty": "medium",
+      "article": "4.1",
+      "options": [
+        { "id": "a", "text": "Dutch Table" },
+        { "id": "b", "text": "Buchholz Table" },
+        { "id": "c", "text": "Berger Table" },
+        { "id": "d", "text": "Sonneborn-Berger Table" }
+      ],
+      "correct": "c",
+      "explanation": "As per Article 4.1, the Berger table is used for scheduling pairings in a Round Robin tournament. It ensures a systematic and fair rotation of opponents and colours."
+    },
+    {
+      "id": "c4q3",
+      "text": "In the Swiss System, when is a player eliminated from the tournament?",
+      "difficulty": "easy",
+      "article": "4.2",
+      "options": [
+        { "id": "a", "text": "After losing two games" },
+        { "id": "b", "text": "After losing one match" },
+        { "id": "c", "text": "Players are never eliminated in a Swiss System" },
+        { "id": "d", "text": "After scoring 0 points in three consecutive rounds" }
+      ],
+      "correct": "c",
+      "explanation": "As per Article 4.2, no player is eliminated in a Swiss system tournament. All players continue to play for the full number of rounds, being paired against opponents with similar scores."
+    },
+    {
+      "id": "c4q4",
+      "text": "In the Scheveningen system, who plays against whom?",
+      "difficulty": "medium",
+      "article": "4.3",
+      "options": [
+        { "id": "a", "text": "Each player plays every other player in the same team" },
+        { "id": "b", "text": "Each member of one team plays each member of the other team" },
+        { "id": "c", "text": "Players are randomly paired each round" },
+        { "id": "d", "text": "Only the top-ranked players from each team play each other" }
+      ],
+      "correct": "b",
+      "explanation": "As per Article 4.3, in the Scheveningen system, two teams play each other with each member of one team playing each member of the other team. The total games equal the product of the sizes of the two teams."
+    },
+    {
+      "id": "c4q5",
+      "text": "In an Armageddon play-off game, what is the result if the game is drawn?",
+      "difficulty": "hard",
+      "article": "4.6",
+      "options": [
+        { "id": "a", "text": "White wins because White had less time" },
+        { "id": "b", "text": "The game is replayed with reversed colours" },
+        { "id": "c", "text": "Black wins because a draw counts as a win for Black" },
+        { "id": "d", "text": "Both players are eliminated" }
+      ],
+      "correct": "c",
+      "explanation": "As per Article 4.6, in an Armageddon game White has more time but must win. A draw counts as a win for Black. This ensures there is always a decisive result in a play-off."
+    }
+  ]
+}

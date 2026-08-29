@@ -1,0 +1,36 @@
+{
+  "chapter": 12,
+  "title": "Sample Exam Questions for Arbiters",
+  "articles": [
+    {
+      "article": "12.1",
+      "heading": "Purpose of Sample Exam Questions",
+      "content": "Chapter 12 of the Arbiters' Manual contains sample examination questions used in FIDE Arbiter seminars. These questions cover all major areas of arbiter knowledge including the Laws of Chess, tournament regulations, rating regulations, and practical arbiting situations. Candidates sitting for the FIDE Arbiter exam should use these questions as study material. The actual exam may contain questions in the same style but with different specific scenarios."
+    },
+    {
+      "article": "12.2",
+      "heading": "Laws of Chess Questions",
+      "content": "Exam questions on the Laws of Chess test knowledge of all 12 articles of the FIDE Laws. Common topics include: the touch-move rule, illegal moves and their consequences, the procedure for claiming a draw, correct clock handling, the rules on late arrival, recording of moves, and the arbiter's authority to intervene. Candidates must be able to apply the rules correctly to practical situations described in the questions."
+    },
+    {
+      "article": "12.3",
+      "heading": "Tournament Regulation Questions",
+      "content": "Questions on tournament regulations cover Swiss pairing systems, round robin scheduling, tie-break systems, withdrawal procedures, and general competition regulations. Candidates must understand the difference between the Dutch System and Accelerated Systems, the correct treatment of unplayed games, and the proper procedure for handling protests and appeals."
+    },
+    {
+      "article": "12.4",
+      "heading": "Rating and Title Questions",
+      "content": "Rating and title questions test knowledge of the FIDE rating system including K-factors, performance rating calculation, norm requirements, and reporting procedures. Candidates must understand the difference between standard, rapid, and blitz rating systems and know the requirements for each level of player title (CM, FM, IM, GM) and arbiter title (FA, IA)."
+    },
+    {
+      "article": "12.5",
+      "heading": "Practical Arbiting Scenarios",
+      "content": "Practical scenario questions present real-life situations that an arbiter might encounter. These include: a player claiming an illegal move after several moves have been played, a dispute over whether a piece was touched, a clock malfunction during time trouble, a player using a mobile phone, a player making an impossible claim, and situations requiring the arbiter to use discretion. The correct answer demonstrates both knowledge of the rules and sound judgment."
+    },
+    {
+      "article": "12.6",
+      "heading": "Anti-Cheating Questions",
+      "content": "Anti-cheating questions cover the FIDE Fair Play Regulations. Topics include: the definition of cheating and fair play violations, the authority of the Fair Play Officer, the correct procedure for suspecting and investigating cheating, the use of statistical analysis, and the sanctions available. Candidates must understand the division of responsibilities between the Chief Arbiter and the Chief Fair Play Officer."
+    }
+  ]
+}

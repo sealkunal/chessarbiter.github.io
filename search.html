@@ -3,49 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Search – FIDE Arbiter's Manual</title>
-  <link rel="stylesheet" href="css/style.css">
-  <style>
-    /* ── Tab bar ── */
-    .tab-bar {
-      display: flex;
-      gap: 0;
-      border-bottom: 2px solid var(--border);
-      margin-bottom: 22px;
-    }
-    .tab-btn {
-      padding: 10px 22px;
-      border: none;
-      background: none;
-      font-family: var(--font);
-      font-size: .93rem;
-      font-weight: 600;
-      color: var(--muted);
-      cursor: pointer;
-      border-bottom: 3px solid transparent;
-      margin-bottom: -2px;
-      transition: color .15s, border-color .15s;
-    }
-    .tab-btn:hover { color: var(--text); }
-    .tab-btn.tab-active {
-      color: var(--accent);
-      border-bottom-color: var(--accent);
-    }
-
-    /* ── PDF download banner ── */
-    .pdf-banner {
-      display: flex;
-      align-items: center;
-      gap: 14px;
-      background: var(--accent-lt);
-      border: 1px solid #c3d6f0;
-      border-radius: var(--radius);
-      padding: 13px 18px;
-      margin-bottom: 20px;
-      font-size: .88rem;
-    }
-    .pdf-banner a { font-weight: 600; }
-  </style>
+  <title>Search – Chess Arbiter</title>
+  <link rel="stylesheet" href="css/style.css?v=2">
 </head>
 <body>
 
@@ -53,7 +12,7 @@
 <header class="site-header">
   <div class="header-inner">
     <div class="site-logo">
-      <a href="index.html" style="color:#fff;text-decoration:none">FIDE <span>Arbiter's Manual</span></a>
+      <a href="index.html" style="color:#fff;text-decoration:none"><strong>Chess Arbiter</strong></a>
     </div>
     <button class="nav-toggle" aria-label="Toggle navigation">
       <span></span><span></span><span></span>
@@ -73,80 +32,185 @@
 
   <div class="section-header" style="margin-bottom:24px;">
     <h1 style="font-size:1.6rem;">Search the Manual</h1>
-    <p>Search the full PDF of the FIDE Arbiter's Manual 2025, or browse by article across all chapters.</p>
+    <p>Search across all articles and chapters of the Chess Arbiter 2025.</p>
   </div>
 
-  <!-- PDF download banner -->
-  <div class="pdf-banner">
-    <span style="font-size:1.4rem;">📄</span>
-    <div>
-      <strong>Arbiters Manual 2025</strong> is available in full —
-      <a href="data/Arbiters_Manual_2025.pdf" target="_blank" rel="noopener">Open PDF ↗</a>
-      &nbsp;·&nbsp;
-      <a href="data/Arbiters_Manual_2025.pdf" download>Download PDF ↓</a>
-    </div>
-  </div>
-
-  <!-- Search controls -->
   <div class="card" style="margin-bottom:28px;">
-
-    <!-- Tab bar -->
-    <div class="tab-bar">
-      <button class="tab-btn tab-active" id="tab-pdf">
-        🔍 Search PDF
-      </button>
-      <button class="tab-btn" id="tab-json">
-        📑 Search Articles (JSON)
-      </button>
-    </div>
-
-    <!-- Input row -->
     <div class="search-bar">
       <input type="text" id="search-input"
-             placeholder="e.g. stalemate, mobile phone, late arrival…"
+             placeholder="e.g. stalemate, mobile phone, Buchholz, late arrival…"
              autocomplete="off">
       <button class="btn btn-primary" id="search-btn">Search</button>
     </div>
 
-    <!-- Chapter filter — only shown in JSON mode -->
-    <div id="filter-row" style="display:none;gap:10px;margin-top:10px;align-items:center;">
+    <div style="display:flex;gap:10px;margin-top:12px;align-items:center;flex-wrap:wrap;">
       <label style="font-size:.85rem;color:var(--muted);white-space:nowrap;">Filter by chapter:</label>
       <select id="chapter-filter"
               style="padding:8px 12px;border:1px solid var(--border);border-radius:var(--radius);
-                     font-family:inherit;font-size:.88rem;outline:none;cursor:pointer;">
+                     font-family:inherit;font-size:.88rem;outline:none;cursor:pointer;flex:1;max-width:340px;">
         <option value="">All Chapters</option>
       </select>
     </div>
 
     <p style="font-size:.78rem;color:var(--muted);margin-top:10px;">
-      Tip: Link directly to a search — e.g.
-      <code>search.html?q=stalemate</code> (PDF) or
-      <code>search.html?q=stalemate&amp;mode=json</code> (Articles)
+      Tip: <code>search.html?q=stalemate</code> &nbsp;·&nbsp;
+      <a href="data/Arbiters_Manual_2025.pdf" target="_blank" rel="noopener">Download full PDF ↗</a>
     </p>
   </div>
 
-  <!-- Results area -->
   <div id="search-results">
-    <div class="loading-wrap"><div class="spinner"></div><p>Loading PDF and building index…</p></div>
+    <div class="loading-wrap"><div class="spinner"></div><p>Building search index…</p></div>
   </div>
 
 </main>
 
 <!-- ── Footer ────────────────────────────────────────────────────────────── -->
 <footer class="site-footer">
-  <p>FIDE Arbiter's Manual Study Portal &mdash; Not an official FIDE publication.</p>
-  <p style="margin-top:4px;">
-    PDF parsing by <a href="https://mozilla.github.io/pdf.js/" target="_blank" rel="noopener">PDF.js</a> &middot;
-    Full-text search by <a href="https://lunrjs.com" target="_blank" rel="noopener">lunr.js</a>
-  </p>
+  <p>Chess Arbiter Study Portal &mdash; Not an official FIDE publication.</p>
+  <p style="margin-top:4px;">Search powered by <a href="https://lunrjs.com" target="_blank" rel="noopener">lunr.js</a></p>
 </footer>
 
-<!-- PDF.js (must come before lunr & search.js) -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.min.js"></script>
-<!-- lunr.js -->
+<!-- lunr.js from CDN -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/lunr.js/2.3.9/lunr.min.js"></script>
-<script src="js/app.js"></script>
-<script src="js/search.js"></script>
+
+<script>
+// Inline — no external JS file dependency
+
+// Mobile nav toggle
+document.querySelector('.nav-toggle').addEventListener('click', function() {
+  document.querySelector('.nav-links').classList.toggle('open');
+});
+
+const searchInput   = document.getElementById('search-input');
+const searchBtn     = document.getElementById('search-btn');
+const resultsWrap   = document.getElementById('search-results');
+const chapterFilter = document.getElementById('chapter-filter');
+
+let lunrIndex = null;
+let docStore  = {};
+
+function escHtml(str) {
+  return String(str)
+    .replace(/&/g, '&amp;').replace(/</g, '&lt;')
+    .replace(/>/g, '&gt;').replace(/"/g, '&quot;');
+}
+
+async function fetchJSON(url) {
+  const res = await fetch(url);
+  if (!res.ok) throw new Error('HTTP ' + res.status + ' — ' + url);
+  return res.json();
+}
+
+async function buildIndex() {
+  resultsWrap.innerHTML = '<div class="loading-wrap"><div class="spinner"></div><p>Building search index…</p></div>';
+
+  const index       = await fetchJSON('data/index.json');
+  const allChapters = await Promise.all(index.chapters.map(ch => fetchJSON(ch.file)));
+
+  // Populate chapter filter
+  chapterFilter.innerHTML = '<option value="">All Chapters</option>' +
+    index.chapters.map(ch =>
+      '<option value="' + ch.id + '">Chapter ' + ch.id + ': ' + escHtml(ch.title) + '</option>'
+    ).join('');
+
+  // Build document store
+  docStore = {};
+  allChapters.forEach(function(chapter) {
+    chapter.articles.forEach(function(art) {
+      const id = chapter.chapter + '-' + art.article;
+      docStore[id] = {
+        id:           id,
+        chapterNum:   chapter.chapter,
+        chapterTitle: chapter.title,
+        article:      art.article,
+        heading:      art.heading,
+        content:      art.content
+      };
+    });
+  });
+
+  // Build lunr index
+  lunrIndex = lunr(function() {
+    this.ref('id');
+    this.field('heading', { boost: 10 });
+    this.field('content', { boost: 5  });
+    this.field('article', { boost: 8  });
+    var docs = docStore;
+    Object.keys(docs).forEach(function(k) { this.add(docs[k]); }, this);
+  });
+
+  var count = Object.keys(docStore).length;
+  resultsWrap.innerHTML = '<p style="color:var(--muted);padding:8px 0">Index ready — ' +
+    count + ' articles across ' + index.chapters.length + ' chapters. Enter a term above and press Search.</p>';
+}
+
+function highlight(text, query) {
+  var re = new RegExp('(' + query.replace(/[.*+?^${}()|[\]\\]/g, '\\$&') + ')', 'gi');
+  return escHtml(text).replace(re, '<mark>$1</mark>');
+}
+
+function doSearch() {
+  var query  = searchInput.value.trim();
+  var filter = chapterFilter.value;
+
+  if (!query) {
+    resultsWrap.innerHTML = '<p class="no-results">Please enter a search term.</p>';
+    return;
+  }
+  if (!lunrIndex) {
+    resultsWrap.innerHTML = '<p class="no-results">Index not ready yet. Please wait…</p>';
+    return;
+  }
+
+  var results;
+  try        { results = lunrIndex.search(query + '*'); }
+  catch(err) { results = lunrIndex.search(query);       }
+
+  if (filter) {
+    results = results.filter(function(r) {
+      return docStore[r.ref] && docStore[r.ref].chapterNum === parseInt(filter, 10);
+    });
+  }
+
+  if (results.length === 0) {
+    resultsWrap.innerHTML = '<div class="no-results"><p>No results for "<strong>' +
+      escHtml(query) + '</strong>". Try different keywords.</p></div>';
+    return;
+  }
+
+  resultsWrap.innerHTML =
+    '<p style="font-size:.85rem;color:var(--muted);margin-bottom:16px">' +
+    results.length + ' article' + (results.length !== 1 ? 's' : '') +
+    ' matched "<strong>' + escHtml(query) + '</strong>"</p>' +
+    results.map(function(r) {
+      var doc  = docStore[r.ref];
+      var snip = doc.content.length > 240 ? doc.content.slice(0, 240) + '…' : doc.content;
+      return '<div class="search-result">' +
+        '<h4>Article ' + escHtml(doc.article) + ' — ' + escHtml(doc.heading) + '</h4>' +
+        '<p style="font-size:.78rem;color:var(--accent);margin-bottom:6px">Chapter ' +
+          doc.chapterNum + ': ' + escHtml(doc.chapterTitle) + '</p>' +
+        '<p>' + highlight(snip, query) + '</p>' +
+        '<a href="manual.html#art-' + doc.article.replace(/\./g, '-') +
+           '" class="btn btn-sm btn-outline" style="margin-top:10px">View in Manual →</a>' +
+        '</div>';
+    }).join('');
+}
+
+searchBtn.addEventListener('click', doSearch);
+searchInput.addEventListener('keydown', function(e) { if (e.key === 'Enter') doSearch(); });
+
+// Auto-search from URL param e.g. search.html?q=stalemate
+var urlQ = new URLSearchParams(location.search).get('q');
+if (urlQ) searchInput.value = urlQ;
+
+buildIndex().then(function() {
+  if (urlQ) doSearch();
+}).catch(function(err) {
+  resultsWrap.innerHTML = '<div style="padding:20px;color:var(--danger)">' +
+    '<strong>Failed to build index:</strong> ' + escHtml(err.message) + '<br><br>' +
+    '<small>Run the site via: <code>python start-server.py</code></small></div>';
+});
+</script>
 
 </body>
 </html>

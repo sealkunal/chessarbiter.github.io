@@ -1,0 +1,76 @@
+{
+  "chapter": 9,
+  "title": "Chapter 9 – Competition Regulations & Tie-Breaks: Mock Exam",
+  "questions": [
+    {
+      "id": "c9q1",
+      "text": "What happens to results already scored against a player who withdraws having completed less than 50% of their games?",
+      "difficulty": "hard",
+      "article": "C05.3",
+      "options": [
+        { "id": "a", "text": "All results stand" },
+        { "id": "b", "text": "Results are cancelled" },
+        { "id": "c", "text": "Results are converted to half-point byes" },
+        { "id": "d", "text": "Only wins against the withdrawn player are cancelled" }
+      ],
+      "correct": "b",
+      "explanation": "As per Article C05.3, if a player withdraws having completed less than 50% of their games, all results already scored against that player are cancelled. If 50% or more are completed, all results stand."
+    },
+    {
+      "id": "c9q2",
+      "text": "What is the Buchholz score?",
+      "difficulty": "medium",
+      "article": "C07.2",
+      "options": [
+        { "id": "a", "text": "The sum of a player's own scores across all rounds" },
+        { "id": "b", "text": "The sum of the final scores of all of a player's opponents" },
+        { "id": "c", "text": "The number of wins minus the number of losses" },
+        { "id": "d", "text": "The average rating of all opponents faced" }
+      ],
+      "correct": "b",
+      "explanation": "As per Article C07.2, the Buchholz score is the sum of the final scores of all of a player's opponents. A higher Buchholz score indicates the player faced stronger opposition."
+    },
+    {
+      "id": "c9q3",
+      "text": "The Sonneborn-Berger system is used primarily in which type of tournament?",
+      "difficulty": "medium",
+      "article": "C07.3",
+      "options": [
+        { "id": "a", "text": "Swiss System tournaments" },
+        { "id": "b", "text": "Knock-out tournaments" },
+        { "id": "c", "text": "Round Robin tournaments" },
+        { "id": "d", "text": "Scheveningen System tournaments" }
+      ],
+      "correct": "c",
+      "explanation": "As per Article C07.3, the Sonneborn-Berger score is used primarily in Round Robin tournaments. It rewards winning against stronger opponents more than winning against weaker ones."
+    },
+    {
+      "id": "c9q4",
+      "text": "How far in advance must an international tournament be publicly announced?",
+      "difficulty": "medium",
+      "article": "C05.2",
+      "options": [
+        { "id": "a", "text": "At least 15 days" },
+        { "id": "b", "text": "At least 30 days" },
+        { "id": "c", "text": "At least 60 days" },
+        { "id": "d", "text": "At least 90 days" }
+      ],
+      "correct": "c",
+      "explanation": "As per Article C05.2, international tournaments must be announced publicly at least 60 days before the start. National events require at least 30 days. The announcement must include all key details."
+    },
+    {
+      "id": "c9q5",
+      "text": "When must the tie-break system be announced in a tournament?",
+      "difficulty": "easy",
+      "article": "C07.1",
+      "options": [
+        { "id": "a", "text": "After the final round when ties are known" },
+        { "id": "b", "text": "Before the start of the tournament" },
+        { "id": "c", "text": "At the start of the final round" },
+        { "id": "d", "text": "Only if a tie actually occurs" }
+      ],
+      "correct": "b",
+      "explanation": "As per Article C07.1, the tie-break system to be used must be announced before the start of the tournament. This ensures all participants know the rules before they begin competing."
+    }
+  ]
+}

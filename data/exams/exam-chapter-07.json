@@ -1,0 +1,76 @@
+{
+  "chapter": 7,
+  "title": "Chapter 7 – FIDE Title Regulations: Mock Exam",
+  "questions": [
+    {
+      "id": "c7q1",
+      "text": "What minimum FIDE rating is required to be awarded the Grandmaster title?",
+      "difficulty": "medium",
+      "article": "B01.3",
+      "options": [
+        { "id": "a", "text": "2400" },
+        { "id": "b", "text": "2450" },
+        { "id": "c", "text": "2500" },
+        { "id": "d", "text": "2600" }
+      ],
+      "correct": "c",
+      "explanation": "As per Article B01.3, to earn the Grandmaster title, a player must achieve a FIDE rating of at least 2500, in addition to scoring three GM norms with a performance rating of at least 2600."
+    },
+    {
+      "id": "c7q2",
+      "text": "How is the FIDE Master (FM) title earned?",
+      "difficulty": "easy",
+      "article": "B01.5",
+      "options": [
+        { "id": "a", "text": "By scoring three FM norms in qualifying events" },
+        { "id": "b", "text": "By achieving a FIDE rating of 2300 or more" },
+        { "id": "c", "text": "By winning a national championship" },
+        { "id": "d", "text": "By passing the FIDE FM examination" }
+      ],
+      "correct": "b",
+      "explanation": "As per Article B01.5, the FIDE Master title is awarded to any player who achieves a FIDE rating of 2300 or more. No norms are required for the FM title."
+    },
+    {
+      "id": "c7q3",
+      "text": "How many GM norms are required to be awarded the Grandmaster title?",
+      "difficulty": "easy",
+      "article": "B01.3",
+      "options": [
+        { "id": "a", "text": "One" },
+        { "id": "b", "text": "Two" },
+        { "id": "c", "text": "Three" },
+        { "id": "d", "text": "Five" }
+      ],
+      "correct": "c",
+      "explanation": "As per Article B01.3, to earn the Grandmaster title a player must score three GM norms in events meeting specific criteria, in addition to achieving a rating of 2500."
+    },
+    {
+      "id": "c7q4",
+      "text": "Who submits the title application to FIDE on behalf of a player?",
+      "difficulty": "medium",
+      "article": "B01.7",
+      "options": [
+        { "id": "a", "text": "The player directly submits to FIDE" },
+        { "id": "b", "text": "The tournament organiser submits automatically" },
+        { "id": "c", "text": "The national federation of the player" },
+        { "id": "d", "text": "The Chief Arbiter of the qualifying event" }
+      ],
+      "correct": "c",
+      "explanation": "As per Article B01.7, applications for FIDE titles must be submitted by the national federation of the player. The application must include title report forms, evidence of norms, and the applicable fee."
+    },
+    {
+      "id": "c7q5",
+      "text": "What is the minimum performance rating required to achieve an International Master norm?",
+      "difficulty": "hard",
+      "article": "B01.4",
+      "options": [
+        { "id": "a", "text": "2400" },
+        { "id": "b", "text": "2450" },
+        { "id": "c", "text": "2500" },
+        { "id": "d", "text": "2600" }
+      ],
+      "correct": "b",
+      "explanation": "As per Article B01.4, an IM norm requires a performance rating of at least 2450. The IM title also requires achieving a FIDE rating of at least 2400 and scoring three IM norms."
+    }
+  ]
+}

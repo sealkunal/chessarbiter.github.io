@@ -1,126 +1,331 @@
 {
   "title": "Full Mock Exam – All Chapters",
-  "description": "A comprehensive exam covering all chapters of the FIDE Arbiter's Manual",
+  "description": "25-question comprehensive exam covering all 12 chapters of the FIDE Arbiter's Manual",
   "questions": [
     {
-      "id": "c1q1", "chapter": 1, "text": "What is the objective of each player in a game of chess?",
-      "difficulty": "easy", "article": "1.1",
+      "id": "fq01", "chapter": 1,
+      "text": "How early before a round should an arbiter arrive at the playing hall for the FIRST round of a tournament?",
+      "difficulty": "medium", "article": "1.2",
       "options": [
-        { "id": "a", "text": "To capture all opponent's pieces" },
-        { "id": "b", "text": "To place the opponent's king under attack with no legal escape" },
-        { "id": "c", "text": "To occupy the centre of the board" },
-        { "id": "d", "text": "To promote a pawn to a queen" }
-      ],
-      "correct": "b",
-      "explanation": "As per Article 1.1, the objective of each player is to place the opponent's king under attack in such a way that the opponent has no legal move. This is called checkmate."
-    },
-    {
-      "id": "c1q2", "chapter": 1, "text": "How must the chessboard be placed at the start of the game?",
-      "difficulty": "easy", "article": "1.2",
-      "options": [
-        { "id": "a", "text": "Near corner square to the left of each player must be white" },
-        { "id": "b", "text": "Near corner square to the right of each player must be black" },
-        { "id": "c", "text": "Near corner square to the right of each player must be white" },
-        { "id": "d", "text": "It does not matter which way the board is placed" }
+        { "id": "a", "text": "15 minutes" },
+        { "id": "b", "text": "30 minutes" },
+        { "id": "c", "text": "1 hour" },
+        { "id": "d", "text": "2 hours" }
       ],
       "correct": "c",
-      "explanation": "As per Article 1.2, the near corner square to the right of each player must be white."
+      "explanation": "Per Article 1.2, for the first round of the tournament the arbiter should arrive at least one (1) hour before the start. For subsequent rounds, 30 minutes is the minimum."
     },
     {
-      "id": "c1q3", "chapter": 1, "text": "What happens if a player arrives after the default time at the start of a session?",
-      "difficulty": "medium", "article": "6.7",
+      "id": "fq02", "chapter": 1,
+      "text": "Which of the following is an acceptable behaviour for an arbiter while supervising games in progress?",
+      "difficulty": "medium", "article": "1.1",
       "options": [
-        { "id": "a", "text": "The player receives a warning" },
-        { "id": "b", "text": "The player's clock continues to run" },
-        { "id": "c", "text": "The player shall lose the game unless the arbiter decides otherwise" },
-        { "id": "d", "text": "The game is adjourned" }
+        { "id": "a", "text": "Leaving the playing area every 15 minutes to smoke" },
+        { "id": "b", "text": "Sitting at a computer surfing the internet" },
+        { "id": "c", "text": "Actively observing all games, especially those in time trouble" },
+        { "id": "d", "text": "Speaking on their mobile phone in the playing hall" }
       ],
       "correct": "c",
-      "explanation": "As per Article 6.7, any player who arrives at the chessboard after the start of the session shall lose the game unless the arbiter decides otherwise."
+      "explanation": "Per Article 1.1, arbiters must observe all games especially in time trouble. Leaving the area frequently, surfing the internet, or using mobile phones are all explicitly prohibited behaviours."
     },
     {
-      "id": "c1q4", "chapter": 1, "text": "What is stalemate?",
-      "difficulty": "easy", "article": "9.1",
+      "id": "fq03", "chapter": 2,
+      "text": "What is the objective of each player in a game of chess?",
+      "difficulty": "easy", "article": "1.1 (FIDE Laws)",
       "options": [
-        { "id": "a", "text": "When a player's king is in check with no legal move" },
-        { "id": "b", "text": "When a player has no legal move and their king is NOT in check" },
-        { "id": "c", "text": "When both players agree to end the game" },
-        { "id": "d", "text": "When only kings remain on the board" }
+        { "id": "a", "text": "To capture all of the opponent's pieces" },
+        { "id": "b", "text": "To place the opponent's king under attack with no legal escape (checkmate)" },
+        { "id": "c", "text": "To occupy the four central squares" },
+        { "id": "d", "text": "To promote a pawn first" }
       ],
       "correct": "b",
-      "explanation": "As per Article 9.1, stalemate occurs when the player to move has no legal move and their king is NOT in check. The game is drawn."
+      "explanation": "Per FIDE Laws Article 1.1, the objective of each player is to place the opponent's king 'under attack in such a way that the opponent has no legal move.' This is called checkmate."
     },
     {
-      "id": "c2q1", "chapter": 2, "text": "What is a player forbidden to use during play?",
-      "difficulty": "easy", "article": "11.1",
-      "options": [
-        { "id": "a", "text": "A scoresheet" },
-        { "id": "b", "text": "Notes, sources of information or advice" },
-        { "id": "c", "text": "A chess clock" },
-        { "id": "d", "text": "A pen or pencil" }
-      ],
-      "correct": "b",
-      "explanation": "As per Article 11.1, during play the players are forbidden to use any notes, sources of information or advice, or analyse on another chessboard."
-    },
-    {
-      "id": "c2q2", "chapter": 2, "text": "What is the penalty if a player is found to have a mobile phone in the playing venue?",
-      "difficulty": "medium", "article": "11.2",
-      "options": [
-        { "id": "a", "text": "A warning is issued" },
-        { "id": "b", "text": "Time is added to the opponent's clock" },
-        { "id": "c", "text": "The player shall lose the game; the opponent shall win" },
-        { "id": "d", "text": "The game is restarted" }
-      ],
-      "correct": "c",
-      "explanation": "As per Article 11.2, if a player has a mobile phone on their person in the playing venue, they shall lose the game and the opponent shall win."
-    },
-    {
-      "id": "c2q4", "chapter": 2, "text": "Can a player leave the playing venue during a game?",
+      "id": "fq04", "chapter": 2,
+      "text": "Under what condition may a player leave the playing venue during a game?",
       "difficulty": "easy", "article": "11.5",
       "options": [
-        { "id": "a", "text": "Yes, at any time freely" },
-        { "id": "b", "text": "Yes, but only with permission of the arbiter" },
-        { "id": "c", "text": "No, never under any circumstances" },
-        { "id": "d", "text": "Yes, but only during the opponent's turn" }
+        { "id": "a", "text": "Only in the last round" },
+        { "id": "b", "text": "Only with the permission of the arbiter" },
+        { "id": "c", "text": "At any time freely" },
+        { "id": "d", "text": "Only during the opponent's thinking time" }
       ],
       "correct": "b",
-      "explanation": "As per Article 11.5, players may leave the playing venue during the game only with the permission of the arbiter."
+      "explanation": "Per FIDE Laws Article 11.5, players may leave the playing venue during the game only with the permission of the arbiter."
     },
     {
-      "id": "c3q1", "chapter": 3, "text": "What is the primary duty of a FIDE Arbiter?",
-      "difficulty": "easy", "article": "12.1",
+      "id": "fq05", "chapter": 2,
+      "text": "What happens if a player makes an illegal move in a standard game and the opponent presses the clock?",
+      "difficulty": "hard", "article": "7.5",
       "options": [
-        { "id": "a", "text": "To assist players with their moves" },
-        { "id": "b", "text": "To see that the Laws of Chess are strictly observed" },
-        { "id": "c", "text": "To record all moves of each game" },
-        { "id": "d", "text": "To broadcast the games to spectators" }
+        { "id": "a", "text": "The player immediately loses the game" },
+        { "id": "b", "text": "The position is restored to the moment before the illegal move; the offender's time is penalised" },
+        { "id": "c", "text": "The move is played and is irreversible" },
+        { "id": "d", "text": "The game is restarted from the beginning" }
       ],
       "correct": "b",
-      "explanation": "As per Article 12.1, the arbiter shall see that the Laws of Chess are strictly observed and act in the best interest of the competition."
+      "explanation": "Per FIDE Laws Article 7.5, if during a game it is found that an illegal move was made, the position shall be reinstated to what it was immediately before the illegal move. The clocks shall be adjusted accordingly, including a time penalty."
     },
     {
-      "id": "c3q2", "chapter": 3, "text": "Which of the following is NOT a valid penalty an arbiter can apply?",
+      "id": "fq06", "chapter": 3,
+      "text": "What is the primary goal of FIDE's Anti-Cheating Regulations?",
+      "difficulty": "easy", "article": "A09",
+      "options": [
+        { "id": "a", "text": "To punish players who make dubious moves" },
+        { "id": "b", "text": "To protect the integrity of chess competition and deter the use of electronic assistance" },
+        { "id": "c", "text": "To restrict access to strong players at open events" },
+        { "id": "d", "text": "To reduce the number of draws in elite chess" }
+      ],
+      "correct": "b",
+      "explanation": "The FIDE Anti-Cheating Regulations (A09) exist to protect the integrity of chess competition, specifically deterring and detecting the use of external assistance, particularly computer assistance, during games."
+    },
+    {
+      "id": "fq07", "chapter": 3,
+      "text": "Which of the following is a valid penalty an arbiter may impose under FIDE Laws Article 12.2?",
       "difficulty": "medium", "article": "12.2",
       "options": [
-        { "id": "a", "text": "Warning the player" },
-        { "id": "b", "text": "Declaring the game lost by the offending player" },
-        { "id": "c", "text": "Awarding the offending player extra time" },
-        { "id": "d", "text": "Expulsion from the event" }
-      ],
-      "correct": "c",
-      "explanation": "As per Article 12.2, arbiters increase the OPPONENT's time (not the offender's). Valid penalties: warning, increasing opponent's time, reducing offender's time, declaring loss, expulsion."
-    },
-    {
-      "id": "c3q4", "chapter": 3, "text": "When should the arbiter intervene in a game?",
-      "difficulty": "hard", "article": "12.7",
-      "options": [
-        { "id": "a", "text": "Whenever the arbiter believes a player is making a bad move" },
-        { "id": "b", "text": "Only in cases described by the Laws of Chess" },
-        { "id": "c", "text": "Whenever a player requests advice" },
-        { "id": "d", "text": "At the end of every 10 moves" }
+        { "id": "a", "text": "Awarding the offending player extra time" },
+        { "id": "b", "text": "Reducing the remaining time of the offending player" },
+        { "id": "c", "text": "Requiring the offending player to replay the entire game" },
+        { "id": "d", "text": "Fining the offending player a monetary amount" }
       ],
       "correct": "b",
-      "explanation": "As per Article 12.7, the arbiter shall not intervene in a game except in cases described by the Laws of Chess."
+      "explanation": "Per Article 12.2, valid arbiter penalties include: warning, increasing the opponent's time, reducing the offender's time, declaring the game lost by the offender, and expulsion. Monetary fines are not a listed chess-game penalty."
+    },
+    {
+      "id": "fq08", "chapter": 4,
+      "text": "In a round-robin tournament with an ODD number of players, what happens in each round?",
+      "difficulty": "easy", "article": "4.1",
+      "options": [
+        { "id": "a", "text": "A player is eliminated" },
+        { "id": "b", "text": "One player receives a bye" },
+        { "id": "c", "text": "Two players must share one board" },
+        { "id": "d", "text": "The tournament pauses for that round" }
+      ],
+      "correct": "b",
+      "explanation": "In a round-robin with an odd number of players, one player receives a bye each round. The Berger table assigns the bye systematically so each player receives it exactly once."
+    },
+    {
+      "id": "fq09", "chapter": 4,
+      "text": "What is the defining characteristic of a Knock-out tournament system?",
+      "difficulty": "easy", "article": "4.7",
+      "options": [
+        { "id": "a", "text": "Players are paired against opponents with equal scores" },
+        { "id": "b", "text": "Every player meets every other player" },
+        { "id": "c", "text": "Players are eliminated after losing a match" },
+        { "id": "d", "text": "Two teams play each member of the other team" }
+      ],
+      "correct": "c",
+      "explanation": "In a knock-out (or elimination) tournament, players are eliminated after losing a match. Winners advance to the next round until only the champion remains."
+    },
+    {
+      "id": "fq10", "chapter": 5,
+      "text": "Which Swiss pairing system is the FIDE standard and is required for FIDE-rated events unless another approved system is specified?",
+      "difficulty": "medium", "article": "C04.3",
+      "options": [
+        { "id": "a", "text": "The Monrad System" },
+        { "id": "b", "text": "The McMahon System" },
+        { "id": "c", "text": "The Dutch System" },
+        { "id": "d", "text": "The SSYS System" }
+      ],
+      "correct": "c",
+      "explanation": "Per FIDE Swiss Rules (C04), the Dutch System is the standard FIDE Swiss pairing system. The Baku Acceleration is an FIDE-approved accelerated variant, but the Dutch System is the default standard."
+    },
+    {
+      "id": "fq11", "chapter": 5,
+      "text": "In the Baku Acceleration system, what is the purpose of assigning virtual points to the top-ranked players in early rounds?",
+      "difficulty": "hard", "article": "C04.5.1",
+      "options": [
+        { "id": "a", "text": "To reward players who paid higher entry fees" },
+        { "id": "b", "text": "To ensure top players meet each other earlier in the tournament" },
+        { "id": "c", "text": "To reduce the total number of rounds needed" },
+        { "id": "d", "text": "To compensate for late entries" }
+      ],
+      "correct": "b",
+      "explanation": "The Baku Acceleration assigns virtual rating-based points to the top half of players so that they meet each other earlier in the tournament, reducing early-round mismatches and producing more decisive results at the top from round one."
+    },
+    {
+      "id": "fq12", "chapter": 6,
+      "text": "What is the minimum rate of play required for a game to be eligible for FIDE standard rating?",
+      "difficulty": "easy", "article": "B02.1",
+      "options": [
+        { "id": "a", "text": "At least 30 minutes per player for all moves" },
+        { "id": "b", "text": "At least 60 minutes per player for all moves" },
+        { "id": "c", "text": "At least 10 minutes per player for all moves" },
+        { "id": "d", "text": "At least 90 minutes per player for all moves" }
+      ],
+      "correct": "b",
+      "explanation": "Per FIDE Rating Regulations B02.1, for standard rating the rate of play must allow at least 60 minutes for each player to complete all moves. Rapid requires 10–60 minutes; blitz requires 3–10 minutes."
+    },
+    {
+      "id": "fq13", "chapter": 6,
+      "text": "What is the K-factor used in the FIDE Elo rating formula for a new player (initial rating period)?",
+      "difficulty": "medium", "article": "B02.8",
+      "options": [
+        { "id": "a", "text": "K = 10" },
+        { "id": "b", "text": "K = 20" },
+        { "id": "c", "text": "K = 40" },
+        { "id": "d", "text": "K = 80" }
+      ],
+      "correct": "c",
+      "explanation": "Per B02.8, the K-factor is 40 for new players (first 30 games or until reaching a published rating). It is 20 for players below 2400 once established, and 10 for players who have ever achieved 2400 or above."
+    },
+    {
+      "id": "fq14", "chapter": 7,
+      "text": "What is the minimum FIDE rating required to earn the Grandmaster (GM) title?",
+      "difficulty": "easy", "article": "B01.3",
+      "options": [
+        { "id": "a", "text": "2400" },
+        { "id": "b", "text": "2450" },
+        { "id": "c", "text": "2500" },
+        { "id": "d", "text": "2600" }
+      ],
+      "correct": "c",
+      "explanation": "Per FIDE Title Regulations B01.3, a player must achieve a FIDE rating of at least 2500 AND score three GM norms (each with a performance rating of at least 2600) to be awarded the Grandmaster title."
+    },
+    {
+      "id": "fq15", "chapter": 7,
+      "text": "How is the FIDE Master (FM) title awarded — what is the requirement?",
+      "difficulty": "easy", "article": "B01.5",
+      "options": [
+        { "id": "a", "text": "Three FM norms and a rating of 2200" },
+        { "id": "b", "text": "Achieving a FIDE rating of 2300 or above" },
+        { "id": "c", "text": "Winning a national championship" },
+        { "id": "d", "text": "Playing 100 rated games" }
+      ],
+      "correct": "b",
+      "explanation": "Per B01.5, the FM title is awarded to any player who achieves a FIDE standard rating of 2300 or above. No norms are required — it is a rating-based title only."
+    },
+    {
+      "id": "fq16", "chapter": 8,
+      "text": "What is the recommended minimum table size for an OTB chess game according to FIDE Technical Recommendations?",
+      "difficulty": "medium", "article": "8.1",
+      "options": [
+        { "id": "a", "text": "60 cm × 60 cm" },
+        { "id": "b", "text": "70 cm × 70 cm" },
+        { "id": "c", "text": "100 cm × 80 cm" },
+        { "id": "d", "text": "120 cm × 100 cm" }
+      ],
+      "correct": "c",
+      "explanation": "FIDE Technical Recommendations specify that each player should have sufficient playing space. The recommended minimum table size is approximately 100 cm × 80 cm to comfortably accommodate the board, clock, scoresheets and player materials."
+    },
+    {
+      "id": "fq17", "chapter": 8,
+      "text": "What is the recommended king height for a chess set used in a FIDE-rated event?",
+      "difficulty": "hard", "article": "8.2",
+      "options": [
+        { "id": "a", "text": "7–10 cm" },
+        { "id": "b", "text": "8.5–10.5 cm" },
+        { "id": "c", "text": "9–10.5 cm" },
+        { "id": "d", "text": "6–8 cm" }
+      ],
+      "correct": "b",
+      "explanation": "FIDE Technical Recommendations specify that the king height should be between 8.5 cm and 10.5 cm for standard FIDE-rated events. The king's base diameter should be 40–50% of its height."
+    },
+    {
+      "id": "fq18", "chapter": 9,
+      "text": "In FIDE tournament regulations, what is the standard tiebreak criterion used FIRST when players are equal on points?",
+      "difficulty": "hard", "article": "C05",
+      "options": [
+        { "id": "a", "text": "Number of wins" },
+        { "id": "b", "text": "Buchholz score (sum of opponents' scores)" },
+        { "id": "c", "text": "Direct encounter (head-to-head result)" },
+        { "id": "d", "text": "Rating at the start of the event" }
+      ],
+      "correct": "b",
+      "explanation": "Per FIDE General Competition Regulations (C05), in Swiss system events, Buchholz (sum of opponents' final scores) is the most commonly applied first tiebreak. However, specific events may specify direct encounter first — tiebreak order must be announced before the event."
+    },
+    {
+      "id": "fq19", "chapter": 9,
+      "text": "A player who withdraws from a tournament before it ends — how are their results treated in terms of FIDE rating?",
+      "difficulty": "hard", "article": "C07",
+      "options": [
+        { "id": "a", "text": "All results stand regardless of when the player withdrew" },
+        { "id": "b", "text": "All results are cancelled" },
+        { "id": "c", "text": "Results of opponents who played the withdrawn player may be excluded if the player completed fewer than 50% of their games" },
+        { "id": "d", "text": "The withdrawn player's results are kept; opponents' results against them are cancelled" }
+      ],
+      "correct": "c",
+      "explanation": "Per FIDE regulations, if a player withdraws having completed fewer than 50% of their scheduled games, the results against that player may be excluded from both tiebreak calculations and rating reports depending on the regulation applied."
+    },
+    {
+      "id": "fq20", "chapter": 10,
+      "text": "What is the minimum examination pass mark required at a FIDE Arbiter seminar to qualify for the FA (FIDE Arbiter) title application?",
+      "difficulty": "medium", "article": "B06.2",
+      "options": [
+        { "id": "a", "text": "60%" },
+        { "id": "b", "text": "70%" },
+        { "id": "c", "text": "75%" },
+        { "id": "d", "text": "80%" }
+      ],
+      "correct": "d",
+      "explanation": "Per FIDE Regulations for Arbiters (B06), candidates must pass the FIDE Arbiter seminar exam with a score of at least 80% to qualify for the FA title application."
+    },
+    {
+      "id": "fq21", "chapter": 10,
+      "text": "FIDE awards two arbiter titles: FIDE Arbiter (FA) and International Arbiter (IA). Which title requires the higher level of qualifying events?",
+      "difficulty": "easy", "article": "B06.1",
+      "options": [
+        { "id": "a", "text": "FIDE Arbiter (FA)" },
+        { "id": "b", "text": "International Arbiter (IA)" },
+        { "id": "c", "text": "Both require exactly the same events" },
+        { "id": "d", "text": "Neither — they are awarded simultaneously" }
+      ],
+      "correct": "b",
+      "explanation": "Per B06.1, the IA (International Arbiter) title requires serving as Chief Arbiter or Deputy Chief Arbiter at international qualifying events and accumulating norms at higher-level events than those required for the FA title."
+    },
+    {
+      "id": "fq22", "chapter": 11,
+      "text": "Under FIDE Online Chess Regulations (E04), what is a 'hybrid' chess event?",
+      "difficulty": "medium", "article": "E04",
+      "options": [
+        { "id": "a", "text": "An event mixing rapid and blitz games" },
+        { "id": "b", "text": "An event combining both over-the-board (OTB) and online play" },
+        { "id": "c", "text": "An event mixing team and individual formats" },
+        { "id": "d", "text": "An event open to both humans and computer programs" }
+      ],
+      "correct": "b",
+      "explanation": "Per FIDE Online Chess Regulations (E04), a hybrid event is one that combines over-the-board play with online play — for example where players are physically present in different locations but compete over an online platform under arbiter supervision."
+    },
+    {
+      "id": "fq23", "chapter": 11,
+      "text": "In an online FIDE-rated chess event, who is responsible for ensuring the integrity of the games?",
+      "difficulty": "easy", "article": "E04",
+      "options": [
+        { "id": "a", "text": "The platform operator alone" },
+        { "id": "b", "text": "The players themselves" },
+        { "id": "c", "text": "The appointed arbiter, following FIDE Online Chess Regulations" },
+        { "id": "d", "text": "The national federation of the strongest player" }
+      ],
+      "correct": "c",
+      "explanation": "Per FIDE Online Chess Regulations (E04), the appointed arbiter is responsible for the integrity of the event and must apply FIDE regulations adapted for the online environment."
+    },
+    {
+      "id": "fq24", "chapter": 12,
+      "text": "A player knocks over several pieces during time trouble. Who is responsible for restoring the position, and when?",
+      "difficulty": "medium", "article": "7.3 / 7.4",
+      "options": [
+        { "id": "a", "text": "Only the arbiter must restore pieces, only after the game ends" },
+        { "id": "b", "text": "Both the player who knocked pieces over and the opponent must restore them immediately" },
+        { "id": "c", "text": "The player who knocked the pieces over must restore them on their own time; the opponent must stop the clock first" },
+        { "id": "d", "text": "It is left unresolved until the round ends" }
+      ],
+      "correct": "b",
+      "explanation": "Per FIDE Laws Articles 7.3/7.4, if pieces are accidentally displaced, both players are responsible for restoring the position using the scoresheet and the clock if necessary. The arbiter should be called if agreement cannot be reached."
+    },
+    {
+      "id": "fq25", "chapter": 12,
+      "text": "In the FIDE Arbiter exam context, what percentage score is generally considered a passing grade, reflecting the standard applied at official FIDE Arbiter seminars?",
+      "difficulty": "easy", "article": "B06.2",
+      "options": [
+        { "id": "a", "text": "50%" },
+        { "id": "b", "text": "60%" },
+        { "id": "c", "text": "75%" },
+        { "id": "d", "text": "80%" }
+      ],
+      "correct": "d",
+      "explanation": "FIDE Arbiter seminars require candidates to score at least 80% on the written examination to be eligible to apply for the FIDE Arbiter (FA) title. This portal also uses 75% as a practice pass threshold to prepare candidates."
     }
   ]
 }

@@ -1,0 +1,46 @@
+{
+  "chapter": 11,
+  "title": "FIDE Online Chess Regulations (E04)",
+  "articles": [
+    {
+      "article": "E04.1",
+      "heading": "Application of the FIDE Laws of Chess Online",
+      "content": "The FIDE Laws of Chess apply to online chess competitions except where modified by the Online Chess Regulations. Online chess competitions must be conducted on FIDE-approved or recognised platforms. The arbiter retains all authority as in over-the-board play. Technical issues specific to online play are governed by Articles 2–20 of the Online Chess Regulations."
+    },
+    {
+      "article": "E04.2",
+      "heading": "Playing Zone",
+      "content": "Players must play in a designated and supervised playing zone when the event requires supervision. The playing zone must have a stable internet connection, adequate lighting for video monitoring, and no unauthorised persons present. Players may not leave the playing zone during their game without arbiter permission, mirroring the over-the-board rule."
+    },
+    {
+      "article": "E04.3",
+      "heading": "Moving the Pieces on the Virtual Chessboard",
+      "content": "A move is considered made when it is executed on the virtual board and confirmed by the platform. The touch-move rule does not apply to online play — a player may select and deselect a piece without penalty until the move is confirmed. Once confirmed, the move cannot be taken back. If a technical error causes an incorrect move to be registered, the arbiter must investigate immediately."
+    },
+    {
+      "article": "E04.4",
+      "heading": "Virtual Chessclock",
+      "content": "The virtual clock starts automatically when the game begins. Time is controlled by the platform. If there is a discrepancy between the displayed time and the actual elapsed time due to a platform error, the arbiter has authority to adjust time. Players must report clock issues to the arbiter immediately — delayed reports may not be accepted."
+    },
+    {
+      "article": "E04.9",
+      "heading": "Players' Conduct in Online Competitions with Supervision",
+      "content": "In supervised online competitions, players must keep their camera on at all times and ensure their face is clearly visible. Players must not have any chess-related material visible in their environment. Mobile phones must be switched off or placed out of reach. Players may not consult any person, book, or electronic device during the game. Violations may result in the loss of the game."
+    },
+    {
+      "article": "E04.10",
+      "heading": "The Arbiter's Role in Online Competitions",
+      "content": "The arbiter monitors all games through the platform's monitoring tools and video feeds. The arbiter has authority to pause, resume, or terminate a game due to technical issues. If a player is found to have violated the conduct rules, the arbiter may declare the game lost for that player. The arbiter's decisions are final subject to appeal."
+    },
+    {
+      "article": "E04.11",
+      "heading": "Disconnections",
+      "content": "If a player is disconnected, the clock continues to run. The player must reconnect as quickly as possible. If the disconnection lasts longer than the time specified in the tournament regulations, the arbiter may declare the game lost for the disconnected player. Repeated disconnections by the same player may be treated as misconduct, especially if they occur at critical moments of the game."
+    },
+    {
+      "article": "E04.16",
+      "heading": "Hybrid Chess Competitions — General Provisions",
+      "content": "A hybrid chess competition is one in which some players are physically present in the playing venue while others participate remotely. The same Laws of Chess apply to all players. Special arrangements must be made for remote players to observe the game in real time and communicate with the arbiter. The technical requirements for hybrid events are more complex than for fully online events."
+    }
+  ]
+}

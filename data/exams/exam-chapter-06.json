@@ -1,0 +1,76 @@
+{
+  "chapter": 6,
+  "title": "Chapter 6 – FIDE Rating Regulations: Mock Exam",
+  "questions": [
+    {
+      "id": "c6q1",
+      "text": "What is the minimum time each player must have for a game to be eligible for FIDE standard rating?",
+      "difficulty": "medium",
+      "article": "B02.1",
+      "options": [
+        { "id": "a", "text": "30 minutes" },
+        { "id": "b", "text": "45 minutes" },
+        { "id": "c", "text": "60 minutes" },
+        { "id": "d", "text": "90 minutes" }
+      ],
+      "correct": "c",
+      "explanation": "As per Article B02.1, for a game to be rated by FIDE for standard rating, the rate of play must allow at least 60 minutes for each player to complete all moves."
+    },
+    {
+      "id": "c6q2",
+      "text": "What is the K-factor for a new player in the FIDE rating system?",
+      "difficulty": "hard",
+      "article": "B02.8",
+      "options": [
+        { "id": "a", "text": "10" },
+        { "id": "b", "text": "20" },
+        { "id": "c", "text": "30" },
+        { "id": "d", "text": "40" }
+      ],
+      "correct": "d",
+      "explanation": "As per Article B02.8, the K-factor is 40 for new players, 20 for players below 2400, and 10 for established players above 2400. A higher K-factor means ratings change more rapidly."
+    },
+    {
+      "id": "c6q3",
+      "text": "Within how many months of the event must a rating report be submitted to FIDE?",
+      "difficulty": "medium",
+      "article": "B02.4",
+      "options": [
+        { "id": "a", "text": "One month" },
+        { "id": "b", "text": "Two months" },
+        { "id": "c", "text": "Three months" },
+        { "id": "d", "text": "Six months" }
+      ],
+      "correct": "b",
+      "explanation": "As per Article B02.4, all rated events must be reported to FIDE within two months of the end of the event. Failure to report within this period may result in the event not being rated."
+    },
+    {
+      "id": "c6q4",
+      "text": "Are rapid and blitz ratings maintained separately from standard ratings?",
+      "difficulty": "easy",
+      "article": "B02-RB",
+      "options": [
+        { "id": "a", "text": "No, all ratings are combined into one FIDE rating" },
+        { "id": "b", "text": "Yes, rapid and blitz ratings are each maintained independently" },
+        { "id": "c", "text": "Only blitz is separate; rapid is combined with standard" },
+        { "id": "d", "text": "Only for players above 2000" }
+      ],
+      "correct": "b",
+      "explanation": "As per Article B02-RB, rapid and blitz games are rated separately from standard games. A player's rapid and blitz ratings are maintained independently on separate rating lists."
+    },
+    {
+      "id": "c6q5",
+      "text": "How is a player's expected score (We) used in the FIDE rating calculation?",
+      "difficulty": "hard",
+      "article": "B02.8",
+      "options": [
+        { "id": "a", "text": "We is subtracted from actual score W, then multiplied by K to get the rating change" },
+        { "id": "b", "text": "We is added to actual score W to get the new rating" },
+        { "id": "c", "text": "We is used only for title norm calculations, not rating changes" },
+        { "id": "d", "text": "We determines the K-factor to be applied" }
+      ],
+      "correct": "a",
+      "explanation": "As per Article B02.8, the rating change is calculated as K × (W - We), where K is the K-factor, W is the actual score achieved, and We is the expected score based on rating differences between the player and their opponents."
+    }
+  ]
+}

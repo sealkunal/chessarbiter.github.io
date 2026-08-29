@@ -6,29 +6,96 @@
   "chapters": [
     {
       "id": 1,
-      "title": "Laws of Chess",
-      "description": "Basic rules governing the game of chess",
+      "title": "The Role of the Arbiters and Their Duties",
+      "description": "General duties, responsibilities and conduct expected of arbiters",
       "file": "data/chapters/chapter-01.json",
       "exam": "data/exams/exam-chapter-01.json"
     },
     {
       "id": 2,
-      "title": "Conduct of Players",
-      "description": "Rules on player behaviour, fair play and ethics",
+      "title": "The FIDE Laws of Chess (E01)",
+      "description": "Complete Laws of Chess — Articles 1–12, Appendices and Guidelines",
       "file": "data/chapters/chapter-02.json",
       "exam": "data/exams/exam-chapter-02.json"
     },
     {
       "id": 3,
-      "title": "The Role of the Arbiter",
-      "description": "Duties, powers and responsibilities of the arbiter",
+      "title": "Anti-Cheating Regulations (A09)",
+      "description": "Fair Play definitions, regulations, protection measures and procedures",
       "file": "data/chapters/chapter-03.json",
       "exam": "data/exams/exam-chapter-03.json"
+    },
+    {
+      "id": 4,
+      "title": "Types of Tournaments",
+      "description": "Round Robin, Swiss, Scheveningen, Knock-out and Match systems",
+      "file": "data/chapters/chapter-04.json",
+      "exam": "data/exams/exam-chapter-04.json"
+    },
+    {
+      "id": 5,
+      "title": "FIDE Swiss Rules (C04)",
+      "description": "Swiss pairing systems including the Dutch System and Baku Acceleration",
+      "file": "data/chapters/chapter-05.json",
+      "exam": "data/exams/exam-chapter-05.json"
+    },
+    {
+      "id": 6,
+      "title": "FIDE Rating Regulations (B02)",
+      "description": "How FIDE ratings work, K-factors, reporting and rapid/blitz ratings",
+      "file": "data/chapters/chapter-06.json",
+      "exam": "data/exams/exam-chapter-06.json"
+    },
+    {
+      "id": 7,
+      "title": "FIDE Title Regulations (B01)",
+      "description": "Requirements for GM, IM, FM titles and the application procedure",
+      "file": "data/chapters/chapter-07.json",
+      "exam": "data/exams/exam-chapter-07.json"
+    },
+    {
+      "id": 8,
+      "title": "Technical Recommendations for Tournaments",
+      "description": "Playing venue standards, chess equipment and scoresheet requirements",
+      "file": "data/chapters/chapter-08.json",
+      "exam": "data/exams/exam-chapter-08.json"
+    },
+    {
+      "id": 9,
+      "title": "General Competition Regulations (C05–C07)",
+      "description": "Tournament regulations, withdrawals, tie-break and play-off systems",
+      "file": "data/chapters/chapter-09.json",
+      "exam": "data/exams/exam-chapter-09.json"
+    },
+    {
+      "id": 10,
+      "title": "FIDE Regulations for Arbiters (B06)",
+      "description": "FA and IA title requirements, training, classification and discipline",
+      "file": "data/chapters/chapter-10.json",
+      "exam": "data/exams/exam-chapter-10.json"
+    },
+    {
+      "id": 11,
+      "title": "FIDE Online Chess Regulations (E04)",
+      "description": "Rules for online and hybrid chess competitions",
+      "file": "data/chapters/chapter-11.json",
+      "exam": "data/exams/exam-chapter-11.json"
+    },
+    {
+      "id": 12,
+      "title": "Sample Exam Questions for Arbiters",
+      "description": "Practice questions in the style of the official FIDE Arbiter seminar exam",
+      "file": "data/chapters/chapter-12.json",
+      "exam": "data/exams/exam-chapter-12.json"
     }
   ],
   "fullExam": {
     "title": "Full Mock Exam",
-    "description": "Questions from all chapters",
+    "description": "25 questions covering all 12 chapters — comprehensive arbiter exam practice",
     "file": "data/exams/exam-full.json"
+  },
+  "pdf": {
+    "file": "data/Arbiters_Manual_2025.pdf",
+    "label": "Arbiters' Manual 2025 (PDF)"
   }
 }

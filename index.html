@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>FIDE Arbiter's Manual – Study & Exam Portal</title>
+  <title>Chess Arbiter – Study & Exam Portal</title>
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
@@ -11,7 +11,7 @@
 <!-- ── Header ────────────────────────────────────────────────────────────── -->
 <header class="site-header">
   <div class="header-inner">
-    <div class="site-logo">FIDE <span>Arbiter's Manual</span></div>
+    <div class="site-logo"><strong>Chess Arbiter</strong></div>
     <button class="nav-toggle" aria-label="Toggle navigation">
       <span></span><span></span><span></span>
     </button>
@@ -28,7 +28,7 @@
 <!-- ── Hero ──────────────────────────────────────────────────────────────── -->
 <section class="hero">
   <div class="container">
-    <h1>FIDE Arbiter's Manual</h1>
+    <h1><strong>Chess Arbiter</strong></h1>
     <p>Your complete study companion for the FIDE Arbiter examination. Read the manual chapter-by-chapter, test yourself with mock exams, and search any rule instantly.</p>
     <div style="display:flex;gap:14px;justify-content:center;flex-wrap:wrap;">
       <a href="manual.html" class="btn btn-white btn-lg">📖 Read the Manual</a>
@@ -71,9 +71,9 @@
         <div style="font-size:2rem;margin-bottom:12px;">📝</div>
         <h3 style="margin-bottom:8px;">Full Mock Exam</h3>
         <p style="color:var(--muted);font-size:.9rem;margin-bottom:16px;">
-          Take a comprehensive exam covering all chapters with instant results.
+          Multiple exam sets covering all chapters. Choose a set and test yourself with instant results.
         </p>
-        <a href="exam.html?file=data/exams/exam-full.json&title=Full+Mock+Exam" class="btn btn-primary">Start Exam</a>
+        <a href="exam.html" class="btn btn-primary">Choose Exam Set</a>
       </div>
 
       <div class="card" style="text-align:center;">
@@ -91,7 +91,7 @@
 
 <!-- ── Footer ────────────────────────────────────────────────────────────── -->
 <footer class="site-footer">
-  <p>FIDE Arbiter's Manual Study Portal &mdash; Free educational resource for aspiring FIDE Arbiters.</p>
+  <p>Chess Arbiter Study Portal &mdash; Free educational resource for aspiring FIDE Arbiters.</p>
   <p style="margin-top:6px;">Content based on FIDE Laws of Chess and Arbiter's Manual. Not an official FIDE publication.</p>
 </footer>
 
@@ -108,7 +108,7 @@
       <h3>${escHtml(ch.title)}</h3>
       <p>${escHtml(ch.description)}</p>
       <div class="card-actions">
-        <a href="manual.html" class="btn btn-secondary btn-sm">📖 Read</a>
+        <a href="manual.html?chapter=${ch.id}" class="btn btn-secondary btn-sm">📖 Read</a>
         <a href="exam.html?file=${encodeURIComponent(ch.exam)}&title=${encodeURIComponent(ch.title)}" class="btn btn-primary btn-sm">✏️ Exam</a>
       </div>
     </div>

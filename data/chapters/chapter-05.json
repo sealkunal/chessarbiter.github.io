@@ -1,0 +1,41 @@
+{
+  "chapter": 5,
+  "title": "FIDE Swiss Rules (C04)",
+  "articles": [
+    {
+      "article": "C04.1",
+      "heading": "Basic Rules for Swiss Systems",
+      "content": "The Swiss system is designed so that in each round players with equal or similar scores are paired against each other. A player is never paired against the same opponent twice. No player is eliminated. Each player receives a colour allocation as close to alternating as possible. The player ranked first in the initial order (or with the highest score) receives the white pieces in the first round unless determined otherwise."
+    },
+    {
+      "article": "C04.2A",
+      "heading": "Pairing Systems",
+      "content": "FIDE recognises the Dutch System and the Accelerated Systems (Baku Acceleration) as approved Swiss pairing systems. The pairing system to be used must be specified in the tournament regulations before the start of the event. Computer-generated pairings using FIDE-approved software are considered official."
+    },
+    {
+      "article": "C04.2B",
+      "heading": "Initial Order",
+      "content": "Before the first round, players are ranked by rating (highest first). Unrated players are ranked after rated players, ordered by any criterion announced in advance. In the absence of ratings, players may be ranked alphabetically or by drawing of lots. The initial order determines colour assignment in the first round."
+    },
+    {
+      "article": "C04.2C",
+      "heading": "Late Entries",
+      "content": "A player who enters after the first round has started is a late entry. Late entries are given a score of zero for each missed round or a half-point bye as specified in the tournament regulations. The arbiter decides the treatment of late entries and must announce the policy in advance."
+    },
+    {
+      "article": "C04.2D",
+      "heading": "Pairing, Colour and Publishing Rules",
+      "content": "Pairings must be published before the start of each round. Players have the right to check their pairing and colour. If a pairing error is discovered before the start of a game, it must be corrected. If discovered after the game has started, the arbiter must decide whether to continue with the incorrect pairing or to correct it, depending on the circumstances."
+    },
+    {
+      "article": "C04.3",
+      "heading": "FIDE (Dutch) System",
+      "content": "The Dutch system is the standard FIDE Swiss pairing system. Players are divided into score brackets. Within each bracket, the top half is paired against the bottom half. Colour preferences and colour history are taken into account. A player with a strong colour preference (having more games with one colour) should receive that colour. The system minimises colour imbalance over the course of the tournament."
+    },
+    {
+      "article": "C04.5.1",
+      "heading": "Baku Acceleration",
+      "content": "The Baku Acceleration is a FIDE-approved accelerated Swiss system. In the first rounds, players are given virtual points to create more competitive pairings at the top. The top half of players in the initial ranking receive additional virtual points (typically 1 point per round of acceleration). This results in top players meeting earlier in the tournament, reducing the number of easy wins in early rounds."
+    }
+  ]
+}

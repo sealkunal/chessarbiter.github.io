@@ -1,0 +1,41 @@
+{
+  "chapter": 7,
+  "title": "FIDE Title Regulations (B01)",
+  "articles": [
+    {
+      "article": "B01.1",
+      "heading": "General Title Requirements",
+      "content": "FIDE awards titles to players who meet specific performance requirements. The main titles are Grandmaster (GM), International Master (IM), FIDE Master (FM), Candidate Master (CM), Woman Grandmaster (WGM), Woman International Master (WIM), Woman FIDE Master (WFM), and Woman Candidate Master (WCM). Titles are awarded for life unless revoked for disciplinary reasons."
+    },
+    {
+      "article": "B01.2",
+      "heading": "Title Norms",
+      "content": "A title norm is a performance requirement achieved in a specific tournament. To achieve a norm, a player must score a minimum number of points against a field of opponents with a sufficiently high average rating. The required score varies with the average rating of the opponents. Most titles require achieving a certain number of norms plus a minimum rating."
+    },
+    {
+      "article": "B01.3",
+      "heading": "Grandmaster Title Requirements",
+      "content": "To earn the Grandmaster title, a player must achieve a FIDE rating of at least 2500 and score three GM norms in events meeting specific criteria. A GM norm requires a performance rating of at least 2600. The events must have a minimum number of games, a minimum proportion of titled opponents, and opponents from at least two different federations other than the player's own."
+    },
+    {
+      "article": "B01.4",
+      "heading": "International Master Title Requirements",
+      "content": "To earn the International Master title, a player must achieve a FIDE rating of at least 2400 and score three IM norms. An IM norm requires a performance rating of at least 2450. The same conditions regarding number of games, proportion of titled opponents, and federation diversity apply as for the GM title."
+    },
+    {
+      "article": "B01.5",
+      "heading": "FIDE Master Title",
+      "content": "The FIDE Master title is awarded to any player who achieves a FIDE rating of 2300 or more. No norms are required. Once awarded, the FM title is retained even if the player's rating subsequently drops below 2300, unless the title is revoked for disciplinary reasons."
+    },
+    {
+      "article": "B01.6",
+      "heading": "Direct Titles",
+      "content": "Some titles may be awarded directly without norms in exceptional circumstances. Players who achieve specific results at top-level events such as the World Championship, Olympiad, or World Junior Championship may receive direct titles. The conditions for direct title awards are specified in the FIDE Handbook and updated periodically."
+    },
+    {
+      "article": "B01.7",
+      "heading": "Application Procedure",
+      "content": "Applications for FIDE titles must be submitted by the national federation of the player. The application must include the title report forms (IT1 and IT2 for player titles), evidence of norms, and the applicable fee. FIDE verifies the norms and awards the title if all conditions are met. The process is administered through the FIDE Online Arena."
+    }
+  ]
+}

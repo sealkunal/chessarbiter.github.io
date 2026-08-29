@@ -1,0 +1,76 @@
+{
+  "chapter": 5,
+  "title": "Chapter 5 – FIDE Swiss Rules: Mock Exam",
+  "questions": [
+    {
+      "id": "c5q1",
+      "text": "Which pairing system is the standard FIDE Swiss pairing system?",
+      "difficulty": "easy",
+      "article": "C04.3",
+      "options": [
+        { "id": "a", "text": "The Baku Acceleration System" },
+        { "id": "b", "text": "The Dutch System" },
+        { "id": "c", "text": "The Scheveningen System" },
+        { "id": "d", "text": "The Berger System" }
+      ],
+      "correct": "b",
+      "explanation": "As per Article C04.3, the Dutch System is the standard FIDE Swiss pairing system. Players are divided into score brackets and the top half is paired against the bottom half within each bracket."
+    },
+    {
+      "id": "c5q2",
+      "text": "In a Swiss system, can a player be paired against the same opponent twice?",
+      "difficulty": "easy",
+      "article": "C04.1",
+      "options": [
+        { "id": "a", "text": "Yes, if they are the only players with the same score" },
+        { "id": "b", "text": "Yes, but only in the final round" },
+        { "id": "c", "text": "No, a player is never paired against the same opponent twice" },
+        { "id": "d", "text": "Only if both players request it" }
+      ],
+      "correct": "c",
+      "explanation": "As per Article C04.1, a player is never paired against the same opponent twice in a Swiss system. This is a fundamental rule of all Swiss pairing systems."
+    },
+    {
+      "id": "c5q3",
+      "text": "In the Baku Acceleration system, what are virtual points used for?",
+      "difficulty": "hard",
+      "article": "C04.5.1",
+      "options": [
+        { "id": "a", "text": "To award bonus prizes to top-rated players" },
+        { "id": "b", "text": "To create more competitive pairings by making top players meet earlier" },
+        { "id": "c", "text": "To compensate players who receive a bye" },
+        { "id": "d", "text": "To calculate the final standings when scores are tied" }
+      ],
+      "correct": "b",
+      "explanation": "As per Article C04.5.1, in the Baku Acceleration system, top-ranked players receive virtual points in early rounds to create more competitive pairings. This ensures top players meet earlier, reducing easy wins."
+    },
+    {
+      "id": "c5q4",
+      "text": "When must pairings be published in a Swiss tournament?",
+      "difficulty": "medium",
+      "article": "C04.2D",
+      "options": [
+        { "id": "a", "text": "After the round has started" },
+        { "id": "b", "text": "Before the start of each round" },
+        { "id": "c", "text": "Only in the last round" },
+        { "id": "d", "text": "Only if a player requests to see them" }
+      ],
+      "correct": "b",
+      "explanation": "As per Article C04.2D, pairings must be published before the start of each round. Players have the right to check their pairing and colour. Errors discovered before the game starts must be corrected."
+    },
+    {
+      "id": "c5q5",
+      "text": "How are late entries treated in a Swiss tournament?",
+      "difficulty": "medium",
+      "article": "C04.2C",
+      "options": [
+        { "id": "a", "text": "They are not allowed to enter after the first round" },
+        { "id": "b", "text": "They receive full points for all missed rounds automatically" },
+        { "id": "c", "text": "They receive zero score or a half-point bye for each missed round as specified" },
+        { "id": "d", "text": "They are always paired in the last group regardless of rating" }
+      ],
+      "correct": "c",
+      "explanation": "As per Article C04.2C, late entries receive a score of zero for each missed round or a half-point bye as specified in the tournament regulations. The arbiter decides the treatment and must announce the policy in advance."
+    }
+  ]
+}

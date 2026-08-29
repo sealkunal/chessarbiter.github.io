@@ -1,0 +1,36 @@
+{
+  "chapter": 8,
+  "title": "General Rules and Technical Recommendations for Tournaments",
+  "articles": [
+    {
+      "article": "C01.1",
+      "heading": "Playing Area",
+      "content": "The playing area must be of sufficient size to accommodate all players comfortably, with adequate space between boards. Good lighting is essential — a minimum of 200 lux is recommended, with no direct light causing glare on the boards. The temperature should be comfortable, typically between 18 and 24 degrees Celsius. The playing area must be separate from spectator areas to prevent disturbance."
+    },
+    {
+      "article": "C01.2",
+      "heading": "Rest of the Playing Venue",
+      "content": "The playing venue should include adequate toilet facilities accessible without passing through the playing area. A separate analysis room should be provided where finished games can be discussed. Refreshments should be available. The venue must comply with all applicable safety and accessibility regulations."
+    },
+    {
+      "article": "C02.1",
+      "heading": "Standards of Chess Equipment",
+      "content": "FIDE sets standards for chess equipment used in rated events. The king should be between 85mm and 105mm in height. The diameter of the king's base should be 40-50% of its height. The board squares should be between 50mm and 65mm. The colour contrast between light and dark squares must be sufficient. Pieces should be of the Staunton pattern or an approved modern variation."
+    },
+    {
+      "article": "C02.2",
+      "heading": "FIDE Compliant Electronic Chess Equipment",
+      "content": "Electronic chess boards and digital clocks must be approved by FIDE to be used in rated events. Electronic boards must accurately record all moves without human error. Digital clocks must display time accurately and support all required time control formats including increments and delays. The list of FIDE-approved equipment is maintained on the FIDE website."
+    },
+    {
+      "article": "C02.3",
+      "heading": "Chess Clocks",
+      "content": "Digital clocks are mandatory in FIDE-rated events. Analogue clocks may be used in events where the time control does not include an increment, and only with specific approval. The clock must be placed to the right of the player with the black pieces unless both players agree otherwise or the arbiter decides differently. The arbiter has final authority on clock placement."
+    },
+    {
+      "article": "C02.4",
+      "heading": "Scoresheets",
+      "content": "Scoresheets must be provided to players in all rated events. The scoresheet must have spaces for the player's name, the opponent's name, the date, the round, the result, and at least 60 move pairs. Players must write legibly. The scoresheet belongs to the organiser and must be handed in at the end of the game. Players may request copies of their scoresheets."
+    }
+  ]
+}

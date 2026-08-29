@@ -4,13 +4,17 @@
 
 'use strict';
 
-const { fetchJSON, showLoading, escHtml } = window.FideApp;
-
-const sidebar   = document.getElementById('chapter-sidebar');
-const content   = document.getElementById('chapter-content');
-const pageTitle = document.getElementById('page-title');
+// All DOM refs and FideApp helpers resolved lazily inside init()
+// to guarantee app.js has run first.
 
 async function init() {
+  const { fetchJSON, showLoading, escHtml } = window.FideApp;
+  const sidebar   = document.getElementById('chapter-sidebar');
+  const content   = document.getElementById('chapter-content');
+  const pageTitle = document.getElementById('page-title'); // may be null — handled safely
+
+  if (!sidebar || !content) return; // required elements missing
+
   showLoading(content, 'Loading chapters…');
 
   const index = await fetchJSON('data/index.json');
@@ -25,7 +29,10 @@ async function init() {
 
   // Load first chapter by default
   const firstLink = sidebar.querySelector('a');
-  if (firstLink) loadChapter(firstLink);
+  if (firstLink) {
+    firstLink.classList.add('active');
+    loadChapter(firstLink);
+  }
 
   // Sidebar click
   sidebar.addEventListener('click', e => {
@@ -36,34 +43,37 @@ async function init() {
     link.classList.add('active');
     loadChapter(link);
   });
-}
 
-async function loadChapter(link) {
-  showLoading(content, 'Loading chapter…');
-  const chapter = await fetchJSON(link.dataset.file);
-  const examFile = link.dataset.exam;
+  async function loadChapter(link) {
+    const { fetchJSON, showLoading, escHtml } = window.FideApp;
+    showLoading(content, 'Loading chapter…');
+    const chapter  = await fetchJSON(link.dataset.file);
+    const examFile = link.dataset.exam;
 
-  pageTitle.textContent = `Chapter ${chapter.chapter}: ${chapter.title}`;
+    // Update heading only if the element exists on this page
+    if (pageTitle) pageTitle.textContent = `Chapter ${chapter.chapter}: ${chapter.title}`;
 
-  content.innerHTML = `
-    <div class="section-header">
-      <h2>Chapter ${chapter.chapter}: ${escHtml(chapter.title)}</h2>
-      <p style="margin-top:12px;">
-        <a href="exam.html?file=${encodeURIComponent(examFile)}&title=${encodeURIComponent(chapter.title)}"
-           class="btn btn-primary btn-sm">Take Chapter ${chapter.chapter} Exam →</a>
-      </p>
-    </div>
-    <ul class="article-list">
-      ${chapter.articles.map(art => `
-        <li class="article-item" id="art-${art.article.replace('.', '-')}">
-          <div class="article-num">Article ${escHtml(art.article)}</div>
-          <div class="article-heading">${escHtml(art.heading)}</div>
-          <div class="article-content">${escHtml(art.content)}</div>
-        </li>
-      `).join('')}
-    </ul>`;
+    content.innerHTML = `
+      <div class="section-header">
+        <h2>Chapter ${chapter.chapter}: ${escHtml(chapter.title)}</h2>
+        <p style="margin-top:12px;">
+          <a href="exam.html?file=${encodeURIComponent(examFile)}&title=${encodeURIComponent(chapter.title)}"
+             class="btn btn-primary btn-sm">Take Chapter ${chapter.chapter} Exam →</a>
+        </p>
+      </div>
+      <ul class="article-list">
+        ${chapter.articles.map(art => `
+          <li class="article-item" id="art-${art.article.replace(/\./g, '-')}">
+            <div class="article-num">Article ${escHtml(art.article)}</div>
+            <div class="article-heading">${escHtml(art.heading)}</div>
+            <div class="article-content">${escHtml(art.content)}</div>
+          </li>
+        `).join('')}
+      </ul>`;
+  }
 }
 
 init().catch(err => {
-  content.innerHTML = `<p style="color:var(--danger);padding:20px">Error loading data: ${err.message}</p>`;
+  const content = document.getElementById('chapter-content');
+  if (content) content.innerHTML = `<p style="color:var(--danger);padding:20px">Error: ${err.message}</p>`;
 });
