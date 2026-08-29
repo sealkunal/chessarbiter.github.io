@@ -71,6 +71,76 @@
       ],
       "correct": "b",
       "explanation": "As per Article 12.4, rating and title questions test knowledge of K-factors, performance rating calculation, norm requirements, reporting procedures, and the differences between standard, rapid and blitz rating systems."
+    },
+    {
+      "id": "c12q6",
+      "text": "A player's flag falls at the end of their move. The position is a theoretical draw. What should the arbiter rule?",
+      "difficulty": "hard",
+      "article": "6.10",
+      "options": [
+        { "id": "a", "text": "Draw, because the position is theoretically drawn" },
+        { "id": "b", "text": "The player whose flag fell loses the game" },
+        { "id": "c", "text": "The game is a draw only if the opponent also cannot deliver checkmate" },
+        { "id": "d", "text": "The arbiter must pause the clock and analyse the position" }
+      ],
+      "correct": "b",
+      "explanation": "Per Article 6.10, if a player's flag falls (time runs out), the game is lost — regardless of the position, UNLESS the opponent cannot possibly deliver checkmate. In a theoretical draw where checkmate IS still possible with any sequence of legal moves, the player who ran out of time loses."
+    },
+    {
+      "id": "c12q7",
+      "text": "During a game, White completes an illegal move (pawn moved backward). The arbiter notices. What is the correct procedure?",
+      "difficulty": "hard",
+      "article": "7.4",
+      "options": [
+        { "id": "a", "text": "The game continues — the illegal move stands since both players continued" },
+        { "id": "b", "text": "White loses the game immediately for any illegal move" },
+        { "id": "c", "text": "The arbiter resets the position, the opponent gains 2 extra minutes (or game loss for 2nd offence)" },
+        { "id": "d", "text": "White must replay the move with the same piece only" }
+      ],
+      "correct": "c",
+      "explanation": "Per Article 7.4, after an illegal move is completed (clock pressed), the arbiter resets the position to before the illegal move, the opponent receives 2 extra minutes of thinking time, and the offending player must make a legal move. A second illegal move by the same player results in loss of the game."
+    },
+    {
+      "id": "c12q8",
+      "text": "Black claims a draw by insufficient mating material when only kings remain. The arbiter checks and also sees it is now White's move with a lone rook on the board. What should the arbiter do?",
+      "difficulty": "hard",
+      "article": "9.6",
+      "options": [
+        { "id": "a", "text": "Uphold the draw claim — with only kings the game is always a draw" },
+        { "id": "b", "text": "Reject the draw claim — White has a rook and can potentially deliver checkmate" },
+        { "id": "c", "text": "Pause the game and ask both players if they agree to a draw" },
+        { "id": "d", "text": "Award Black the win since their king survived" }
+      ],
+      "correct": "b",
+      "explanation": "Per Article 9.6, a draw by insufficient mating material applies only when it is impossible to checkmate with any sequence of legal moves. A rook and king CAN deliver checkmate, so the draw claim must be rejected and play continues."
+    },
+    {
+      "id": "c12q9",
+      "text": "A player is caught with a vibrating device in their pocket during a game. They claim it is a medical device. What should the arbiter do?",
+      "difficulty": "hard",
+      "article": "11.2",
+      "options": [
+        { "id": "a", "text": "Accept the explanation and allow the player to continue" },
+        { "id": "b", "text": "Apply the default penalty (loss of game) unless the competition rules state otherwise, and report to the Chief Arbiter" },
+        { "id": "c", "text": "Give a formal warning and ask the player to remove the device" },
+        { "id": "d", "text": "Suspend the game and consult FIDE by email" }
+      ],
+      "correct": "b",
+      "explanation": "Per Article 11.2, having an electronic device on one's person during play results in loss of the game. Medical exceptions may be granted but only if declared BEFORE the game and approved by the Chief Arbiter. A claim made after discovery does not override the rule."
+    },
+    {
+      "id": "c12q10",
+      "text": "A player writes their intended move on the scoresheet before making it, then claims a draw by threefold repetition. Is the claim valid?",
+      "difficulty": "hard",
+      "article": "9.3",
+      "options": [
+        { "id": "a", "text": "No — writing a move before playing it is illegal" },
+        { "id": "b", "text": "Yes — the player must write the move on the scoresheet and stop the clock to claim the threefold repetition correctly" },
+        { "id": "c", "text": "Yes — but only if the repetition has already happened three times before writing the move" },
+        { "id": "d", "text": "No — the arbiter must verify the repetition independently before allowing the claim" }
+      ],
+      "correct": "b",
+      "explanation": "Per Article 9.3, to claim a draw by threefold repetition when the position is ABOUT TO appear for the third time, the player must first write the intended move on the scoresheet without making it, then stop the clock and inform the arbiter. This is the only correct procedure."
     }
   ]
 }

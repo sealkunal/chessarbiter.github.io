@@ -81,5 +81,41 @@ function escHtml(str) {
     .replace(/"/g, '&quot;');
 }
 
+// ─── Progress Tracker (localStorage) ────────────────────────────────────────
+function markChapterStudied(chapterId) {
+  try {
+    const data = JSON.parse(localStorage.getItem('progress') || '{}');
+    if (!data.studied) data.studied = {};
+    data.studied[chapterId] = true;
+    localStorage.setItem('progress', JSON.stringify(data));
+  } catch (e) {}
+}
+
+function markExamAttempted(chapterId, score) {
+  try {
+    const data = JSON.parse(localStorage.getItem('progress') || '{}');
+    if (!data.exams) data.exams = {};
+    // Keep best score
+    if (!data.exams[chapterId] || score > data.exams[chapterId]) {
+      data.exams[chapterId] = score;
+    }
+    localStorage.setItem('progress', JSON.stringify(data));
+  } catch (e) {}
+}
+
+function loadProgress() {
+  try {
+    return JSON.parse(localStorage.getItem('progress') || '{}');
+  } catch (e) { return {}; }
+}
+
+function clearProgress() {
+  try { localStorage.removeItem('progress'); } catch (e) {}
+}
+
 // Export for use in other scripts (works without a bundler via global scope)
-window.FideApp = { fetchJSON, shuffle, showLoading, showToast, saveExamState, loadExamState, escHtml };
+window.FideApp = {
+  fetchJSON, shuffle, showLoading, showToast,
+  saveExamState, loadExamState, escHtml,
+  markChapterStudied, markExamAttempted, loadProgress, clearProgress
+};

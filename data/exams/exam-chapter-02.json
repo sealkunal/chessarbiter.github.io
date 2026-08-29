@@ -1,6 +1,6 @@
 {
   "chapter": 2,
-  "title": "Chapter 2 – Conduct of Players: Mock Exam",
+  "title": "Chapter 2 – FIDE Laws of Chess: Mock Exam",
   "questions": [
     {
       "id": "c2q1",
@@ -14,7 +14,7 @@
         { "id": "d", "text": "A pen or pencil" }
       ],
       "correct": "b",
-      "explanation": "As per Article 11.1, during play the players are forbidden to use any notes, sources of information or advice, or analyse on another chessboard."
+      "explanation": "As per Article 11.1, during play players are forbidden to use any notes, sources of information or advice, or analyse on another chessboard."
     },
     {
       "id": "c2q2",
@@ -28,49 +28,49 @@
         { "id": "d", "text": "The game is restarted" }
       ],
       "correct": "c",
-      "explanation": "As per Article 11.2, if it is evident that a player has a mobile phone or electronic device on their person in the playing venue, the player shall lose the game and the opponent shall win (unless competition rules specify a different penalty)."
+      "explanation": "As per Article 11.2, if it is evident that a player has a mobile phone on their person in the playing venue, the player shall lose the game and the opponent shall win unless competition rules specify otherwise."
     },
     {
       "id": "c2q3",
-      "text": "Which of the following is considered an infringement under Article 11.3?",
-      "difficulty": "medium",
-      "article": "11.3",
+      "text": "How must the chessboard be placed at the start of the game?",
+      "difficulty": "easy",
+      "article": "1.2",
       "options": [
-        { "id": "a", "text": "Offering a draw once during the game" },
-        { "id": "b", "text": "Writing moves on the scoresheet" },
-        { "id": "c", "text": "Making unreasonable claims to distract the opponent" },
-        { "id": "d", "text": "Pressing the clock after moving" }
+        { "id": "a", "text": "Near corner square to the left of each player must be white" },
+        { "id": "b", "text": "Near corner square to the right of each player must be black" },
+        { "id": "c", "text": "Near corner square to the right of each player must be white" },
+        { "id": "d", "text": "It does not matter which way the board is placed" }
       ],
       "correct": "c",
-      "explanation": "As per Article 11.3, it is forbidden to distract or annoy the opponent in any manner, including unreasonable claims, unreasonable draw offers, or introducing noise into the playing area."
+      "explanation": "As per Article 1.2, the chessboard is placed so that the near corner square to the right of each player is white (the 'white in the right' rule)."
     },
     {
       "id": "c2q4",
-      "text": "Can a player leave the playing venue during a game?",
-      "difficulty": "easy",
-      "article": "11.5",
+      "text": "What happens if a player arrives after the default time at the start of a session?",
+      "difficulty": "medium",
+      "article": "6.7",
       "options": [
-        { "id": "a", "text": "Yes, at any time freely" },
-        { "id": "b", "text": "Yes, but only with permission of the arbiter" },
-        { "id": "c", "text": "No, never under any circumstances" },
-        { "id": "d", "text": "Yes, but only during the opponent's turn" }
+        { "id": "a", "text": "The player receives a warning" },
+        { "id": "b", "text": "The player's clock continues to run" },
+        { "id": "c", "text": "The player shall lose the game unless the arbiter decides otherwise" },
+        { "id": "d", "text": "The game is adjourned" }
       ],
-      "correct": "b",
-      "explanation": "As per Article 11.5, players may leave the playing venue during the game only with the permission of the arbiter."
+      "correct": "c",
+      "explanation": "As per Article 6.7, any player who arrives at the chessboard after the start of the session shall lose the game unless the arbiter decides otherwise. The default time is 0 minutes unless specified."
     },
     {
       "id": "c2q5",
-      "text": "What can an arbiter do in response to an infringement of the Laws?",
-      "difficulty": "hard",
-      "article": "11.9",
+      "text": "When can a player offer a draw?",
+      "difficulty": "medium",
+      "article": "9.2",
       "options": [
-        { "id": "a", "text": "Only issue a verbal warning" },
-        { "id": "b", "text": "Award a draw to both players" },
-        { "id": "c", "text": "Apply penalties including declaring loss of game for the offender" },
-        { "id": "d", "text": "Restart the game from the beginning" }
+        { "id": "a", "text": "At any time during the opponent's turn" },
+        { "id": "b", "text": "Only before making a move" },
+        { "id": "c", "text": "After making a move on the chessboard, then pressing the clock" },
+        { "id": "d", "text": "Only in the endgame phase" }
       ],
       "correct": "c",
-      "explanation": "As per Article 11.9, an infringement of the Laws may result in penalties including the loss of the game. The arbiter may impose various penalties such as awarding extra time to the opponent or declaring a loss for the offending player."
+      "explanation": "As per Article 9.2, a draw offer may be made after the player has made a move on the chessboard, then pressing the clock. The offer may not be withdrawn."
     },
     {
       "id": "c2q6",
@@ -84,7 +84,63 @@
         { "id": "d", "text": "Any purpose the player chooses" }
       ],
       "correct": "a",
-      "explanation": "As per Article 11.1, the scoresheet shall be used only for recording the moves, the times of the clocks, offers of a draw, matters relating to a claim and other relevant data. It cannot be used for notes or calculations."
+      "explanation": "As per Article 11.1, the scoresheet shall be used ONLY for recording the moves, the times of the clocks, offers of a draw, matters relating to a claim and other relevant data."
+    },
+    {
+      "id": "c2q7",
+      "text": "What is stalemate?",
+      "difficulty": "easy",
+      "article": "9.1",
+      "options": [
+        { "id": "a", "text": "When a player's king is in check with no legal move" },
+        { "id": "b", "text": "When a player has no legal move and their king is NOT in check" },
+        { "id": "c", "text": "When both players agree to end the game" },
+        { "id": "d", "text": "When only kings remain on the board" }
+      ],
+      "correct": "b",
+      "explanation": "As per Article 9.1, a game is drawn (stalemate) when the player to move has no legal move and their king is NOT in check. This is different from checkmate where the king IS in check."
+    },
+    {
+      "id": "c2q8",
+      "text": "When can a draw be claimed by threefold repetition?",
+      "difficulty": "hard",
+      "article": "9.3",
+      "options": [
+        { "id": "a", "text": "When the same position has appeared twice" },
+        { "id": "b", "text": "When the same position is about to appear or has appeared at least three times" },
+        { "id": "c", "text": "When both players have been making the same moves for 10 turns" },
+        { "id": "d", "text": "Only when agreed upon by both players" }
+      ],
+      "correct": "b",
+      "explanation": "As per Article 9.3, a draw can be claimed when the same position is about to appear for the third time (player must write the move and declare intention) or has appeared at least three times."
+    },
+    {
+      "id": "c2q9",
+      "text": "Under the touch-move rule, what must a player do if they touch a piece?",
+      "difficulty": "easy",
+      "article": "4.3",
+      "options": [
+        { "id": "a", "text": "They may choose any legal move with any piece" },
+        { "id": "b", "text": "They must move the touched piece if a legal move exists" },
+        { "id": "c", "text": "They must capture the touched piece if it belongs to the opponent" },
+        { "id": "d", "text": "Nothing — the rule only applies in time trouble" }
+      ],
+      "correct": "b",
+      "explanation": "As per Article 4.3, if a player having the move touches one or more of their own pieces, they must move the first piece touched that can be legally moved. The touch-move rule applies at all times."
+    },
+    {
+      "id": "c2q10",
+      "text": "What is the 50-move rule?",
+      "difficulty": "hard",
+      "article": "9.4",
+      "options": [
+        { "id": "a", "text": "A draw if 50 moves have been made in total by both players combined" },
+        { "id": "b", "text": "A draw may be claimed if in the last 50 moves no capture and no pawn move occurred" },
+        { "id": "c", "text": "A draw if a player takes more than 50 minutes on a single move" },
+        { "id": "d", "text": "A draw if the same player makes 50 consecutive moves without losing material" }
+      ],
+      "correct": "b",
+      "explanation": "As per Article 9.4, a draw may be claimed if in the last 50 consecutive moves by each player no pawn has been moved and no piece has been captured. Each player's 50 moves are counted separately."
     }
   ]
 }

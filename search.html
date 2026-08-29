@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Search – Chess Arbiter</title>
-  <link rel="stylesheet" href="css/style.css?v=2">
+  <link rel="stylesheet" href="css/style.css?v=3">
 </head>
 <body>
 
@@ -38,7 +38,7 @@
   <div class="card" style="margin-bottom:28px;">
     <div class="search-bar">
       <input type="text" id="search-input"
-             placeholder="e.g. stalemate, mobile phone, Buchholz, late arrival…"
+             placeholder="e.g. Article 7, stalemate, mobile phone, Buchholz…"
              autocomplete="off">
       <button class="btn btn-primary" id="search-btn">Search</button>
     </div>
@@ -53,13 +53,14 @@
     </div>
 
     <p style="font-size:.78rem;color:var(--muted);margin-top:10px;">
-      Tip: <code>search.html?q=stalemate</code> &nbsp;·&nbsp;
+      Tip: search by article number (e.g. <code>Article 7</code>), keyword (e.g. <code>stalemate</code>),
+      or regulation code (e.g. <code>B02</code>) &nbsp;·&nbsp;
       <a href="data/Arbiters_Manual_2025.pdf" target="_blank" rel="noopener">Download full PDF ↗</a>
     </p>
   </div>
 
   <div id="search-results">
-    <div class="loading-wrap"><div class="spinner"></div><p>Building search index…</p></div>
+    <div class="loading-wrap"><div class="spinner"></div><p>Loading search index…</p></div>
   </div>
 
 </main>
@@ -67,32 +68,18 @@
 <!-- ── Footer ────────────────────────────────────────────────────────────── -->
 <footer class="site-footer">
   <p>Chess Arbiter Study Portal &mdash; Not an official FIDE publication.</p>
-  <p style="margin-top:4px;">Search powered by <a href="https://lunrjs.com" target="_blank" rel="noopener">lunr.js</a></p>
 </footer>
 
-<!-- lunr.js from CDN -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/lunr.js/2.3.9/lunr.min.js"></script>
-
 <script>
-// Inline — no external JS file dependency
-
-// Mobile nav toggle
+// ── Helpers ────────────────────────────────────────────────────────────────
 document.querySelector('.nav-toggle').addEventListener('click', function() {
   document.querySelector('.nav-links').classList.toggle('open');
 });
 
-const searchInput   = document.getElementById('search-input');
-const searchBtn     = document.getElementById('search-btn');
-const resultsWrap   = document.getElementById('search-results');
-const chapterFilter = document.getElementById('chapter-filter');
-
-let lunrIndex = null;
-let docStore  = {};
-
 function escHtml(str) {
   return String(str)
-    .replace(/&/g, '&amp;').replace(/</g, '&lt;')
-    .replace(/>/g, '&gt;').replace(/"/g, '&quot;');
+    .replace(/&/g,'&amp;').replace(/</g,'&lt;')
+    .replace(/>/g,'&gt;').replace(/"/g,'&quot;');
 }
 
 async function fetchJSON(url) {
@@ -101,99 +88,161 @@ async function fetchJSON(url) {
   return res.json();
 }
 
+// ── State ──────────────────────────────────────────────────────────────────
+var allDocs = [];   // flat array of {chapterNum, chapterTitle, article, heading, content, examFile}
+
+var searchInput   = document.getElementById('search-input');
+var searchBtn     = document.getElementById('search-btn');
+var resultsWrap   = document.getElementById('search-results');
+var chapterFilter = document.getElementById('chapter-filter');
+
+// ── Build index: fetch all chapter JSONs ───────────────────────────────────
 async function buildIndex() {
-  resultsWrap.innerHTML = '<div class="loading-wrap"><div class="spinner"></div><p>Building search index…</p></div>';
+  resultsWrap.innerHTML = '<div class="loading-wrap"><div class="spinner"></div><p>Loading search index…</p></div>';
 
-  const index       = await fetchJSON('data/index.json');
-  const allChapters = await Promise.all(index.chapters.map(ch => fetchJSON(ch.file)));
+  var idx = await fetchJSON('data/index.json');
 
-  // Populate chapter filter
+  // Populate chapter filter dropdown
   chapterFilter.innerHTML = '<option value="">All Chapters</option>' +
-    index.chapters.map(ch =>
-      '<option value="' + ch.id + '">Chapter ' + ch.id + ': ' + escHtml(ch.title) + '</option>'
-    ).join('');
+    idx.chapters.map(function(ch) {
+      return '<option value="' + ch.id + '">Chapter ' + ch.id + ': ' + escHtml(ch.title) + '</option>';
+    }).join('');
 
-  // Build document store
-  docStore = {};
-  allChapters.forEach(function(chapter) {
-    chapter.articles.forEach(function(art) {
-      const id = chapter.chapter + '-' + art.article;
-      docStore[id] = {
-        id:           id,
-        chapterNum:   chapter.chapter,
-        chapterTitle: chapter.title,
+  // Fetch all chapters in parallel
+  var chapters = await Promise.all(idx.chapters.map(function(ch) {
+    return fetchJSON(ch.file).then(function(data) {
+      return { meta: ch, data: data };
+    });
+  }));
+
+  // Build flat doc store
+  allDocs = [];
+  chapters.forEach(function(c) {
+    c.data.articles.forEach(function(art) {
+      allDocs.push({
+        chapterNum:   c.data.chapter,
+        chapterTitle: c.data.title,
+        chapterFile:  c.meta.file,
+        examFile:     c.meta.exam,
         article:      art.article,
         heading:      art.heading,
         content:      art.content
-      };
+      });
     });
   });
 
-  // Build lunr index
-  lunrIndex = lunr(function() {
-    this.ref('id');
-    this.field('heading', { boost: 10 });
-    this.field('content', { boost: 5  });
-    this.field('article', { boost: 8  });
-    var docs = docStore;
-    Object.keys(docs).forEach(function(k) { this.add(docs[k]); }, this);
-  });
-
-  var count = Object.keys(docStore).length;
-  resultsWrap.innerHTML = '<p style="color:var(--muted);padding:8px 0">Index ready — ' +
-    count + ' articles across ' + index.chapters.length + ' chapters. Enter a term above and press Search.</p>';
+  var total = allDocs.length;
+  resultsWrap.innerHTML =
+    '<p style="color:var(--muted);padding:8px 0">Index ready — ' +
+    total + ' articles across ' + idx.chapters.length + ' chapters. ' +
+    'Enter a search term above and press Search.</p>';
 }
 
-function highlight(text, query) {
-  var re = new RegExp('(' + query.replace(/[.*+?^${}()|[\]\\]/g, '\\$&') + ')', 'gi');
-  return escHtml(text).replace(re, '<mark>$1</mark>');
-}
-
+// ── Plain-text multi-word search ───────────────────────────────────────────
+// Splits query into words. A doc must contain ALL words (case-insensitive)
+// anywhere across: article number, heading, content.
+// Scores by how many words hit the heading (higher) vs content (lower).
 function doSearch() {
-  var query  = searchInput.value.trim();
-  var filter = chapterFilter.value;
+  var rawQuery = searchInput.value.trim();
+  var filter   = chapterFilter.value;
 
-  if (!query) {
+  if (!rawQuery) {
     resultsWrap.innerHTML = '<p class="no-results">Please enter a search term.</p>';
     return;
   }
-  if (!lunrIndex) {
-    resultsWrap.innerHTML = '<p class="no-results">Index not ready yet. Please wait…</p>';
+  if (allDocs.length === 0) {
+    resultsWrap.innerHTML = '<p class="no-results">Index not ready yet — please wait a moment.</p>';
     return;
   }
 
-  var results;
-  try        { results = lunrIndex.search(query + '*'); }
-  catch(err) { results = lunrIndex.search(query);       }
+  // Split into individual words; drop empties
+  var words = rawQuery.toLowerCase().split(/\s+/).filter(Boolean);
 
-  if (filter) {
-    results = results.filter(function(r) {
-      return docStore[r.ref] && docStore[r.ref].chapterNum === parseInt(filter, 10);
+  var scored = [];
+
+  allDocs.forEach(function(doc) {
+    // Apply chapter filter
+    if (filter && doc.chapterNum !== parseInt(filter, 10)) return;
+
+    var artLower     = doc.article.toLowerCase();
+    var headingLower = doc.heading.toLowerCase();
+    var contentLower = doc.content.toLowerCase();
+
+    // Searchable string: "article X.X heading content"
+    // We also include "article 7" expansion: if article is "7.5", we also
+    // match against the bare chapter prefix "7"
+    var artPrefix = artLower.split('.')[0];  // "7" from "7.5"
+
+    var score = 0;
+    var allMatch = words.every(function(w) {
+      var inArt     = artLower.includes(w) || artPrefix === w;
+      var inHeading = headingLower.includes(w);
+      var inContent = contentLower.includes(w);
+      if (inArt)     score += 15;
+      if (inHeading) score += 10;
+      if (inContent) score += 1;
+      return inArt || inHeading || inContent;
     });
-  }
 
-  if (results.length === 0) {
-    resultsWrap.innerHTML = '<div class="no-results"><p>No results for "<strong>' +
-      escHtml(query) + '</strong>". Try different keywords.</p></div>';
+    if (allMatch) scored.push({ doc: doc, score: score });
+  });
+
+  // Sort by score descending
+  scored.sort(function(a, b) { return b.score - a.score; });
+
+  if (scored.length === 0) {
+    resultsWrap.innerHTML =
+      '<div class="no-results"><p>No results for "<strong>' + escHtml(rawQuery) +
+      '</strong>".<br>Try: individual keywords, article numbers like <code>7.5</code> or <code>Article 7</code>, or regulation codes like <code>B02</code>.</p></div>';
     return;
   }
 
   resultsWrap.innerHTML =
     '<p style="font-size:.85rem;color:var(--muted);margin-bottom:16px">' +
-    results.length + ' article' + (results.length !== 1 ? 's' : '') +
-    ' matched "<strong>' + escHtml(query) + '</strong>"</p>' +
-    results.map(function(r) {
-      var doc  = docStore[r.ref];
-      var snip = doc.content.length > 240 ? doc.content.slice(0, 240) + '…' : doc.content;
+    scored.length + ' article' + (scored.length !== 1 ? 's' : '') +
+    ' matched "<strong>' + escHtml(rawQuery) + '</strong>"</p>' +
+    scored.map(function(item) {
+      var doc  = item.doc;
+      // Snippet: find first word hit in content, show surrounding context
+      var snip = makeSnippet(doc.content, words);
+      var link = 'manual.html?chapter=' + doc.chapterNum +
+                 '#art-' + doc.article.replace(/\./g, '-');
       return '<div class="search-result">' +
-        '<h4>Article ' + escHtml(doc.article) + ' — ' + escHtml(doc.heading) + '</h4>' +
-        '<p style="font-size:.78rem;color:var(--accent);margin-bottom:6px">Chapter ' +
-          doc.chapterNum + ': ' + escHtml(doc.chapterTitle) + '</p>' +
-        '<p>' + highlight(snip, query) + '</p>' +
-        '<a href="manual.html#art-' + doc.article.replace(/\./g, '-') +
-           '" class="btn btn-sm btn-outline" style="margin-top:10px">View in Manual →</a>' +
+        '<h4>' + highlightWords('Article ' + escHtml(doc.article) + ' — ' + escHtml(doc.heading), words) + '</h4>' +
+        '<p style="font-size:.78rem;color:var(--accent);margin-bottom:6px">' +
+          'Chapter ' + doc.chapterNum + ': ' + escHtml(doc.chapterTitle) +
+        '</p>' +
+        '<p>' + highlightWords(escHtml(snip), words) + '</p>' +
+        '<a href="' + link + '" class="btn btn-sm btn-outline" style="margin-top:10px">' +
+          'View in Manual →' +
+        '</a>' +
         '</div>';
     }).join('');
+}
+
+// Build a ~260-char snippet centred around the first keyword hit
+function makeSnippet(text, words) {
+  var lower = text.toLowerCase();
+  var pos   = -1;
+  for (var i = 0; i < words.length; i++) {
+    var p = lower.indexOf(words[i]);
+    if (p !== -1 && (pos === -1 || p < pos)) pos = p;
+  }
+  if (pos === -1) return text.slice(0, 260) + (text.length > 260 ? '…' : '');
+  var start = Math.max(0, pos - 80);
+  var end   = Math.min(text.length, pos + 180);
+  return (start > 0 ? '…' : '') + text.slice(start, end) + (end < text.length ? '…' : '');
+}
+
+// Highlight all matched words in an already-escaped HTML string
+function highlightWords(escapedHtml, words) {
+  var result = escapedHtml;
+  words.forEach(function(w) {
+    // w is plain text; escape for regex
+    var re = new RegExp('(' + w.replace(/[.*+?^${}()|[\]\\]/g, '\\$&') + ')', 'gi');
+    result = result.replace(re, '<mark>$1</mark>');
+  });
+  return result;
 }
 
 searchBtn.addEventListener('click', doSearch);
@@ -206,8 +255,9 @@ if (urlQ) searchInput.value = urlQ;
 buildIndex().then(function() {
   if (urlQ) doSearch();
 }).catch(function(err) {
-  resultsWrap.innerHTML = '<div style="padding:20px;color:var(--danger)">' +
-    '<strong>Failed to build index:</strong> ' + escHtml(err.message) + '<br><br>' +
+  resultsWrap.innerHTML =
+    '<div style="padding:20px;color:var(--danger);background:var(--danger-lt);border-radius:var(--radius)">' +
+    '<strong>Failed to load index:</strong> ' + escHtml(err.message) + '<br><br>' +
     '<small>Run the site via: <code>python start-server.py</code></small></div>';
 });
 </script>

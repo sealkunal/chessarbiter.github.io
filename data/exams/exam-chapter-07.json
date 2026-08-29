@@ -71,6 +71,76 @@
       ],
       "correct": "b",
       "explanation": "As per Article B01.4, an IM norm requires a performance rating of at least 2450. The IM title also requires achieving a FIDE rating of at least 2400 and scoring three IM norms."
+    },
+    {
+      "id": "c7q6",
+      "text": "What is the rating threshold for the Candidate Master (CM) title?",
+      "difficulty": "medium",
+      "article": "B01.6",
+      "options": [
+        { "id": "a", "text": "2000" },
+        { "id": "b", "text": "2100" },
+        { "id": "c", "text": "2200" },
+        { "id": "d", "text": "2300" }
+      ],
+      "correct": "c",
+      "explanation": "As per Article B01.6, the Candidate Master (CM) title is awarded to any player who achieves a FIDE standard rating of 2200 or more. Like the FM title, no norms are required."
+    },
+    {
+      "id": "c7q7",
+      "text": "What is the minimum rating for a player to earn a Woman Grandmaster (WGM) norm?",
+      "difficulty": "hard",
+      "article": "B01.3W",
+      "options": [
+        { "id": "a", "text": "2200 performance rating" },
+        { "id": "b", "text": "2300 performance rating" },
+        { "id": "c", "text": "2400 performance rating" },
+        { "id": "d", "text": "2500 performance rating" }
+      ],
+      "correct": "c",
+      "explanation": "As per Article B01.3W, a WGM norm requires a performance rating of at least 2400. The WGM title requires three such norms plus a minimum FIDE rating of 2300."
+    },
+    {
+      "id": "c7q8",
+      "text": "Which title can a player earn by direct award, without completing norms?",
+      "difficulty": "medium",
+      "article": "B01.8",
+      "options": [
+        { "id": "a", "text": "Only FM and CM, since they require only a rating" },
+        { "id": "b", "text": "GM, IM, WGM, WIM by exceptional achievement (e.g. World Champion)" },
+        { "id": "c", "text": "Any title, at FIDE's discretion" },
+        { "id": "d", "text": "No title — all require norms" }
+      ],
+      "correct": "b",
+      "explanation": "As per Article B01.8, FIDE may award GM, IM, WGM, or WIM titles directly — without norms — for exceptional achievement such as winning the World Championship or at the FIDE Congress by special recommendation."
+    },
+    {
+      "id": "c7q9",
+      "text": "What form must accompany a title norm application submitted by a national federation?",
+      "difficulty": "hard",
+      "article": "B01.7",
+      "options": [
+        { "id": "a", "text": "IT1 form (Individual Title application) for each norm event" },
+        { "id": "b", "text": "FA1 form used for arbiter titles" },
+        { "id": "c", "text": "A letter from the player's national coach" },
+        { "id": "d", "text": "No form is needed — only the FIDE rating report is sufficient" }
+      ],
+      "correct": "a",
+      "explanation": "As per Article B01.7, each norm must be reported using an IT1 form (Individual Title tournament crosstable). The IT2 form covers individual title applications. Both are submitted by the national federation."
+    },
+    {
+      "id": "c7q10",
+      "text": "Can a title once awarded by FIDE be revoked?",
+      "difficulty": "medium",
+      "article": "B01.1",
+      "options": [
+        { "id": "a", "text": "No, once awarded a FIDE title can never be taken away" },
+        { "id": "b", "text": "Yes, but only if the player requests it" },
+        { "id": "c", "text": "Yes, in cases of fraud, cheating or serious breach of FIDE ethics" },
+        { "id": "d", "text": "Yes, automatically if the player's rating drops below the threshold" }
+      ],
+      "correct": "c",
+      "explanation": "As per Article B01.1, FIDE titles are awarded for life. However, FIDE retains the right to revoke a title if it was obtained through fraud, or if the title holder is found guilty of cheating or a serious breach of FIDE ethical regulations."
     }
   ]
 }

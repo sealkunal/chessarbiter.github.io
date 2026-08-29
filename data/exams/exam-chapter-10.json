@@ -71,6 +71,76 @@
       ],
       "correct": "c",
       "explanation": "As per Article B06.5.4, the available sanctions are: warning, suspension from arbiting, downgrading of classification, suspension of title, and revocation of title. A financial fine payable to players is not a listed sanction."
+    },
+    {
+      "id": "c10q6",
+      "text": "How many arbiter norms are required for the IA title?",
+      "difficulty": "medium",
+      "article": "B06.1.4",
+      "options": [
+        { "id": "a", "text": "One norm" },
+        { "id": "b", "text": "Two norms" },
+        { "id": "c", "text": "Three norms" },
+        { "id": "d", "text": "Five norms" }
+      ],
+      "correct": "c",
+      "explanation": "Per Article B06.1.4, the IA title requires three arbiter norms earned at qualifying FIDE events, in addition to other requirements such as language proficiency and the minimum FA holding period."
+    },
+    {
+      "id": "c10q7",
+      "text": "What is the classification system for FIDE arbiters?",
+      "difficulty": "medium",
+      "article": "B06.3",
+      "options": [
+        { "id": "a", "text": "Gold, Silver, and Bronze tiers" },
+        { "id": "b", "text": "Categories A, B, C, and D based on event level served" },
+        { "id": "c", "text": "Class 1, 2 and 3 based on years of experience" },
+        { "id": "d", "text": "Premier, Standard and Club levels" }
+      ],
+      "correct": "b",
+      "explanation": "Per Article B06.3, FIDE classifies arbiters into Categories A, B, C and D based on the level of events they have officiated. Category A is the highest, awarded for service at world-level events."
+    },
+    {
+      "id": "c10q8",
+      "text": "What is required before an FA title holder can be appointed to serve as Chief Arbiter at a FIDE World Championship?",
+      "difficulty": "hard",
+      "article": "B06.4",
+      "options": [
+        { "id": "a", "text": "Only the FA title is needed — no additional requirements" },
+        { "id": "b", "text": "The arbiter must hold the IA title and have a Category A classification" },
+        { "id": "c", "text": "The arbiter must have completed at least 10 years in chess" },
+        { "id": "d", "text": "FIDE Presidential Board approval on a case-by-case basis" }
+      ],
+      "correct": "b",
+      "explanation": "Per Article B06.4, for top-level appointments (such as World Championship Chief Arbiter), the arbiter must hold the IA title and ideally a Category A classification, demonstrating the highest standard of arbiter service."
+    },
+    {
+      "id": "c10q9",
+      "text": "How is the FIDE Arbiter (FA) title application submitted?",
+      "difficulty": "medium",
+      "article": "B06.1.5",
+      "options": [
+        { "id": "a", "text": "Submitted directly by the individual to FIDE Online" },
+        { "id": "b", "text": "Submitted by the national federation using the FA1/FA2 forms" },
+        { "id": "c", "text": "Submitted by the seminar lecturer automatically after passing" },
+        { "id": "d", "text": "Submitted by the organiser of the seminar event" }
+      ],
+      "correct": "b",
+      "explanation": "Per Article B06.1.5, FA title applications must be submitted by the national federation using the FA1 form (for the seminar norm) and FA2 form (individual application). The federation is responsible for the submission."
+    },
+    {
+      "id": "c10q10",
+      "text": "What must an arbiter do to maintain their FIDE title classification?",
+      "difficulty": "medium",
+      "article": "B06.3",
+      "options": [
+        { "id": "a", "text": "Retake the seminar exam every 5 years" },
+        { "id": "b", "text": "Continue to officiate at qualifying events to earn new norms within the classification period" },
+        { "id": "c", "text": "Pay a renewal fee to FIDE every year" },
+        { "id": "d", "text": "Nothing — the classification is permanent once awarded" }
+      ],
+      "correct": "b",
+      "explanation": "Per Article B06.3, arbiter classifications are reviewed periodically. Arbiters must continue to officiate at qualifying events and earn new norms to maintain or improve their classification. Inactive arbiters may be downgraded."
     }
   ]
 }

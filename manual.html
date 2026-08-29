@@ -212,14 +212,11 @@
   <p>Chess Arbiter Study Portal &mdash; Not an official FIDE publication.</p>
 </footer>
 
+<script src="js/app.js"></script>
 <script>
 // ── Helpers ────────────────────────────────────────────────────────────────
 const sidebarLinks = document.getElementById('sidebar-links');
 const content      = document.getElementById('chapter-content');
-
-document.querySelector('.nav-toggle').addEventListener('click', () => {
-  document.querySelector('.nav-links').classList.toggle('open');
-});
 
 function escHtml(s) {
   return String(s)
@@ -241,7 +238,7 @@ async function fetchJSON(url) {
 }
 
 // ── Load & render a chapter ────────────────────────────────────────────────
-async function loadChapter(file, examFile) {
+async function loadChapter(file, examFile, chapterId) {
   content.innerHTML = '<div class="loading-wrap"><div class="spinner"></div><p>Loading chapter…</p></div>';
   const ch = await fetchJSON(file);
 
@@ -266,6 +263,11 @@ async function loadChapter(file, examFile) {
          class="btn btn-primary btn-sm">✏️ Take Chapter Exam →</a>
     </p>
   `;
+
+  // Mark chapter as studied in progress tracker
+  if (chapterId && window.FideApp) {
+    window.FideApp.markChapterStudied(chapterId);
+  }
 }
 
 // ── Init ───────────────────────────────────────────────────────────────────
@@ -295,7 +297,12 @@ async function init() {
 
   if (targetLink) {
     activateLink(targetLink);
-    await loadChapter(targetLink.dataset.file, targetLink.dataset.exam);
+    await loadChapter(targetLink.dataset.file, targetLink.dataset.exam, targetLink.dataset.id);
+    // Scroll to hash anchor if present (e.g. #art-7 from search deep link)
+    if (location.hash) {
+      const el = document.querySelector(location.hash);
+      if (el) el.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
   }
 
   // Sidebar click handler
@@ -306,7 +313,7 @@ async function init() {
     activateLink(link);
     // Update URL without reload
     history.replaceState(null, '', '?chapter=' + link.dataset.id);
-    await loadChapter(link.dataset.file, link.dataset.exam).catch(showError);
+    await loadChapter(link.dataset.file, link.dataset.exam, link.dataset.id).catch(showError);
     window.scrollTo({ top: 0, behavior: 'smooth' });
   });
 }

@@ -11,10 +11,26 @@ let examWrap  = null;
 let examTitle = null;
 
 // ─── State ───────────────────────────────────────────────────────────────────
-let questions = [];
-let current   = 0;
-let answers   = {};   // { questionId: chosenOptionId }
-let startTime = null;
+let questions  = [];
+let current    = 0;
+let answers    = {};   // { questionId: chosenOptionId }
+let startTime  = null;
+let timerInterval = null;
+
+// ─── Timer helpers ────────────────────────────────────────────────────────────
+function formatTime(seconds) {
+  const m = Math.floor(seconds / 60);
+  const s = seconds % 60;
+  return `${String(m).padStart(2, '0')}:${String(s).padStart(2, '0')}`;
+}
+
+function startTimer() {
+  timerInterval = setInterval(() => {
+    const elapsed = Math.round((Date.now() - startTime) / 1000);
+    const el = document.getElementById('exam-timer');
+    if (el) el.textContent = formatTime(elapsed);
+  }, 1000);
+}
 
 // ─── Boot ────────────────────────────────────────────────────────────────────
 async function init() {
@@ -42,6 +58,7 @@ async function init() {
   if (maxQ > 0) questions = questions.slice(0, maxQ);
 
   startTime = Date.now();
+  startTimer();
   renderQuestion();
 }
 
@@ -54,7 +71,13 @@ function renderQuestion() {
 
   examWrap.innerHTML = `
     <div class="exam-header">
-      <h2 id="exam-title">${escHtml(examTitle.textContent)}</h2>
+      <div style="display:flex;justify-content:space-between;align-items:flex-start;gap:12px;flex-wrap:wrap;">
+        <h2 id="exam-title" style="flex:1;">${escHtml(examTitle.textContent)}</h2>
+        <div style="font-size:.85rem;font-weight:600;background:rgba(255,255,255,.15);
+                    padding:4px 12px;border-radius:20px;white-space:nowrap;">
+          ⏱ <span id="exam-timer">00:00</span>
+        </div>
+      </div>
       <div style="display:flex;justify-content:space-between;font-size:.82rem;opacity:.85;margin-top:8px;">
         <span>Question ${num} of ${questions.length}</span>
         <span>${pct}% complete</span>
@@ -126,12 +149,18 @@ function saveCurrentAnswer() {
 // ─── Submit & redirect to results ────────────────────────────────────────────
 function submitExam() {
   const { saveExamState } = window.FideApp;
+  clearInterval(timerInterval);
   const timeTaken = Math.round((Date.now() - startTime) / 1000);
+  // Build an examKey from the file path for progress tracking (e.g. "exam-chapter-03")
+  const params  = new URLSearchParams(location.search);
+  const fileStr = params.get('file') || '';
+  const examKey = fileStr.replace(/^.*\//, '').replace(/\.json$/, '');
   const resultData = {
     title:     examTitle.textContent,
     questions: questions,
     answers:   answers,
-    timeTaken: timeTaken
+    timeTaken: timeTaken,
+    examKey:   examKey
   };
   saveExamState('examResult', resultData);
   location.href = 'results.html';

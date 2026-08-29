@@ -1,6 +1,6 @@
 {
   "chapter": 3,
-  "title": "Chapter 3 – The Role of the Arbiter: Mock Exam",
+  "title": "Chapter 3 – Anti-Cheating Regulations: Mock Exam",
   "questions": [
     {
       "id": "c3q1",
@@ -42,7 +42,7 @@
         { "id": "d", "text": "Invite spectators to assist with scorekeeping" }
       ],
       "correct": "b",
-      "explanation": "As per Article 12.3, the arbiter shall ensure spectators do not disturb the players. No analysis is permitted in the playing area, and the arbiter may expel offenders from the playing venue."
+      "explanation": "As per Article 12.3, the arbiter shall ensure spectators do not disturb the players. No analysis is permitted in the playing area, and the arbiter may expel offenders from the venue."
     },
     {
       "id": "c3q4",
@@ -84,7 +84,63 @@
         { "id": "d", "text": "The arbiter writes the moves on behalf of both players" }
       ],
       "correct": "b",
-      "explanation": "As per Article 12.5, the arbiter collects scoresheets at the end of each round. They are an important piece of evidence in disputes and the arbiter can request a player's scoresheet at any time during the game."
+      "explanation": "As per Article 12.5, the arbiter collects scoresheets at the end of each round. They are important evidence in disputes and the arbiter can request a player's scoresheet at any time during the game."
+    },
+    {
+      "id": "c3q7",
+      "text": "What does the FIDE Fair Play Commission (FPL) have jurisdiction over?",
+      "difficulty": "medium",
+      "article": "A09.3",
+      "options": [
+        { "id": "a", "text": "Only offline over-the-board cheating cases" },
+        { "id": "b", "text": "All cheating-related complaints submitted through national federations" },
+        { "id": "c", "text": "Rating fraud and illegal title applications only" },
+        { "id": "d", "text": "Cheating investigations at World Championships only" }
+      ],
+      "correct": "b",
+      "explanation": "Per Article A09.3, the FIDE Fair Play Commission (FPL) has jurisdiction over all cheating-related complaints submitted through national federations or initiated by FIDE. This covers both OTB and online events."
+    },
+    {
+      "id": "c3q8",
+      "text": "What is the Z-score used for in FIDE anti-cheating procedures?",
+      "difficulty": "hard",
+      "article": "A09.4",
+      "options": [
+        { "id": "a", "text": "To calculate a player's expected performance against the field" },
+        { "id": "b", "text": "A statistical measure to compare a player's results against expected results — unusually high scores can indicate cheating" },
+        { "id": "c", "text": "To measure the strength of an opponent's play" },
+        { "id": "d", "text": "A ranking system used only for blitz tournaments" }
+      ],
+      "correct": "b",
+      "explanation": "Per Article A09.4, the Z-score is a statistical measure comparing a player's actual results against statistically expected results. An unusually high Z-score can be one indicator (among several) of possible cheating."
+    },
+    {
+      "id": "c3q9",
+      "text": "Who is the CFPO (Chief Fair Play Officer) at a major FIDE event?",
+      "difficulty": "medium",
+      "article": "A09.2",
+      "options": [
+        { "id": "a", "text": "The same person as the Chief Arbiter" },
+        { "id": "b", "text": "A specially designated officer responsible for anti-cheating measures at the event" },
+        { "id": "c", "text": "The organiser of the event" },
+        { "id": "d", "text": "Any arbiter at the tournament who suspects cheating" }
+      ],
+      "correct": "b",
+      "explanation": "Per Article A09.2, the CFPO is a specially designated officer (separate from the Chief Arbiter) responsible for implementing anti-cheating measures at the event, including device searches and statistical monitoring."
+    },
+    {
+      "id": "c3q10",
+      "text": "Which of the following is defined as cheating under FIDE Regulations?",
+      "difficulty": "easy",
+      "article": "A09.1",
+      "options": [
+        { "id": "a", "text": "Offering a draw in a winning position" },
+        { "id": "b", "text": "Deliberately losing a game" },
+        { "id": "c", "text": "Using any means not permitted by the Laws to gain an unfair advantage" },
+        { "id": "d", "text": "Playing quickly in time trouble" }
+      ],
+      "correct": "c",
+      "explanation": "Per Article A09.1, cheating is defined as using any means not permitted by the Laws to gain an unfair advantage over the opponent. This includes using electronic devices, receiving assistance, or manipulating results."
     }
   ]
 }

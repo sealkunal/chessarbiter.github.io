@@ -1,41 +1,56 @@
 {
   "chapter": 3,
-  "title": "The Role of the Arbiter",
+  "title": "Anti-Cheating Regulations (A09)",
   "articles": [
     {
-      "article": "12.1",
-      "heading": "Duties of the Arbiter",
-      "content": "The arbiter shall see that the Laws of Chess are strictly observed. The arbiter shall act in the best interest of the competition. The arbiter shall ensure that a good playing environment is maintained and that the players are not disturbed. The arbiter shall supervise the progress of the competition in accordance with FIDE Regulations."
+      "article": "3.1",
+      "heading": "Purpose and Guiding Principles",
+      "content": "These regulations deal with the investigation of suspected cheating incidents and other fair play violations. They supplement and clarify the provisions of the FIDE Charter, the FIDE Ethics and Disciplinary Code, and the Procedural Rules of the Fair Play Commission.\n\nThe FIDE Laws of Chess have introduced provisions against cheating:\n- Article 12.2.1: The arbiter shall ensure fair play.\n- Article 12.2.7: The arbiter shall follow the Anti-Cheating Rules or Guidelines.\n\nIt is therefore the arbiter's duty to prevent cheating by the players. The Laws also explicitly forbid electronic devices (Articles 11.3.1, 11.3.2, 11.3.3)."
     },
     {
-      "article": "12.2",
-      "heading": "Powers of the Arbiter",
-      "content": "The arbiter can apply one or more of the following penalties: warning, increasing the remaining time of the opponent, reducing the remaining time of the offending player, declaring the game to be lost by the offending player, expulsion from the event."
+      "article": "3.2",
+      "heading": "Definition of Cheating",
+      "content": "\"Cheating\" means:\na) The deliberate use of electronic devices (Art. 11.3.2 FIDE Laws of Chess) or other sources of information or advice (Art. 11.3.1) during a game; or\nb) The manipulation of chess competitions, including but not limited to: result manipulation, sandbagging, match-fixing, rating fraud, false identity, and deliberate participation in fictitious tournaments or games.\n\nSandbagging refers to deliberately playing below one's actual ability in order to lower one's rating to play in a future event with a higher handicap and consequently with a better chance of winning.\n\nFor the purposes of this regulation, attempts at cheating will be considered cheating."
     },
     {
-      "article": "12.3",
-      "heading": "Spectators and Analysis",
-      "content": "The arbiter shall ensure that spectators do not disturb the players. No analysis is to be conducted in the playing area. The arbiter may expel offenders from the playing venue. The arbiter shall not intervene in a game unless a player is being disturbed."
+      "article": "3.3",
+      "heading": "Assumed Cheating and Z-Score Thresholds",
+      "content": "There shall be a presumption of cheating if statistical analysis by a FIDE-validated and approved algorithm shows a Z-score above the official threshold.\n\nCurrently, only Prof. Kenneth W. Regan's methodology is approved by FIDE. His model uses three separate statistical tests: Move-Matching (MM), Equal-top value moves (EV) and Average Scaled Difference (ASD), combined into a single overall Z-score.\n\nThresholds:\na) For online chess: a threshold of 4.25 (natural frequency of one in almost 100,000)\nb) For over-the-board chess: a threshold of 5.00 (natural frequency of one in almost 3.5 million)\n\nThese provisions apply if there is no other evidence. If other evidence is available, a Z-score of 2.50 or higher may be used in support."
     },
     {
-      "article": "12.4",
-      "heading": "Pairing Responsibilities",
-      "content": "The arbiter is responsible for pairings in a Swiss or round-robin tournament. The arbiter must ensure that the pairing system used complies with FIDE regulations. Results must be transmitted to FIDE in a timely manner after the conclusion of the event."
+      "article": "3.4",
+      "heading": "Other Fair Play Violations",
+      "content": "Other fair play violations include:\na) Over-the-board rule violation: OTB rule violations include bringing a phone into the playing hall, bringing other forbidden gadgets (e.g. wallets, smart glasses, pens, watches), being uncooperative with the Fair Play Team or Arbiter, refusing to be searched or scanned. The list of OTB rule violations is not exhaustive.\n\nb) Online technical rule violation: Technical violations connected with the video conference system — disconnections, playing without a camera on, playing without a shared screen, playing without a microphone on — per se do not lead to the assumption that a cheating offence has been committed, however, the player can be penalised accordingly."
     },
     {
-      "article": "12.5",
-      "heading": "Scoresheets",
-      "content": "The arbiter shall collect the scoresheets at the end of each round and ensure they are properly stored. In the event of a dispute, the scoresheet is an important piece of evidence and must be preserved. The arbiter can request a player's scoresheet at any time during the game."
+      "article": "3.5",
+      "heading": "Jurisdiction of the Fair Play Commission",
+      "content": "The Fair Play Commission (FPL) has jurisdiction in all cheating-related matters, including false accusations. People subject to FPL jurisdiction include any person with FIDE ID: players, supporting persons, and team captains.\n\nAll FIDE-rated over-the-board games are subject to FPL jurisdiction.\n\nCheating incidents occurring in tournaments requiring maximum and increased levels of protection must be reported to FPL. Cheating incidents in standard-level tournaments are to be referred to National Federations (NFs), except when they affect the awarding of FM/WFM titles, or involve a person holding FM/WFM, IM/WIM or GM/WGM title — such cases must be reported to FPL."
     },
     {
-      "article": "12.6",
-      "heading": "Reporting Irregularities",
-      "content": "If the arbiter observes any irregularity during a game, it is their duty to bring it to the attention of the relevant parties. The arbiter must document all decisions and penalties applied during the competition for the official report."
+      "article": "3.6",
+      "heading": "Complaints and Investigations",
+      "content": "Investigations can be initiated based on:\na) An In-Tournament Complaint (ITC)\nb) A Post-Tournament Complaint (PTC)\nc) A report of the Chief Fair Play Officer or Chief Arbiter\nd) FPL initiative\ne) A request by the Ethics and Disciplinary Commission (EDC)\n\nAny person with a FIDE Identity Number can file a complaint. All complaints must be submitted in writing to fpl@fide.com. Oral or informal complaints are not accepted. All complaints based solely on the assumption that a person is playing stronger than expected due to rating will be considered manifestly unfounded.\n\nAll information about complaints and investigations shall remain confidential until an investigation is completed."
     },
     {
-      "article": "12.7",
-      "heading": "Decisions of the Arbiter",
-      "content": "The arbiter shall not intervene in a game except in cases described by the Laws of Chess. The players must not speak to the arbiter except to make a claim. The arbiter's decision is final and binding unless an appeal procedure is in place under competition rules."
+      "article": "3.7",
+      "heading": "Investigation Procedure",
+      "content": "When a cheating incident is brought to the attention of FPL, an Investigatory Panel (IP) of up to three FPL members can be nominated. The IP considers physical, observational, and statistical evidence, and may gather additional evidence including GM opinion.\n\nPlayers, organisers, arbiters, national federations, and other parties are all required to cooperate with the IP. Failure to do so may result in referral to EDC.\n\nIf the IP comes to the unanimous conclusion that no cheating occurred or there is not enough evidence to meet the standard of proof, it shall dismiss the complaint. Otherwise, FPL decides by majority vote whether to forward the case to EDC.\n\nThe statute of limitation is five years; in online events, one year after the last round."
+    },
+    {
+      "article": "3.8",
+      "heading": "Levels of Fair Play Protection",
+      "content": "Events are classified into three levels of protection:\n\na) Maximum Protection (Level 1): All FIDE World Events; all major Continental Events; round-robins with average rating 2650+; events with prize funds exceeding EUR 100,000; FIDE Circuit and Zonal Tournaments at Level 1.\n\nb) Increased Protection (Level 2): Minor Continental events; National Championships; Norm events (for GM/IM titles); events with prize funds EUR 15,000+; round-robins with average rating 2500+.\n\nc) Standard Protection (Level 3): National Junior/Youth Championships; all remaining FIDE-rated competitions.\n\nFor Level 1 events, a Fair Play Team led by a Chief Fair Play Officer (CFPO) is appointed, with a ratio of 1 Fair Play Specialist per 50 players in GSC events."
+    },
+    {
+      "article": "3.9",
+      "heading": "Practical Guidance for Arbiters on Anti-Cheating",
+      "content": "According to Article 11.3.3 of the FIDE Laws of Chess, the arbiter may require the player to allow his/her clothes, bags, or other items to be inspected, in private. The arbiter or authorised person shall be of the same gender as the player. Note: such searches are illegal in some countries.\n\nAn arbiter should know how to recognise suspicious behaviours:\n- Visits only the same toilet cubicle repeatedly\n- Frequent absences from the board, with subsequent moves matching computer recommendations\n- Accepting information from spectators or team members\n\nArbiters are encouraged to use the FIDE Screening Tool with PGN games during a tournament. Finding that a player or spectator is using a chess program in the playing area calls for immediate action in conjunction with the Chief Arbiter.\n\nThe player making a complaint should be told not to tell anyone else of their suspicions, as that could contaminate evidence."
+    },
+    {
+      "article": "3.10",
+      "heading": "Chief Arbiter – Chief Fair Play Officer Division of Tasks",
+      "content": "The Chief Arbiter (CA) and the Chief Fair Play Officer (CFPO) have distinct but complementary responsibilities:\n\nThe Chief Arbiter is responsible for applying the Laws of Chess, administering the competition, and handling game-related incidents.\n\nThe Chief Fair Play Officer is responsible for devising and implementing the fair play plan, coordinating the Fair Play Team, conducting random and post-game checks, sending games for screening, and preparing the final fair play report.\n\nAt Level 1 events, the CFPO shall be invited to Organizing Team meetings as early as practicable. The CFPO and CA must coordinate closely. At events where no CFPO is appointed, In-Tournament Complaints should be addressed to the Chief Arbiter.\n\nA list of prohibited items in the playing area must be jointly identified by the CA and CFPO and listed in the tournament regulations."
     }
   ]
 }

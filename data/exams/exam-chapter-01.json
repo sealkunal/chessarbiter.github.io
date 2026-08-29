@@ -1,104 +1,146 @@
 {
   "chapter": 1,
-  "title": "Chapter 1 – Laws of Chess: Mock Exam",
+  "title": "Chapter 1 – Role of Arbiters & Duties: Mock Exam",
   "questions": [
     {
       "id": "c1q1",
-      "text": "What is the objective of each player in a game of chess?",
-      "difficulty": "easy",
-      "article": "1.1",
+      "text": "How early before a round should an arbiter arrive at the playing hall for the FIRST round of a tournament?",
+      "difficulty": "medium",
+      "article": "1.2",
       "options": [
-        { "id": "a", "text": "To capture all opponent's pieces" },
-        { "id": "b", "text": "To place the opponent's king under attack with no legal escape" },
-        { "id": "c", "text": "To occupy the centre of the board" },
-        { "id": "d", "text": "To promote a pawn to a queen" }
+        { "id": "a", "text": "15 minutes" },
+        { "id": "b", "text": "30 minutes" },
+        { "id": "c", "text": "1 hour" },
+        { "id": "d", "text": "2 hours" }
       ],
-      "correct": "b",
-      "explanation": "As per Article 1.1, the objective of each player is to place the opponent's king under attack in such a way that the opponent has no legal move. This is called checkmate."
+      "correct": "c",
+      "explanation": "Per Article 1.2, for the first round the arbiter should arrive at least one (1) hour before the start. For subsequent rounds, 30 minutes before is the minimum."
     },
     {
       "id": "c1q2",
-      "text": "How must the chessboard be placed at the start of the game?",
-      "difficulty": "easy",
-      "article": "1.2",
+      "text": "Which of the following is an acceptable behaviour for an arbiter while supervising games in progress?",
+      "difficulty": "medium",
+      "article": "1.1",
       "options": [
-        { "id": "a", "text": "Near corner square to the left of each player must be white" },
-        { "id": "b", "text": "Near corner square to the right of each player must be black" },
-        { "id": "c", "text": "Near corner square to the right of each player must be white" },
-        { "id": "d", "text": "It does not matter which way the board is placed" }
+        { "id": "a", "text": "Leaving the playing area every 15 minutes to smoke" },
+        { "id": "b", "text": "Sitting at a computer surfing the internet" },
+        { "id": "c", "text": "Actively observing all games, especially those in time trouble" },
+        { "id": "d", "text": "Speaking on their mobile phone in the playing hall" }
       ],
       "correct": "c",
-      "explanation": "As per Article 1.2, the chessboard is placed between the players in such a way that the near corner square to the right of each player is white."
+      "explanation": "Per Article 1.1, arbiters must observe all games, especially those in time trouble. Leaving the area frequently, surfing the internet, or using mobile phones are prohibited behaviours."
     },
     {
       "id": "c1q3",
-      "text": "What happens if a player arrives after the default time at the start of a session?",
-      "difficulty": "medium",
-      "article": "6.7",
+      "text": "What is the primary duty of a FIDE Arbiter?",
+      "difficulty": "easy",
+      "article": "1.1",
       "options": [
-        { "id": "a", "text": "The player receives a warning" },
-        { "id": "b", "text": "The player's clock continues to run" },
-        { "id": "c", "text": "The player shall lose the game unless the arbiter decides otherwise" },
-        { "id": "d", "text": "The game is adjourned" }
+        { "id": "a", "text": "To assist players with their strategy" },
+        { "id": "b", "text": "To see that the Laws of Chess are strictly observed" },
+        { "id": "c", "text": "To record all moves of each game" },
+        { "id": "d", "text": "To broadcast the games to spectators" }
       ],
-      "correct": "c",
-      "explanation": "As per Article 6.7, any player who arrives at the chessboard after the start of the session shall lose the game unless the arbiter decides otherwise. The default time is 0 minutes unless competition rules specify otherwise."
+      "correct": "b",
+      "explanation": "Per Article 1.1, the arbiter shall see that the Laws of Chess are strictly observed, act in the best interest of the competition, and ensure a good playing environment."
     },
     {
       "id": "c1q4",
-      "text": "What is stalemate?",
-      "difficulty": "easy",
-      "article": "9.1",
+      "text": "What is the role of the Chief Arbiter in a tournament?",
+      "difficulty": "medium",
+      "article": "1.5",
       "options": [
-        { "id": "a", "text": "When a player's king is in check with no legal move" },
-        { "id": "b", "text": "When a player has no legal move and their king is NOT in check" },
-        { "id": "c", "text": "When both players agree to end the game" },
-        { "id": "d", "text": "When only kings remain on the board" }
+        { "id": "a", "text": "To play in the tournament alongside the other participants" },
+        { "id": "b", "text": "To oversee all other arbiters and take final responsibility for arbitral decisions" },
+        { "id": "c", "text": "To organise accommodation and travel for players" },
+        { "id": "d", "text": "To determine prize fund distribution only" }
       ],
       "correct": "b",
-      "explanation": "As per Article 9.1, a game is drawn (stalemate) when the player to move has no legal move and their king is NOT in check. This is different from checkmate where the king IS in check."
+      "explanation": "Per Article 1.5, the Chief Arbiter oversees all other arbiters, takes final responsibility for arbitral decisions, and ensures all procedures comply with FIDE regulations."
     },
     {
       "id": "c1q5",
-      "text": "When can a player offer a draw?",
-      "difficulty": "medium",
-      "article": "9.2",
-      "options": [
-        { "id": "a", "text": "At any time during the opponent's turn" },
-        { "id": "b", "text": "Only before making a move" },
-        { "id": "c", "text": "After making a move on the chessboard, then pressing the clock" },
-        { "id": "d", "text": "Only in the endgame phase" }
-      ],
-      "correct": "c",
-      "explanation": "As per Article 9.2, a draw offer may be made after the player has made a move on the chessboard, then pressing the clock. The offer may not be withdrawn."
-    },
-    {
-      "id": "c1q6",
-      "text": "How many pieces does each player start with?",
+      "text": "Which of the following must an arbiter do BEFORE a round starts?",
       "difficulty": "easy",
       "article": "1.3",
       "options": [
-        { "id": "a", "text": "12 pieces" },
-        { "id": "b", "text": "14 pieces" },
-        { "id": "c", "text": "16 pieces" },
-        { "id": "d", "text": "18 pieces" }
+        { "id": "a", "text": "Check all equipment is in place, boards set up and clocks ready" },
+        { "id": "b", "text": "Announce the pairings during the game" },
+        { "id": "c", "text": "Inspect players' bags for electronic devices" },
+        { "id": "d", "text": "Verify FIDE ratings of all players" }
+      ],
+      "correct": "a",
+      "explanation": "Per Article 1.3, before each round the arbiter must verify all equipment is in place, boards are correctly set up with pieces in the right starting position, and clocks are set and ready."
+    },
+    {
+      "id": "c1q6",
+      "text": "An arbiter notices a player repeatedly knocking pieces off the board carelessly. What should the arbiter do?",
+      "difficulty": "medium",
+      "article": "1.1",
+      "options": [
+        { "id": "a", "text": "Ignore it as this is not an arbiter's concern" },
+        { "id": "b", "text": "Immediately forfeit the player's game" },
+        { "id": "c", "text": "Warn the player and monitor behaviour; escalate if repeated" },
+        { "id": "d", "text": "Ask the opponent if they are offended" }
       ],
       "correct": "c",
-      "explanation": "As per Article 1.3, at the beginning of the game each player has 16 pieces: a king, a queen, two rooks, two bishops, two knights, and eight pawns."
+      "explanation": "Per Article 1.1, the arbiter must act in the best interest of the competition. Disrupting play by carelessly knocking pieces is an infraction that deserves a warning with escalation if the behaviour continues."
     },
     {
       "id": "c1q7",
-      "text": "When can a draw be claimed by threefold repetition?",
-      "difficulty": "hard",
-      "article": "9.3",
+      "text": "What should an arbiter do at the END of each round?",
+      "difficulty": "medium",
+      "article": "1.4",
       "options": [
-        { "id": "a", "text": "When the same position has appeared twice" },
-        { "id": "b", "text": "When the same position is about to appear or has appeared at least three times" },
-        { "id": "c", "text": "When both players have been making the same moves for 10 turns" },
-        { "id": "d", "text": "Only when agreed upon by both players" }
+        { "id": "a", "text": "Collect scoresheets and record all results" },
+        { "id": "b", "text": "Allow players to freely take the equipment home" },
+        { "id": "c", "text": "Begin the next round immediately without break" },
+        { "id": "d", "text": "Submit rating reports to FIDE automatically" }
+      ],
+      "correct": "a",
+      "explanation": "Per Article 1.4, after each round the arbiter must collect all scoresheets from both players, record results, and prepare for the next round including computing pairings."
+    },
+    {
+      "id": "c1q8",
+      "text": "Can an arbiter refuse to implement an appeal committee decision?",
+      "difficulty": "hard",
+      "article": "1.5",
+      "options": [
+        { "id": "a", "text": "Yes, if the arbiter believes the committee is wrong" },
+        { "id": "b", "text": "No, the arbiter must implement all valid decisions of the appeals committee" },
+        { "id": "c", "text": "Only if the Chief Arbiter agrees the decision was incorrect" },
+        { "id": "d", "text": "Only in title norm tournaments" }
       ],
       "correct": "b",
-      "explanation": "As per Article 9.3, a draw can be claimed when the same position is about to appear for the third time (player must write move and declare intention) or has appeared at least three times."
+      "explanation": "Per Article 1.5, the arbiter must implement decisions of the appeals committee. The arbiter cannot refuse to implement a committee ruling even if they personally disagree with it."
+    },
+    {
+      "id": "c1q9",
+      "text": "Which of the following is a key BEFORE-GAME duty of the arbiter?",
+      "difficulty": "easy",
+      "article": "1.3",
+      "options": [
+        { "id": "a", "text": "Publishing the pairings" },
+        { "id": "b", "text": "Collecting the prizes" },
+        { "id": "c", "text": "Negotiating with the organiser about fees" },
+        { "id": "d", "text": "Conducting opening ceremony speeches" }
+      ],
+      "correct": "a",
+      "explanation": "Per Article 1.3, before-game duties include publishing the pairings, ensuring equipment is ready, confirming venue is prepared, and verifying that clocks are correctly set."
+    },
+    {
+      "id": "c1q10",
+      "text": "How should an arbiter handle a protest or complaint from a player during a game?",
+      "difficulty": "hard",
+      "article": "1.1",
+      "options": [
+        { "id": "a", "text": "Dismiss it and ask the player to focus on their game" },
+        { "id": "b", "text": "Ask the opponent what they think happened first" },
+        { "id": "c", "text": "Listen carefully, gather facts, and make a ruling according to the Laws" },
+        { "id": "d", "text": "Always refer it to the organiser without making any decision" }
+      ],
+      "correct": "c",
+      "explanation": "Per Article 1.1, the arbiter must act impartially. When a protest is made, the arbiter must listen carefully, gather all relevant facts, and make a fair ruling strictly in accordance with the Laws of Chess."
     }
   ]
 }

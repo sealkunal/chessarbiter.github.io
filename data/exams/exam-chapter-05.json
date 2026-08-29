@@ -28,7 +28,7 @@
         { "id": "d", "text": "Only if both players request it" }
       ],
       "correct": "c",
-      "explanation": "As per Article C04.1, a player is never paired against the same opponent twice in a Swiss system. This is a fundamental rule of all Swiss pairing systems."
+      "explanation": "As per Article C04.1, a player is never paired against the same opponent twice in a Swiss system. This is a fundamental absolute rule of all Swiss pairing systems."
     },
     {
       "id": "c5q3",
@@ -42,7 +42,7 @@
         { "id": "d", "text": "To calculate the final standings when scores are tied" }
       ],
       "correct": "b",
-      "explanation": "As per Article C04.5.1, in the Baku Acceleration system, top-ranked players receive virtual points in early rounds to create more competitive pairings. This ensures top players meet earlier, reducing easy wins."
+      "explanation": "As per Article C04.5.1, in the Baku Acceleration system, top-ranked players receive virtual points in early rounds to create more competitive pairings. This ensures top players meet earlier, reducing easy wins in the first rounds."
     },
     {
       "id": "c5q4",
@@ -70,7 +70,77 @@
         { "id": "d", "text": "They are always paired in the last group regardless of rating" }
       ],
       "correct": "c",
-      "explanation": "As per Article C04.2C, late entries receive a score of zero for each missed round or a half-point bye as specified in the tournament regulations. The arbiter decides the treatment and must announce the policy in advance."
+      "explanation": "As per Article C04.2C, late entries receive a score of zero for each missed round or a half-point bye as specified in the tournament regulations. The arbiter decides and must announce the policy in advance."
+    },
+    {
+      "id": "c5q6",
+      "text": "What is the colour allocation rule in the Dutch System when two players in the same score group are paired?",
+      "difficulty": "hard",
+      "article": "C04.3",
+      "options": [
+        { "id": "a", "text": "The higher-rated player always gets White" },
+        { "id": "b", "text": "Colours alternate based on each player's colour history, with the player due White getting it" },
+        { "id": "c", "text": "The player with fewer wins gets White" },
+        { "id": "d", "text": "Colour is decided by coin toss each round" }
+      ],
+      "correct": "b",
+      "explanation": "Per Article C04.3, the Dutch System allocates colours based on the colour history of each player. Each player should ideally alternate colours, and the player who is 'due White' (based on previous colours) gets White."
+    },
+    {
+      "id": "c5q7",
+      "text": "What is a 'bye' in a Swiss tournament?",
+      "difficulty": "easy",
+      "article": "C04.2B",
+      "options": [
+        { "id": "a", "text": "A draw agreed before the game starts" },
+        { "id": "b", "text": "A round where a player has no opponent and receives a score without playing" },
+        { "id": "c", "text": "A player's right to withdraw from one round without penalty" },
+        { "id": "d", "text": "An extra round added at the end of the tournament" }
+      ],
+      "correct": "b",
+      "explanation": "Per Article C04.2B, a bye is given to a player who has no opponent in a round (usually due to an odd number of players). The player with the bye typically receives half a point or, for a requested bye, as specified by the regulations."
+    },
+    {
+      "id": "c5q8",
+      "text": "In the Dutch System, how are players divided for pairing within each score group?",
+      "difficulty": "medium",
+      "article": "C04.3",
+      "options": [
+        { "id": "a", "text": "Randomly shuffled within each group" },
+        { "id": "b", "text": "Top half (S1) paired against bottom half (S2) by rating order" },
+        { "id": "c", "text": "First player plays last player, second plays second-last, etc." },
+        { "id": "d", "text": "Players are paired based on their colour history only" }
+      ],
+      "correct": "b",
+      "explanation": "Per Article C04.3, within each score bracket players are sorted by rating. The bracket is split into S1 (top half) and S2 (bottom half). The top player of S1 is paired with the top player of S2, and so on."
+    },
+    {
+      "id": "c5q9",
+      "text": "How many rounds are typically recommended for a Swiss tournament with 64 players?",
+      "difficulty": "medium",
+      "article": "C04.1",
+      "options": [
+        { "id": "a", "text": "5 rounds" },
+        { "id": "b", "text": "6 rounds" },
+        { "id": "c", "text": "7 rounds" },
+        { "id": "d", "text": "9 rounds" }
+      ],
+      "correct": "b",
+      "explanation": "Per Article C04.1, the recommended number of rounds for a Swiss tournament is approximately log₂(N) where N is the number of players. For 64 players: log₂(64) = 6 rounds. This ensures a clear winner can emerge."
+    },
+    {
+      "id": "c5q10",
+      "text": "When may the arbiter deviate from the standard Swiss pairing rules?",
+      "difficulty": "hard",
+      "article": "C04.2",
+      "options": [
+        { "id": "a", "text": "Whenever the arbiter personally prefers a different pairing" },
+        { "id": "b", "text": "Only to avoid byes or to prevent violation of absolute criteria like same-opponent-twice" },
+        { "id": "c", "text": "At any time, as the arbiter has full discretion" },
+        { "id": "d", "text": "Only in the last round, to ensure a decisive final game" }
+      ],
+      "correct": "b",
+      "explanation": "Per Article C04.2, the arbiter can only deviate from standard Swiss pairing rules when strictly necessary — for example, to avoid giving a bye to a player who has already had one, or to prevent the same two players meeting again."
     }
   ]
 }

@@ -50,8 +50,24 @@
   </div>
 </section>
 
+<!-- ── Study Stats ───────────────────────────────────────────────────────── -->
+<section class="section section-alt" id="stats-section" style="display:none;">
+  <div class="container">
+    <div class="section-header">
+      <h2>Your Study Progress</h2>
+      <p>Chapters read and exams attempted are tracked automatically in your browser.</p>
+    </div>
+    <div id="stats-wrap" style="display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:16px;">
+    </div>
+    <p style="margin-top:18px;text-align:right;">
+      <button id="clear-progress-btn" class="btn btn-secondary btn-sm"
+              style="font-size:.8rem;">Clear Progress</button>
+    </p>
+  </div>
+</section>
+
 <!-- ── Quick Actions ─────────────────────────────────────────────────────── -->
-<section class="section section-alt">
+<section class="section">
   <div class="container">
     <div class="section-header">
       <h2>Quick Actions</h2>
@@ -97,22 +113,81 @@
 
 <script src="js/app.js"></script>
 <script>
-// Load chapter cards dynamically from index.json
 (async function() {
-  const { fetchJSON, escHtml } = window.FideApp;
-  const grid = document.getElementById('chapter-cards');
+  const { fetchJSON, escHtml, loadProgress, clearProgress } = window.FideApp;
+
+  // ── Load chapters ──────────────────────────────────────────────────────
+  const grid  = document.getElementById('chapter-cards');
   const index = await fetchJSON('data/index.json');
-  grid.innerHTML = index.chapters.map(ch => `
-    <div class="chapter-card">
-      <div class="chapter-num">Chapter ${ch.id}</div>
-      <h3>${escHtml(ch.title)}</h3>
-      <p>${escHtml(ch.description)}</p>
-      <div class="card-actions">
-        <a href="manual.html?chapter=${ch.id}" class="btn btn-secondary btn-sm">📖 Read</a>
-        <a href="exam.html?file=${encodeURIComponent(ch.exam)}&title=${encodeURIComponent(ch.title)}" class="btn btn-primary btn-sm">✏️ Exam</a>
-      </div>
-    </div>
-  `).join('');
+
+  // ── Render chapter cards ───────────────────────────────────────────────
+  const progress = loadProgress();
+  const studied  = (progress.studied || {});
+  const exams    = (progress.exams   || {});
+
+  grid.innerHTML = index.chapters.map(ch => {
+    const examKey   = ch.exam.replace(/^.*\//, '').replace(/\.json$/, '');
+    const isStudied = studied[ch.id] || studied[String(ch.id)];
+    const bestScore = exams[examKey];
+    const scoreBadge = bestScore != null
+      ? `<span style="font-size:.75rem;font-weight:700;padding:2px 8px;border-radius:12px;
+                      background:${bestScore >= 75 ? 'var(--success-lt)' : 'var(--warn-lt)'};
+                      color:${bestScore >= 75 ? 'var(--success)' : 'var(--warn)'};">
+           Best: ${bestScore}%
+         </span>`
+      : '';
+    const readBadge = isStudied
+      ? `<span style="font-size:.75rem;padding:2px 8px;border-radius:12px;
+                      background:var(--accent-lt);color:var(--accent);">✓ Read</span>`
+      : '';
+    return `
+      <div class="chapter-card">
+        <div class="chapter-num" style="display:flex;justify-content:space-between;align-items:center;">
+          <span>Chapter ${ch.id}</span>
+          <span style="display:flex;gap:5px;">${readBadge}${scoreBadge}</span>
+        </div>
+        <h3>${escHtml(ch.title)}</h3>
+        <p>${escHtml(ch.description)}</p>
+        <div class="card-actions">
+          <a href="manual.html?chapter=${ch.id}" class="btn btn-secondary btn-sm">📖 Read</a>
+          <a href="exam.html?file=${encodeURIComponent(ch.exam)}&title=${encodeURIComponent(ch.title)}"
+             class="btn btn-primary btn-sm">✏️ Exam</a>
+        </div>
+      </div>`;
+  }).join('');
+
+  // ── Study Stats panel (only show if there is any progress) ─────────────
+  const studiedCount = Object.keys(studied).length;
+  const examCount    = Object.keys(exams).length;
+  const passCount    = Object.values(exams).filter(s => s >= 75).length;
+
+  if (studiedCount > 0 || examCount > 0) {
+    const section  = document.getElementById('stats-section');
+    const statsWrap = document.getElementById('stats-wrap');
+    section.style.display = '';
+
+    const statCard = (icon, value, label, color) =>
+      `<div class="card" style="text-align:center;padding:20px 16px;">
+         <div style="font-size:2rem;margin-bottom:4px;">${icon}</div>
+         <div style="font-size:1.8rem;font-weight:700;color:${color}">${value}</div>
+         <div style="font-size:.82rem;color:var(--muted);">${label}</div>
+       </div>`;
+
+    statsWrap.innerHTML =
+      statCard('📖', studiedCount, `of 12 chapters read`, 'var(--accent)') +
+      statCard('✏️', examCount, 'exams attempted', 'var(--text)') +
+      statCard('🎉', passCount, 'exams passed (≥75%)', 'var(--success)') +
+      statCard('📊', examCount > 0 ? Math.round(Object.values(exams).reduce((a,b)=>a+b,0)/examCount)+'%' : '—', 'average best score', 'var(--warn)');
+  }
+
+  // ── Clear progress button ─────────────────────────────────────────────
+  document.getElementById('clear-progress-btn').addEventListener('click', () => {
+    if (confirm('Clear all study progress? This cannot be undone.')) {
+      clearProgress();
+      location.reload();
+    }
+  });
+
 })().catch(e => {
   document.getElementById('chapter-cards').innerHTML =
     `<p style="color:var(--danger)">Failed to load chapters: ${e.message}</p>`;

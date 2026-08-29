@@ -28,7 +28,7 @@
         { "id": "d", "text": "40" }
       ],
       "correct": "d",
-      "explanation": "As per Article B02.8, the K-factor is 40 for new players, 20 for players below 2400, and 10 for established players above 2400. A higher K-factor means ratings change more rapidly."
+      "explanation": "As per Article B02.8, the K-factor is 40 for new players, 20 for players below 2400 who are not new, and 10 for established players above 2400. A higher K-factor means ratings change more rapidly."
     },
     {
       "id": "c6q3",
@@ -70,7 +70,77 @@
         { "id": "d", "text": "We determines the K-factor to be applied" }
       ],
       "correct": "a",
-      "explanation": "As per Article B02.8, the rating change is calculated as K × (W - We), where K is the K-factor, W is the actual score achieved, and We is the expected score based on rating differences between the player and their opponents."
+      "explanation": "As per Article B02.8, the rating change is K × (W - We), where K is the K-factor, W is the actual score, and We is the expected score based on rating differences between the player and their opponents."
+    },
+    {
+      "id": "c6q6",
+      "text": "What is the minimum number of rated opponents required for a FIDE rated event?",
+      "difficulty": "medium",
+      "article": "B02.2",
+      "options": [
+        { "id": "a", "text": "2 opponents" },
+        { "id": "b", "text": "3 opponents" },
+        { "id": "c", "text": "4 opponents" },
+        { "id": "d", "text": "5 opponents" }
+      ],
+      "correct": "b",
+      "explanation": "Per Article B02.2, to be considered for FIDE rating, a player must play against at least 3 rated opponents in the event. Events must also have at least 5 players participating in total."
+    },
+    {
+      "id": "c6q7",
+      "text": "What is the K-factor for a player whose rating has surpassed 2400 for the first time?",
+      "difficulty": "hard",
+      "article": "B02.8",
+      "options": [
+        { "id": "a", "text": "The K-factor drops to 10 immediately" },
+        { "id": "b", "text": "The K-factor remains at 40 for the rest of their career" },
+        { "id": "c", "text": "The K-factor drops to 10 only after completing 30 rated games above 2400" },
+        { "id": "d", "text": "The K-factor changes to 20 once a player reaches 2400, regardless of games played" }
+      ],
+      "correct": "c",
+      "explanation": "Per Article B02.8, once a player's rating reaches 2400, their K-factor drops from 20 to 10 only after they have also completed a minimum of 30 rated games at or above that level. Both conditions must be met."
+    },
+    {
+      "id": "c6q8",
+      "text": "What is the minimum time per player for a game to qualify for FIDE Rapid rating?",
+      "difficulty": "medium",
+      "article": "B02-RB",
+      "options": [
+        { "id": "a", "text": "More than 10 minutes but less than 60 minutes" },
+        { "id": "b", "text": "Exactly 25 minutes per player" },
+        { "id": "c", "text": "At least 30 minutes per player" },
+        { "id": "d", "text": "More than 60 minutes per player" }
+      ],
+      "correct": "a",
+      "explanation": "Per Article B02-RB, Rapid chess is defined as a game where each player has more than 10 minutes but less than 60 minutes for all moves, or a total of more than 10 minutes with an increment. This distinguishes Rapid from both Blitz and Standard."
+    },
+    {
+      "id": "c6q9",
+      "text": "How does the Elo formula calculate the expected score for a player against one opponent?",
+      "difficulty": "hard",
+      "article": "B02.8",
+      "options": [
+        { "id": "a", "text": "We = 1 / (1 + 10^((Ro - Ra)/400))" },
+        { "id": "b", "text": "We = K × (Ra - Ro)" },
+        { "id": "c", "text": "We = (Ra - Ro) / 400" },
+        { "id": "d", "text": "We = Ra / (Ra + Ro)" }
+      ],
+      "correct": "a",
+      "explanation": "Per Article B02.8, the Elo expected score formula is We = 1 / (1 + 10^((Ro - Ra)/400)), where Ra is the player's rating and Ro is the opponent's rating. This gives a probability between 0 and 1 of scoring against that opponent."
+    },
+    {
+      "id": "c6q10",
+      "text": "Which of the following events qualifies a player to earn a FIDE title norm?",
+      "difficulty": "medium",
+      "article": "B02.5",
+      "options": [
+        { "id": "a", "text": "Any club-level event with 10 or more players" },
+        { "id": "b", "text": "Any national championship regardless of player strength" },
+        { "id": "c", "text": "FIDE-approved events with required percentages of titled players" },
+        { "id": "d", "text": "Any blitz tournament with a minimum prize fund" }
+      ],
+      "correct": "c",
+      "explanation": "Per Article B02.5, a title norm can only be achieved in FIDE-approved events that meet specific requirements — including minimum average rating of opponents, required percentages of titled players from different federations, and minimum number of games."
     }
   ]
 }

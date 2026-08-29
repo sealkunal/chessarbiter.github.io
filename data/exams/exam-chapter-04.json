@@ -56,7 +56,7 @@
         { "id": "d", "text": "Only the top-ranked players from each team play each other" }
       ],
       "correct": "b",
-      "explanation": "As per Article 4.3, in the Scheveningen system, two teams play each other with each member of one team playing each member of the other team. The total games equal the product of the sizes of the two teams."
+      "explanation": "As per Article 4.3, in the Scheveningen system, two teams play each other with each member of one team playing each member of the other team. Total games equal the product of the team sizes."
     },
     {
       "id": "c4q5",
@@ -71,6 +71,76 @@
       ],
       "correct": "c",
       "explanation": "As per Article 4.6, in an Armageddon game White has more time but must win. A draw counts as a win for Black. This ensures there is always a decisive result in a play-off."
+    },
+    {
+      "id": "c4q6",
+      "text": "What is the Skalitzka (or Schiller) system?",
+      "difficulty": "hard",
+      "article": "4.4",
+      "options": [
+        { "id": "a", "text": "A variant of the Round Robin where each player has a fixed opponent" },
+        { "id": "b", "text": "A team tournament where players are arranged in boards 1 to N and play the corresponding board of the opponent team" },
+        { "id": "c", "text": "A knock-out tournament where the loser is eliminated immediately" },
+        { "id": "d", "text": "A Swiss tournament variant used only for national championships" }
+      ],
+      "correct": "b",
+      "explanation": "Per Article 4.4, the Skalitzka system (also called Schiller) is a team tournament format where players are arranged by board order and each player plays the corresponding board from the opposing team."
+    },
+    {
+      "id": "c4q7",
+      "text": "How many rounds are required for a single Round Robin tournament with 8 players?",
+      "difficulty": "medium",
+      "article": "4.1",
+      "options": [
+        { "id": "a", "text": "5 rounds" },
+        { "id": "b", "text": "7 rounds" },
+        { "id": "c", "text": "8 rounds" },
+        { "id": "d", "text": "14 rounds" }
+      ],
+      "correct": "b",
+      "explanation": "Per Article 4.1, in a single Round Robin with N players, the number of rounds = N-1 if N is even. With 8 players: 8 - 1 = 7 rounds. Each player plays exactly once against every other player."
+    },
+    {
+      "id": "c4q8",
+      "text": "In a knock-out tournament, what happens to a player who loses their match?",
+      "difficulty": "easy",
+      "article": "4.5",
+      "options": [
+        { "id": "a", "text": "They are re-seeded into a lower bracket" },
+        { "id": "b", "text": "They play in a consolation bracket" },
+        { "id": "c", "text": "They are eliminated from the tournament" },
+        { "id": "d", "text": "They play a third game to decide placement" }
+      ],
+      "correct": "c",
+      "explanation": "Per Article 4.5, in a knock-out tournament (also called elimination tournament), the loser of each match is eliminated. Only the winner advances to the next round. This continues until one player or team wins the final."
+    },
+    {
+      "id": "c4q9",
+      "text": "Which tournament format is best suited for selecting a single champion from a large field of players?",
+      "difficulty": "easy",
+      "article": "4.2",
+      "options": [
+        { "id": "a", "text": "Round Robin, because every player plays every other" },
+        { "id": "b", "text": "Swiss System, because no player is eliminated and the highest scorer wins" },
+        { "id": "c", "text": "Scheveningen, because teams compete head-to-head" },
+        { "id": "d", "text": "Matches only, because two players play a fixed number of games" }
+      ],
+      "correct": "b",
+      "explanation": "Per Article 4.2, the Swiss system is best suited for large fields because no player is eliminated, all players complete the same number of rounds, and the player with the highest final score is the winner."
+    },
+    {
+      "id": "c4q10",
+      "text": "In a match (as opposed to a tournament), how is the result typically decided?",
+      "difficulty": "medium",
+      "article": "4.7",
+      "options": [
+        { "id": "a", "text": "By the total number of wins only, ignoring draws" },
+        { "id": "b", "text": "By the score accumulated over a fixed number of games, with play-offs if tied" },
+        { "id": "c", "text": "By the player who wins the most consecutive games" },
+        { "id": "d", "text": "Always by Armageddon regardless of prior scores" }
+      ],
+      "correct": "b",
+      "explanation": "Per Article 4.7, a match is decided by the total score over a fixed number of games. If tied after the fixed games, tie-break methods specified in advance (such as rapid or Armageddon) determine the winner."
     }
   ]
 }

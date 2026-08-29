@@ -14,7 +14,7 @@
         { "id": "d", "text": "1000 lux" }
       ],
       "correct": "b",
-      "explanation": "As per Article C01.1, a minimum of 200 lux is recommended for the playing area, with no direct light causing glare on the boards. Good lighting is essential for fair play."
+      "explanation": "As per Article C01.1, a minimum of 200 lux is recommended for the playing area, with no direct light causing glare on the boards. Good lighting is essential for fair play and correct scoresheet recording."
     },
     {
       "id": "c8q2",
@@ -71,6 +71,76 @@
       ],
       "correct": "c",
       "explanation": "As per Article C02.4, the scoresheet belongs to the organiser and must be handed in at the end of the game. Players may request copies of their scoresheets."
+    },
+    {
+      "id": "c8q6",
+      "text": "What is the recommended square size for a tournament chessboard?",
+      "difficulty": "hard",
+      "article": "C02.1",
+      "options": [
+        { "id": "a", "text": "40mm to 50mm per square" },
+        { "id": "b", "text": "50mm to 65mm per square" },
+        { "id": "c", "text": "70mm to 80mm per square" },
+        { "id": "d", "text": "30mm to 40mm per square" }
+      ],
+      "correct": "b",
+      "explanation": "Per Article C02.1, the recommended chessboard square size is 50mm to 65mm per square. The board size must be proportional to the piece size — the king's base should occupy 75–80% of a square."
+    },
+    {
+      "id": "c8q7",
+      "text": "What must the playing hall temperature ideally be maintained at?",
+      "difficulty": "medium",
+      "article": "C01.1",
+      "options": [
+        { "id": "a", "text": "Below 15°C for best concentration" },
+        { "id": "b", "text": "A comfortable room temperature, typically 18–22°C" },
+        { "id": "c", "text": "Above 25°C as recommended by FIDE" },
+        { "id": "d", "text": "Temperature is not specified in tournament recommendations" }
+      ],
+      "correct": "b",
+      "explanation": "Per Article C01.1, the playing hall should be maintained at a comfortable temperature, typically 18–22°C. Extreme heat or cold can impair concentration and affect the fairness of the competition."
+    },
+    {
+      "id": "c8q8",
+      "text": "Which of the following is a requirement for scoresheet design in FIDE events?",
+      "difficulty": "medium",
+      "article": "C02.4",
+      "options": [
+        { "id": "a", "text": "Must be printed on official FIDE watermarked paper" },
+        { "id": "b", "text": "Must include space for player names, move numbers and a draw offer column" },
+        { "id": "c", "text": "Can be any plain paper as long as moves are legible" },
+        { "id": "d", "text": "Must be submitted electronically — paper scoresheets are not accepted" }
+      ],
+      "correct": "b",
+      "explanation": "Per Article C02.4, scoresheets must include spaces for player names, their federation, round number, board number, move notation, clock times, and a draw offer column. They must be legible and handed in after each game."
+    },
+    {
+      "id": "c8q9",
+      "text": "What is required for the rest room and analysis area at FIDE events?",
+      "difficulty": "easy",
+      "article": "C01.2",
+      "options": [
+        { "id": "a", "text": "No rest area is required — players must stay at their board" },
+        { "id": "b", "text": "A separate room away from the playing hall where players can relax" },
+        { "id": "c", "text": "The analysis area must be in the playing hall for spectators to watch" },
+        { "id": "d", "text": "Rest room and analysis area can be combined with the press room" }
+      ],
+      "correct": "b",
+      "explanation": "Per Article C01.2, FIDE events should provide a rest room separate from the playing hall for players to relax. Analysis of games in the playing area is forbidden, so a dedicated analysis area away from the boards is recommended."
+    },
+    {
+      "id": "c8q10",
+      "text": "What is the recommendation for the noise level in the playing hall?",
+      "difficulty": "easy",
+      "article": "C01.1",
+      "options": [
+        { "id": "a", "text": "Background music at moderate volume is recommended to aid concentration" },
+        { "id": "b", "text": "The hall should be kept quiet, with minimal disturbance to the players" },
+        { "id": "c", "text": "Audience commentary is allowed as long as it is kept at a low volume" },
+        { "id": "d", "text": "Noise level is not addressed in FIDE technical recommendations" }
+      ],
+      "correct": "b",
+      "explanation": "Per Article C01.1, the playing hall should be kept quiet to allow players to concentrate. Noise from spectators, commentary, or other sources should be minimised. The arbiter must act to address excessive noise."
     }
   ]
 }

@@ -71,6 +71,76 @@
       ],
       "correct": "b",
       "explanation": "As per Article C07.1, the tie-break system to be used must be announced before the start of the tournament. This ensures all participants know the rules before they begin competing."
+    },
+    {
+      "id": "c9q6",
+      "text": "What is the Median Buchholz (also called Cut Buchholz)?",
+      "difficulty": "hard",
+      "article": "C07.2",
+      "options": [
+        { "id": "a", "text": "The Buchholz score with the highest opponent's score added" },
+        { "id": "b", "text": "The Buchholz score with the lowest and/or highest opponent scores removed" },
+        { "id": "c", "text": "The median of all players' Buchholz scores in the event" },
+        { "id": "d", "text": "The Buchholz score calculated only for the middle rounds" }
+      ],
+      "correct": "b",
+      "explanation": "Per Article C07.2, Median (Cut) Buchholz removes the lowest and/or highest opponents' scores from the standard Buchholz calculation. This reduces the impact of an exceptionally weak or strong single opponent."
+    },
+    {
+      "id": "c9q7",
+      "text": "What happens when two players have the same score and all tie-break criteria are equal?",
+      "difficulty": "hard",
+      "article": "C07.4",
+      "options": [
+        { "id": "a", "text": "They share the prize money equally" },
+        { "id": "b", "text": "An Armageddon game or play-off is mandatory" },
+        { "id": "c", "text": "The higher-rated player is ranked above the lower-rated player" },
+        { "id": "d", "text": "Lots are drawn to determine final ranking" }
+      ],
+      "correct": "a",
+      "explanation": "Per Article C07.4, when all tie-break criteria result in equality, players share the prize money and/or title equally. A play-off is only required if a title or medal (not shared prize money) must be awarded to a single player."
+    },
+    {
+      "id": "c9q8",
+      "text": "What is the Sonneborn-Berger score calculation?",
+      "difficulty": "hard",
+      "article": "C07.3",
+      "options": [
+        { "id": "a", "text": "Sum of the final scores of all opponents" },
+        { "id": "b", "text": "Sum of the scores of opponents beaten, plus half the scores of opponents drawn against" },
+        { "id": "c", "text": "Sum of the final scores of all opponents multiplied by game result" },
+        { "id": "d", "text": "Number of wins divided by number of games played" }
+      ],
+      "correct": "b",
+      "explanation": "Per Article C07.3, the Sonneborn-Berger score = (sum of the final scores of each player beaten) + (sum of half the final scores of each player drawn against). Losses contribute 0. It measures the quality of results."
+    },
+    {
+      "id": "c9q9",
+      "text": "How is the drawing of lots used in a tournament?",
+      "difficulty": "easy",
+      "article": "C05.4",
+      "options": [
+        { "id": "a", "text": "To decide who wins when all tiebreaks are equal" },
+        { "id": "b", "text": "To determine starting order, player numbers and colour for first round" },
+        { "id": "c", "text": "To select which games are broadcast live" },
+        { "id": "d", "text": "To randomly reduce the number of players in large events" }
+      ],
+      "correct": "b",
+      "explanation": "Per Article C05.4, drawing of lots is used at the start of a tournament to determine the player numbers (starting order) and, in Round Robin events, the order of players which determines their first-round pairings and colours."
+    },
+    {
+      "id": "c9q10",
+      "text": "Who comprises an appeals committee in a FIDE event?",
+      "difficulty": "medium",
+      "article": "C06.2",
+      "options": [
+        { "id": "a", "text": "The Chief Arbiter and two senior arbiters" },
+        { "id": "b", "text": "Representatives of the players or their captains only" },
+        { "id": "c", "text": "A committee independent of the arbiters, usually nominated by the players or federations" },
+        { "id": "d", "text": "FIDE headquarters appoints the committee remotely" }
+      ],
+      "correct": "c",
+      "explanation": "Per Article C06.2, the appeals committee must be independent of the arbiters. It is typically composed of representatives nominated by the participating players or federations, or persons appointed by the organiser before the event."
     }
   ]
 }

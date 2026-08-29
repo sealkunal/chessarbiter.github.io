@@ -54,7 +54,7 @@
     return;
   }
 
-  const { title, questions, answers, timeTaken } = data;
+  const { title, questions, answers, timeTaken, examKey } = data;
   const total   = questions.length;
   let   correct = 0;
 
@@ -64,6 +64,12 @@
 
   const score    = Math.round((correct / total) * 100);
   const passed   = score >= 75;  // 75% pass mark
+
+  // Track progress
+  if (examKey) {
+    const { markExamAttempted } = window.FideApp;
+    markExamAttempted(examKey, score);
+  }
   const mins     = Math.floor(timeTaken / 60);
   const secs     = timeTaken % 60;
   const timeStr  = mins > 0 ? `${mins}m ${secs}s` : `${secs}s`;

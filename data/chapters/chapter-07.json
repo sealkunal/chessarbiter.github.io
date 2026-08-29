@@ -4,38 +4,38 @@
   "articles": [
     {
       "article": "B01.1",
-      "heading": "General Title Requirements",
-      "content": "FIDE awards titles to players who meet specific performance requirements. The main titles are Grandmaster (GM), International Master (IM), FIDE Master (FM), Candidate Master (CM), Woman Grandmaster (WGM), Woman International Master (WIM), Woman FIDE Master (WFM), and Woman Candidate Master (WCM). Titles are awarded for life unless revoked for disciplinary reasons."
+      "heading": "General Provisions — Player Titles",
+      "content": "FIDE awards the following titles to players who meet specific performance and rating requirements:\n\nOpen titles: Grandmaster (GM), International Master (IM), FIDE Master (FM), Candidate Master (CM)\nWomen's titles: Woman Grandmaster (WGM), Woman International Master (WIM), Woman FIDE Master (WFM), Woman Candidate Master (WCM)\n\nAll titles are awarded for life and are valid regardless of the player's subsequent rating, unless revoked for disciplinary reasons by the FIDE Ethics and Disciplinary Commission.\n\nA player who holds both a women's title and the corresponding open title may use either or both. Players may not hold both GM and WGM if acquired under different conditions simultaneously — the higher title supersedes.\n\nTitle applications must be submitted by the player's national federation. The application must include completed title report forms (IT1 for each norm and IT2 for the title application itself), along with the applicable fee. FIDE verifies the norms before awarding the title.\n\nTitles effective from 1 January 2024 follow updated norm and rating requirements."
     },
     {
       "article": "B01.2",
-      "heading": "Title Norms",
-      "content": "A title norm is a performance requirement achieved in a specific tournament. To achieve a norm, a player must score a minimum number of points against a field of opponents with a sufficiently high average rating. The required score varies with the average rating of the opponents. Most titles require achieving a certain number of norms plus a minimum rating."
+      "heading": "Title Norms — General Requirements",
+      "content": "A title norm is a performance achieved in a specific tournament that counts toward a title. To score a norm, a player must:\n1. Achieve a minimum performance rating (Rp) in the event\n2. Play a minimum number of games\n3. Face a minimum percentage of titled opponents\n4. Have opponents from at least two federations other than the player's own\n\nNorm events must be specifically approved or registered as eligible norm events. Not all FIDE-rated tournaments are eligible for title norms.\n\nGeneral eligibility conditions for all norms:\n- Minimum 9 games in a round-robin, or minimum 9 games in a Swiss\n- At least 1/3 of opponents must be from other federations (minimum 3)\n- The average rating of opponents must meet minimum thresholds\n- The event must have been announced and registered with FIDE in advance\n\nDirect titles (without norms) may be awarded in exceptional circumstances, such as specific results at the World Championship, Olympiad, or World Junior Championship. The conditions for direct title awards are listed in the Direct Titles Table (B01.2)."
     },
     {
       "article": "B01.3",
-      "heading": "Grandmaster Title Requirements",
-      "content": "To earn the Grandmaster title, a player must achieve a FIDE rating of at least 2500 and score three GM norms in events meeting specific criteria. A GM norm requires a performance rating of at least 2600. The events must have a minimum number of games, a minimum proportion of titled opponents, and opponents from at least two different federations other than the player's own."
+      "heading": "Requirements for the Grandmaster Title",
+      "content": "To earn the Grandmaster title, a player must satisfy ALL of the following:\n\n1. Achieve a published FIDE standard rating of at least 2500 at any time\n2. Score three (3) GM norms\n\nRequirements for each GM norm:\n- Minimum performance rating (Rp) of 2600\n- Minimum 9 games in the event\n- At least 50% of opponents must hold a title of IM or above (or WGM)\n- Opponents from at least 2 federations other than the player's own\n- The average rating of opponents must be at least 2380 (for a 9-game norm)\n\nFor women seeking the GM title: the same requirements apply as for men.\n\nNote: A player may achieve the required rating before completing three norms, or complete three norms before reaching the required rating. The title is awarded only when both conditions are satisfied.\n\nGM norms remain valid indefinitely once achieved. They do not expire."
     },
     {
       "article": "B01.4",
-      "heading": "International Master Title Requirements",
-      "content": "To earn the International Master title, a player must achieve a FIDE rating of at least 2400 and score three IM norms. An IM norm requires a performance rating of at least 2450. The same conditions regarding number of games, proportion of titled opponents, and federation diversity apply as for the GM title."
+      "heading": "Requirements for the International Master Title",
+      "content": "To earn the International Master title, a player must satisfy ALL of the following:\n\n1. Achieve a published FIDE standard rating of at least 2400 at any time\n2. Score three (3) IM norms\n\nRequirements for each IM norm:\n- Minimum performance rating (Rp) of 2450\n- Minimum 9 games in the event\n- At least 1/3 of opponents must hold an international title (FM or above, or WIM)\n- Opponents from at least 2 federations other than the player's own\n- The average rating of opponents must be at least 2230 (for a 9-game norm)\n\nThe same conditions regarding number of games, proportion of titled opponents, and federation diversity apply as for GM norms.\n\nWomen seeking the IM title must meet the same requirements as men."
     },
     {
       "article": "B01.5",
-      "heading": "FIDE Master Title",
-      "content": "The FIDE Master title is awarded to any player who achieves a FIDE rating of 2300 or more. No norms are required. Once awarded, the FM title is retained even if the player's rating subsequently drops below 2300, unless the title is revoked for disciplinary reasons."
+      "heading": "FIDE Master and Candidate Master Titles",
+      "content": "FIDE Master (FM):\nThe FM title is awarded to any player who achieves a published FIDE standard rating of 2300 or above. No norms are required. The title is awarded automatically upon the player's national federation submitting the application. The FM title is retained even if the player's rating subsequently falls below 2300.\n\nCandidate Master (CM):\nThe CM title is awarded to any player who achieves a published FIDE standard rating of 2200 or above. No norms are required.\n\nWomen's equivalent titles:\n- WFM: achieved by reaching a FIDE standard rating of 2100 or above\n- WCM: achieved by reaching a FIDE standard rating of 1900 or above\n\nFor WGM title: Rp ≥ 2400 for each of three norms, plus a published rating of at least 2300.\nFor WIM title: Rp ≥ 2250 for each of three norms, plus a published rating of at least 2100.\n\nAll rating-based titles (FM, CM, WFM, WCM) are awarded for life once the required rating is achieved."
     },
     {
       "article": "B01.6",
       "heading": "Direct Titles",
-      "content": "Some titles may be awarded directly without norms in exceptional circumstances. Players who achieve specific results at top-level events such as the World Championship, Olympiad, or World Junior Championship may receive direct titles. The conditions for direct title awards are specified in the FIDE Handbook and updated periodically."
+      "content": "Some titles may be awarded directly, without the normal norm and rating requirements, in recognition of exceptional results at specific high-level events.\n\nExamples of conditions for direct GM title:\n- Winner of the World Chess Championship (Open)\n- Winner of the World Junior Championship (Open)\n- Gold medal at the Chess Olympiad on a specific board with a minimum score\n- Finalist at the World Chess Championship Candidates\n\nThe complete table of direct titles and the exact conditions are listed in the Direct Titles Table (B01.2), which is updated periodically. Conditions may change based on FIDE Congress decisions.\n\nDirect titles still require the player to hold a FIDE ID and be a member of a national federation affiliated with FIDE. The national federation must still submit the application with appropriate documentation."
     },
     {
       "article": "B01.7",
-      "heading": "Application Procedure",
-      "content": "Applications for FIDE titles must be submitted by the national federation of the player. The application must include the title report forms (IT1 and IT2 for player titles), evidence of norms, and the applicable fee. FIDE verifies the norms and awards the title if all conditions are met. The process is administered through the FIDE Online Arena."
+      "heading": "Application Procedure for Player Titles",
+      "content": "Applications for FIDE titles must be submitted by the national federation of the player. The procedure is:\n\n1. For each norm: complete an IT1 – Certificate of Title Result form, signed by the Chief Arbiter of the event and the national federation.\n\n2. For the title application: complete an IT2 – Title Application form, which references all the qualifying norms.\n\n3. Submission: both forms are submitted to FIDE through the national federation. The application fee must be paid.\n\n4. Verification: FIDE verifies that all norm events were properly registered, that the norms are genuine, and that the rating requirements are met.\n\n5. Approval: If all conditions are satisfied, the title is awarded at the next available FIDE General Assembly or Council meeting, or between sessions if FIDE procedures allow.\n\nImportant: The norms must have been achieved in events registered with FIDE as norm events. Retroactive registration of events as norm events is not permitted. The arbiter and organiser bear responsibility for ensuring events are correctly registered before they begin."
     }
   ]
 }
