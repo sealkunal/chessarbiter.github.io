@@ -90,6 +90,20 @@
         title:  'Full Mock Exam — Set 2 (25 Questions)',
         desc:   '25 questions covering all 12 chapters — comprehensive arbiter exam practice.',
         file:   index.fullExam.file
+      },
+      {
+        type:   'internal',
+        set:    'Set 3',
+        title:  'Full Exam-Laws of Chess CH 1-12',
+        desc:   'Full exam covering Laws of Chess — Articles 1 to 12.',
+        file:   'data/exams/exam-full_Laws_Of_Chess.json'
+      },
+      {
+        type:   'page',
+        set:    'FA Exam',
+        title:  'FIDE Arbiter (FA) Exam Paper',
+        desc:   'Official style 39-question subjective examination with written answers and PDF report export.',
+        pageUrl:'fa-exam.html'
       }
     ];
 
@@ -123,6 +137,11 @@
                 ? `<a href="${set.url}" target="_blank" rel="noopener"
                       class="btn btn-primary btn-sm" style="margin-top:8px;">
                      Start Exam ↗
+                   </a>`
+                : set.type === 'page'
+                ? `<a href="${set.pageUrl}"
+                      class="btn btn-primary btn-sm" style="margin-top:8px;">
+                     Start Exam →
                    </a>`
                 : `<a href="exam.html?file=${encodeURIComponent(set.file)}&title=${encodeURIComponent(set.title)}"
                       class="btn btn-primary btn-sm" style="margin-top:8px;">

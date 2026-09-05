@@ -1,0 +1,622 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>FA Mock Exam – Chess Arbiter</title>
+  <link rel="stylesheet" href="css/style.css">
+  <!-- jsPDF and html2canvas CDN for robust client-side PDF generation with print styling fallback -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
+  <style>
+    .fa-exam-meta {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 20px;
+      margin-bottom: 28px;
+    }
+    .fa-meta-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 16px;
+      margin-top: 14px;
+    }
+    @media (max-width: 600px) {
+      .fa-meta-grid { grid-template-columns: 1fr; }
+    }
+    .form-group label {
+      display: block;
+      font-weight: 600;
+      font-size: 0.9rem;
+      margin-bottom: 6px;
+      color: var(--text);
+    }
+    .form-group input {
+      width: 100%;
+      padding: 10px 12px;
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      font-size: 0.95rem;
+      font-family: var(--font);
+    }
+    .form-group input:focus {
+      outline: none;
+      border-color: var(--accent);
+      box-shadow: 0 0 0 3px var(--accent-lt);
+    }
+    .q-section-header {
+      background: var(--accent);
+      color: #fff;
+      padding: 12px 18px;
+      border-radius: var(--radius);
+      font-size: 1.1rem;
+      font-weight: 700;
+      margin: 36px 0 20px 0;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .fa-card {
+      background: #fff;
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 22px;
+      margin-bottom: 24px;
+      box-shadow: var(--shadow);
+      transition: border-color .15s;
+    }
+    .fa-card:focus-within {
+      border-color: var(--accent);
+    }
+    .fa-card-top {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      margin-bottom: 12px;
+      gap: 10px;
+    }
+    .q-badge {
+      background: var(--accent-lt);
+      color: var(--accent);
+      font-weight: 700;
+      font-size: 0.85rem;
+      padding: 4px 10px;
+      border-radius: 4px;
+      white-space: nowrap;
+    }
+    .marks-badge {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      color: var(--muted);
+      font-size: 0.8rem;
+      font-weight: 600;
+      padding: 3px 8px;
+      border-radius: 4px;
+      white-space: nowrap;
+    }
+    .q-text {
+      font-size: 1rem;
+      line-height: 1.6;
+      color: var(--text);
+      margin-bottom: 16px;
+      white-space: pre-line;
+    }
+    .q-table-wrap {
+      overflow-x: auto;
+      margin: 14px 0;
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 6px;
+      padding: 8px;
+    }
+    .q-table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 0.88rem;
+    }
+    .q-table th, .q-table td {
+      border: 1px solid var(--border);
+      padding: 6px 10px;
+      text-align: left;
+    }
+    .q-table th {
+      background: #eef2f7;
+      font-weight: 600;
+    }
+    .q-img-wrap {
+      margin: 14px 0;
+      text-align: center;
+    }
+    .q-img-wrap img {
+      max-width: 100%;
+      max-height: 320px;
+      margin: 0 auto;
+      border: 1px solid var(--border);
+      border-radius: 6px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.06);
+    }
+    .answer-textarea {
+      width: 100%;
+      min-height: 110px;
+      padding: 12px;
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      font-family: var(--font);
+      font-size: 0.95rem;
+      line-height: 1.5;
+      resize: vertical;
+      background: #fafbfc;
+      transition: all 0.2s;
+    }
+    .answer-textarea:focus {
+      outline: none;
+      border-color: var(--accent);
+      background: #fff;
+      box-shadow: 0 0 0 3px var(--accent-lt);
+    }
+    .fa-submit-bar {
+      position: sticky;
+      bottom: 20px;
+      background: #fff;
+      border: 2px solid var(--accent);
+      border-radius: var(--radius);
+      padding: 16px 24px;
+      margin-top: 40px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      box-shadow: 0 4px 16px rgba(0,0,0,0.15);
+      z-index: 50;
+      flex-wrap: wrap;
+      gap: 12px;
+    }
+    .fa-status-info {
+      font-size: 0.95rem;
+      color: var(--text);
+    }
+    .progress-bar-container {
+      width: 180px;
+      height: 8px;
+      background: var(--surface);
+      border-radius: 4px;
+      overflow: hidden;
+      border: 1px solid var(--border);
+      display: inline-block;
+      vertical-align: middle;
+      margin-left: 8px;
+    }
+    .progress-bar-fill {
+      height: 100%;
+      width: 0%;
+      background: var(--success);
+      transition: width 0.3s ease;
+    }
+
+    /* Print / PDF generation styles */
+    @media print {
+      body { background: #fff; color: #000; font-size: 11pt; }
+      .site-header, .site-footer, .fa-submit-bar, #back-btn, .nav-toggle { display: none !important; }
+      .container { max-width: 100%; padding: 0; }
+      .fa-card { break-inside: avoid; border: 1px solid #ccc; box-shadow: none; margin-bottom: 15px; }
+      .q-section-header { background: #333 !important; color: #fff !important; break-inside: avoid; }
+      .answer-textarea { border: 1px solid #999; background: #fff; resize: none; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- ── Header ────────────────────────────────────────────────────────────── -->
+<header class="site-header">
+  <div class="header-inner">
+    <div class="site-logo"><a href="index.html" style="color:#fff;text-decoration:none"><strong>Chess Arbiter</strong></a></div>
+    <button class="nav-toggle" aria-label="Toggle navigation">
+      <span></span><span></span><span></span>
+    </button>
+    <nav class="nav-links">
+      <a href="index.html">Home</a>
+      <a href="manual.html">Manual</a>
+      <a href="exam.html" class="active">Mock Exam</a>
+      <a href="search.html">Search</a>
+      <a href="feedback.html">Feedback</a>
+    </nav>
+  </div>
+</header>
+
+<!-- ── Main Exam Container ───────────────────────────────────────────────── -->
+<main class="container" style="max-width:840px;padding-top:36px;padding-bottom:60px;">
+
+  <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:20px;flex-wrap:wrap;gap:10px;">
+    <div>
+      <h1 style="font-size:1.6rem;color:var(--accent);">Full Exam – FIDE Arbiter (FA)</h1>
+      <p style="color:var(--muted);font-size:0.95rem;">Subjective / Written Question Paper (39 Questions) • No Time Limit</p>
+    </div>
+    <a href="exam.html" id="back-btn" class="btn btn-secondary btn-sm">← Back to Exam Selector</a>
+  </div>
+
+  <!-- Instructions & Examinee Information -->
+  <div class="fa-exam-meta" id="examinee-section">
+    <h2 style="font-size:1.15rem;margin-bottom:8px;">Examinee Information & Instructions</h2>
+    <p style="font-size:0.9rem;color:var(--muted);margin-bottom:12px;">
+      Please enter your name below. All answers are autosaved in your browser. When you complete the examination, click <strong>"Submit & Generate PDF"</strong> to generate and download an official examination sheet PDF containing all questions and your answers.
+    </p>
+
+    <div class="fa-meta-grid">
+      <div class="form-group">
+        <label for="examinee-name">Examinee Full Name <span style="color:var(--danger)">*</span></label>
+        <input type="text" id="examinee-name" placeholder="e.g. Jane Doe" required>
+      </div>
+      <div class="form-group">
+        <label for="fide-id">FIDE ID / Club / Federation (Optional)</label>
+        <input type="text" id="fide-id" placeholder="e.g. ENG / 12345678">
+      </div>
+    </div>
+
+    <div style="margin-top:14px;padding-top:12px;border-top:1px solid var(--border);font-size:0.85rem;color:var(--muted);display:flex;justify-content:space-between;flex-wrap:wrap;gap:8px;">
+      <span><strong>Pass Mark:</strong> 80%</span>
+      <span><strong>Standard:</strong> FIDE Laws & Regulations 2025</span>
+      <span><strong>Format:</strong> Written response</span>
+    </div>
+  </div>
+
+  <!-- Question List Container -->
+  <div id="questions-container">
+    <div class="loading-wrap"><div class="spinner"></div><p>Loading FA Exam questions…</p></div>
+  </div>
+
+  <!-- Sticky Submission & Progress Bar -->
+  <div class="fa-submit-bar" id="submit-bar" style="display:none;">
+    <div class="fa-status-info">
+      <strong>Answered:</strong> <span id="answered-count">0</span> / 39 questions
+      <div class="progress-bar-container">
+        <div class="progress-bar-fill" id="progress-fill"></div>
+      </div>
+    </div>
+    <div style="display:flex;gap:10px;">
+      <button type="button" class="btn btn-secondary btn-sm" id="btn-save-draft">Save Draft</button>
+      <button type="button" class="btn btn-primary" id="btn-submit-pdf" style="font-weight:600;">
+        📥 Submit & Generate PDF
+      </button>
+    </div>
+  </div>
+
+</main>
+
+<!-- ── Footer ────────────────────────────────────────────────────────────── -->
+<footer class="site-footer">
+  <p>Chess Arbiter Study Portal &mdash; Not an official FIDE publication.</p>
+</footer>
+
+<script src="js/app.js"></script>
+<script>
+(async function() {
+  const { fetchJSON, escHtml, showToast } = window.FideApp;
+
+  const qContainer = document.getElementById('questions-container');
+  const submitBar = document.getElementById('submit-bar');
+  const nameInput = document.getElementById('examinee-name');
+  const fideInput = document.getElementById('fide-id');
+  const answeredCountEl = document.getElementById('answered-count');
+  const progressFillEl = document.getElementById('progress-fill');
+  const btnSubmit = document.getElementById('btn-submit-pdf');
+  const btnSaveDraft = document.getElementById('btn-save-draft');
+
+  let examData = null;
+  const STORAGE_KEY = 'fide_fa_exam_responses_v1';
+  const META_KEY = 'fide_fa_exam_meta_v1';
+
+  // Load saved meta
+  try {
+    const savedMeta = JSON.parse(localStorage.getItem(META_KEY) || '{}');
+    if (savedMeta.name) nameInput.value = savedMeta.name;
+    if (savedMeta.fideId) fideInput.value = savedMeta.fideId;
+  } catch(e) {}
+
+  // Save meta on change
+  function saveMeta() {
+    const meta = { name: nameInput.value.trim(), fideId: fideInput.value.trim() };
+    localStorage.setItem(META_KEY, JSON.stringify(meta));
+  }
+  nameInput.addEventListener('input', saveMeta);
+  fideInput.addEventListener('input', saveMeta);
+
+  // Load responses from localStorage
+  function loadSavedAnswers() {
+    try {
+      return JSON.parse(localStorage.getItem(STORAGE_KEY) || '{}');
+    } catch(e) {
+      return {};
+    }
+  }
+
+  function saveAllAnswers() {
+    const answers = {};
+    document.querySelectorAll('.answer-textarea').forEach(ta => {
+      const qId = ta.getAttribute('data-qid');
+      answers[qId] = ta.value;
+    });
+    localStorage.setItem(STORAGE_KEY, JSON.stringify(answers));
+    updateProgress();
+  }
+
+  function updateProgress() {
+    let count = 0;
+    const textareas = document.querySelectorAll('.answer-textarea');
+    textareas.forEach(ta => {
+      if (ta.value.trim().length > 0) count++;
+    });
+    answeredCountEl.textContent = count;
+    const pct = (count / (textareas.length || 39)) * 100;
+    progressFillEl.style.width = pct + '%';
+  }
+
+  // Format table / markdown in question text
+  function formatQuestionText(text) {
+    if (!text) return '';
+    // Detect markdown tables
+    const lines = text.split('\n');
+    let inTable = false;
+    let tableRows = [];
+    let htmlOutput = [];
+
+    for (let i = 0; i < lines.length; i++) {
+      const line = lines[i].trim();
+      if (line.startsWith('|') && line.endsWith('|')) {
+        if (!inTable) {
+          inTable = true;
+          tableRows = [];
+        }
+        tableRows.push(line);
+      } else {
+        if (inTable) {
+          htmlOutput.push(renderMarkdownTable(tableRows));
+          inTable = false;
+          tableRows = [];
+        }
+        if (line) {
+          htmlOutput.push(`<p style="margin-bottom:8px;">${escHtml(line)}</p>`);
+        }
+      }
+    }
+    if (inTable) {
+      htmlOutput.push(renderMarkdownTable(tableRows));
+    }
+    return htmlOutput.join('');
+  }
+
+  function renderMarkdownTable(rows) {
+    if (rows.length === 0) return '';
+    let html = '<div class="q-table-wrap"><table class="q-table">';
+    let isHeader = true;
+
+    for (let r = 0; r < rows.length; r++) {
+      const row = rows[r];
+      const cells = row.split('|').slice(1, -1).map(c => c.trim());
+      if (cells.every(c => /^:?-+:?$/.test(c))) {
+        // divider row
+        isHeader = false;
+        continue;
+      }
+      html += '<tr>';
+      cells.forEach(cell => {
+        if (isHeader) {
+          html += `<th>${escHtml(cell)}</th>`;
+        } else {
+          html += `<td>${escHtml(cell)}</td>`;
+        }
+      });
+      html += '</tr>';
+    }
+    html += '</table></div>';
+    return html;
+  }
+
+  // Load exam JSON
+  try {
+    examData = await fetchJSON('data/exams/exam-fa-questions.json');
+    renderExam(examData);
+  } catch (err) {
+    qContainer.innerHTML = `<div class="card" style="color:var(--danger)">Failed to load exam data: ${escHtml(err.message)}</div>`;
+    return;
+  }
+
+  function renderExam(data) {
+    const saved = loadSavedAnswers();
+    let currentSection = '';
+    let html = '';
+
+    data.questions.forEach((q, idx) => {
+      if (q.section !== currentSection) {
+        currentSection = q.section;
+        html += `
+          <div class="q-section-header">
+            <span>${escHtml(currentSection)}</span>
+          </div>`;
+      }
+
+      const qAns = saved[q.id] || '';
+      const formattedQ = formatQuestionText(q.question);
+
+      let imagesHtml = '';
+      if (q.images && q.images.length > 0) {
+        imagesHtml = q.images.map(img => `
+          <div class="q-img-wrap">
+            <img src="${escHtml(img)}" alt="Question Diagram ${q.id}" loading="lazy">
+          </div>
+        `).join('');
+      }
+
+      html += `
+        <div class="fa-card" id="q-card-${q.id}">
+          <div class="fa-card-top">
+            <span class="q-badge">Question ${q.id}</span>
+            <span class="marks-badge">${escHtml(q.marks || '')}</span>
+          </div>
+          <div class="q-text">${formattedQ}</div>
+          ${imagesHtml}
+          <div style="margin-top:14px;">
+            <label style="font-weight:600;font-size:0.85rem;color:var(--muted);display:block;margin-bottom:6px;">
+              Your Answer / Working:
+            </label>
+            <textarea class="answer-textarea" data-qid="${q.id}" placeholder="Type your answer here...">${escHtml(qAns)}</textarea>
+          </div>
+        </div>
+      `;
+    });
+
+    qContainer.innerHTML = html;
+    submitBar.style.display = 'flex';
+    updateProgress();
+
+    // Attach autosave listeners
+    document.querySelectorAll('.answer-textarea').forEach(ta => {
+      ta.addEventListener('input', () => {
+        saveAllAnswers();
+      });
+    });
+  }
+
+  btnSaveDraft.addEventListener('click', () => {
+    saveAllAnswers();
+    saveMeta();
+    showToast('Draft successfully saved in browser!');
+  });
+
+  // Submit and generate PDF
+  btnSubmit.addEventListener('click', async () => {
+    const examineeName = nameInput.value.trim();
+    if (!examineeName) {
+      alert('Please enter your Examinee Name before submitting.');
+      nameInput.focus();
+      return;
+    }
+
+    saveAllAnswers();
+    saveMeta();
+
+    const answers = loadSavedAnswers();
+    const answeredTotal = Object.values(answers).filter(a => a && a.trim().length > 0).length;
+
+    const confirmSubmit = confirm(
+      `You have answered ${answeredTotal} of 39 questions.\n\nAre you sure you want to submit and generate your PDF report?`
+    );
+    if (!confirmSubmit) return;
+
+    btnSubmit.disabled = true;
+    btnSubmit.textContent = '⏳ Generating PDF…';
+    showToast('Preparing your submission document…');
+
+    try {
+      generateSubmissionPDF(examineeName, fideInput.value.trim(), examData, answers);
+    } catch(err) {
+      console.error(err);
+      alert('Failed to generate PDF. You can also print the page directly using Ctrl+P / Print to PDF.');
+    } finally {
+      btnSubmit.disabled = false;
+      btnSubmit.textContent = '📥 Submit & Generate PDF';
+    }
+  });
+
+  function generateSubmissionPDF(name, fideId, exam, answers) {
+    const submissionDate = new Date().toLocaleString('en-US', {
+      dateStyle: 'long',
+      timeStyle: 'short'
+    });
+
+    // Create printable container
+    const printArea = document.createElement('div');
+    printArea.id = 'pdf-render-area';
+    printArea.style.padding = '25px 30px';
+    printArea.style.fontFamily = 'Arial, sans-serif';
+    printArea.style.color = '#111';
+    printArea.style.background = '#fff';
+    printArea.style.maxWidth = '800px';
+    printArea.style.margin = '0 auto';
+
+    let printHtml = `
+      <div style="border-bottom: 2px solid #1d4a8f; padding-bottom: 12px; margin-bottom: 20px;">
+        <h1 style="color:#1d4a8f; margin:0 0 4px 0; font-size:20pt;">FIDE Arbiter (FA) Examination</h1>
+        <h2 style="margin:0 0 10px 0; font-size:13pt; color:#555; font-weight:normal;">Candidate Examination & Answer Sheet</h2>
+        <table style="width:100%; font-size:10pt; border-collapse:collapse; margin-top:8px;">
+          <tr>
+            <td style="padding:3px 0;"><strong>Examinee Name:</strong> ${escHtml(name)}</td>
+            <td style="padding:3px 0; text-align:right;"><strong>Date:</strong> ${escHtml(submissionDate)}</td>
+          </tr>
+          <tr>
+            <td style="padding:3px 0;"><strong>FIDE ID / Fed:</strong> ${escHtml(fideId || 'N/A')}</td>
+            <td style="padding:3px 0; text-align:right;"><strong>Pass Mark:</strong> 80%</td>
+          </tr>
+        </table>
+      </div>
+    `;
+
+    let currentSection = '';
+    exam.questions.forEach((q) => {
+      if (q.section !== currentSection) {
+        currentSection = q.section;
+        printHtml += `
+          <div style="background:#1d4a8f; color:#fff; padding:6px 10px; font-weight:bold; font-size:11pt; margin-top:20px; margin-bottom:12px; border-radius:3px;">
+            ${escHtml(currentSection)}
+          </div>`;
+      }
+
+      const ans = (answers[q.id] || '').trim();
+      const ansDisplay = ans ? escHtml(ans).replace(/\n/g, '<br>') : '<em style="color:#888;">[No answer provided]</em>';
+
+      printHtml += `
+        <div style="border:1px solid #ddd; border-radius:4px; padding:12px 14px; margin-bottom:14px; background:#fff; page-break-inside:avoid;">
+          <div style="display:flex; justify-content:space-between; margin-bottom:6px; font-size:10pt;">
+            <strong style="color:#1d4a8f;">Question ${q.id}</strong>
+            <span style="color:#666; font-size:9pt;">(${escHtml(q.marks)})</span>
+          </div>
+          <div style="font-size:10pt; line-height:1.4; margin-bottom:10px; color:#222;">
+            ${formatQuestionText(q.question)}
+          </div>
+          <div style="background:#f7f9fc; border-left:3px solid #1d4a8f; padding:8px 10px; font-size:9.5pt; color:#111;">
+            <strong style="font-size:8.5pt; text-transform:uppercase; color:#1d4a8f; display:block; margin-bottom:4px;">Candidate Answer:</strong>
+            ${ansDisplay}
+          </div>
+        </div>
+      `;
+    });
+
+    printHtml += `
+      <div style="margin-top:30px; padding-top:10px; border-top:1px solid #ccc; font-size:8pt; text-align:center; color:#777;">
+        FIDE Arbiter Study Portal • Generated on ${escHtml(submissionDate)} • Examinee: ${escHtml(name)}
+      </div>
+    `;
+
+    printArea.innerHTML = printHtml;
+
+    // Use html2pdf
+    if (window.html2pdf) {
+      const opt = {
+        margin:       [10, 10, 10, 10],
+        filename:     `${name.replace(/[^a-zA-Z0-9_-]/g, '_')}_FA_Exam_Answers.pdf`,
+        image:        { type: 'jpeg', quality: 0.98 },
+        html2canvas:  { scale: 2, useCORS: true },
+        jsPDF:        { unit: 'mm', format: 'a4', orientation: 'portrait' },
+        pagebreak:    { mode: ['avoid-all', 'css', 'legacy'] }
+      };
+
+      html2pdf().set(opt).from(printArea).save().then(() => {
+        showToast('PDF downloaded successfully!');
+      }).catch(err => {
+        console.error('html2pdf error:', err);
+        window.print();
+      });
+    } else {
+      // Fallback: window.print()
+      const win = window.open('', '_blank');
+      win.document.write(`<html><head><title>${name} - FA Exam</title><style>body{font-family:Arial,sans-serif;padding:20px;}</style></head><body>${printHtml}</body></html>`);
+      win.document.close();
+      win.focus();
+      setTimeout(() => { win.print(); }, 500);
+    }
+  }
+
+})();
+</script>
+
+</body>
+</html>

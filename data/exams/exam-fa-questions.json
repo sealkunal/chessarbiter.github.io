@@ -1,0 +1,297 @@
+{
+  "title": "FIDE Arbiter (FA) Examination",
+  "description": "Comprehensive 39-question FIDE Arbiter examination with subjective text responses.",
+  "passMark": "80%",
+  "totalMarks": 100,
+  "questions": [
+    {
+      "id": 1,
+      "section": "Questions on Laws of Chess (55 Marks)",
+      "marks": "2 marks",
+      "question": "In the position given Black has played his king from d2 to e3. White resigns immediately. Both players write 0-1 on their scoresheets and start to sign them. An arbiter has been watching. What should the arbiter do? Explain your answer.",
+      "images": [
+        "images/fa-exam/image1.png"
+      ]
+    },
+    {
+      "id": 2,
+      "section": "Questions on Laws of Chess (55 Marks)",
+      "marks": "2 marks",
+      "question": "Black plays 1 ... Nf3. Before he can complete the move his flag falls. Black claims a draw as after the White king moves 2 ... Nxe1 and Black cannot lose. What is the result and why?",
+      "images": [
+        "images/fa-exam/image2.png"
+      ]
+    },
+    {
+      "id": 3,
+      "section": "Questions on Laws of Chess (55 Marks)",
+      "marks": "4 marks",
+      "question": "White makes the move 40. Rf8. His flag falls. Black claims a win on time. White claims that he has made the time control and the game should continue.\n\n• Is White correct?\n• Is Black correct?\n\nExplain your answers fully.",
+      "images": [
+        "images/fa-exam/image3.png"
+      ]
+    },
+    {
+      "id": 4,
+      "section": "Questions on Laws of Chess (55 Marks)",
+      "marks": "4 marks",
+      "question": "The arbiter arrives at a Blitz game where the position is given in the diagram.\n\n1. What action does the arbiter take? Explain your answer.\n2. If the game continued with 1 ... Nxd5 2. Qxf7, what action should the arbiter take?",
+      "images": [
+        "images/fa-exam/image4.png"
+      ]
+    },
+    {
+      "id": 5,
+      "section": "Questions on Laws of Chess (55 Marks)",
+      "marks": "2 marks",
+      "question": "A player promotes his pawn and the arbiter that is present gives him the requested piece that will deliver immediate mate, but the flag falls. The arbiter assigns him the victory.\n\n• Is this decision correct?\n• Why?",
+      "images": []
+    },
+    {
+      "id": 6,
+      "section": "Questions on Laws of Chess (55 Marks)",
+      "marks": "4 marks",
+      "question": "In the position shown White plays Bxc3 and starts Black's clock. Black's flag falls immediately.\n\n• What is the result of the game and why?\n• Would the result have been different if White had played Ke1? If so, why?",
+      "images": [
+        "images/fa-exam/image5.jpeg"
+      ]
+    },
+    {
+      "id": 7,
+      "section": "Questions on Laws of Chess (55 Marks)",
+      "marks": "2 marks",
+      "question": "In a team competition the player on board 1 who played with white pieces offered his opponent a draw under the condition that the two players on board 4 should do the same. The players on board 4 did not agree. After a few minutes Black on board 1 accepted the draw, but White went to the arbiter and told him that he had offered the draw under the condition that the players on board 4 also agreed to a draw. What is the arbiter's decision? Explain your answer.",
+      "images": []
+    },
+    {
+      "id": 8,
+      "section": "Questions on Laws of Chess (55 Marks)",
+      "marks": "4 marks",
+      "question": "The following moves were played in a game:\n1.d4 Nf6 2.c4 c5 3.d5 b5 4.cxb5 a6 5.e3 Bb7\n6.Nc3 Qa5 7.Bd2 axb5 8.Bxb5 Qb6 9.Qb3 e6\n10.e4 Nxe4 11.Nxe4 Bxd5 12.Qd3 Qb7 13.f3 c4\n14.Bxc4 Bxc4 15.Qxc4 d5 16.Qc2 dxe4 17.Qxe4 Qxe4+\n18.fxe4 Nd7 19.Ne2 Nc5 20.Nc3 Nd3+ 21.Ke2 Nxb2\n22.Nb5 Ra4 23.Nc3 Ra8 24.Nb5 Ra4 25.Nc3 Ra8\n\nAfter 25...Ra8 move White wrote on his scoresheet 26. Nb5, stopped the chess clock, summoned the arbiter and claimed a draw because of three times the same position. He had even underlined the moves which produced the same position. The arbiter investigated the position and took the right decision to reject the claim.\n\nCan you explain fully why he rejected the claim? How should the game be restarted?",
+      "images": [
+        "images/fa-exam/image6.png"
+      ]
+    },
+    {
+      "id": 9,
+      "section": "Questions on Laws of Chess (55 Marks)",
+      "marks": "2 marks",
+      "question": "White makes a move which is checkmate. Black correctly states that White's move was the 50th without a capture or a pawn move and therefore the game is drawn.\n\nExplain the decision you make.",
+      "images": []
+    },
+    {
+      "id": 10,
+      "section": "Questions on Laws of Chess (55 Marks)",
+      "marks": "4 marks",
+      "question": "In the position shown, Black is very short of time and unsure which move to make. He lifts up his king and without letting go of it, he moves it to f6, then to f8, and then to e7 before finally placing it on f7 where he releases it and presses the clock. What should the arbiter do and why?",
+      "images": [
+        "images/fa-exam/image7.png"
+      ]
+    },
+    {
+      "id": 11,
+      "section": "Questions on Laws of Chess (55 Marks)",
+      "marks": "3 marks",
+      "question": "The arbiter is watching a game. The move counter is not being used. Both scoresheets show 38 moves have been played by the White player.\n\nBlack makes a move and the chess clock shows: 0:00.35 | 0:05.12\nWhite makes his reply and now the chess clock shows: 0:30.35 | 0:35.12\n\nWhy is the White clock showing 0:30.35? What should the arbiter do?",
+      "images": []
+    },
+    {
+      "id": 12,
+      "section": "Questions on Laws of Chess (55 Marks)",
+      "marks": "2 marks",
+      "question": "In a Blitz tournament Black, who was left-handed, moved the chess clock so that it was at his left-hand side. This suited both players. All the other clocks faced in the opposite direction.\n\nShould the arbiter allow this? Explain your answer.",
+      "images": []
+    },
+    {
+      "id": 13,
+      "section": "Questions on Laws of Chess (55 Marks)",
+      "marks": "2 marks",
+      "question": "White has K+R. Black has K+N. White's flag falls. What is the result of the game? Give an explanation for your decision.",
+      "images": []
+    },
+    {
+      "id": 14,
+      "section": "Questions on Laws of Chess (55 Marks)",
+      "marks": "3 marks",
+      "question": "In a tournament a blind player and a deaf player are due to play each other. What special arrangement should an arbiter make?",
+      "images": []
+    },
+    {
+      "id": 15,
+      "section": "Questions on Laws of Chess (55 Marks)",
+      "marks": "2 marks",
+      "question": "Name four places which are part of the playing venue.",
+      "images": []
+    },
+    {
+      "id": 16,
+      "section": "Questions on Laws of Chess (55 Marks)",
+      "marks": "2 marks",
+      "question": "Name four things an assistant can do for the disabled player.",
+      "images": []
+    },
+    {
+      "id": 17,
+      "section": "Questions on Laws of Chess (55 Marks)",
+      "marks": "3 marks",
+      "question": "White plays g8. There is no spare queen at his board so he puts an upturned rook on in place of the pawn and announces check. The opponent calls over the arbiter. The arbiter states that White has played an illegal move and decreases two minutes from White's time. He then replaces the upturned rook with a queen. What mistakes if any has the arbiter made?",
+      "images": [
+        "images/fa-exam/image8.png"
+      ]
+    },
+    {
+      "id": 18,
+      "section": "Questions on Laws of Chess (55 Marks)",
+      "marks": "2 marks",
+      "question": "Game played with 90 minutes plus 30 seconds increment a move: after 30' a clock shows: W 1:10 - B 1:12 after White's 12th move. Is it correct? Why?",
+      "images": []
+    },
+    {
+      "id": 19,
+      "section": "Questions on Laws of Chess (55 Marks)",
+      "marks": "3 marks",
+      "question": "In which of the following situations must an arbiter intervene? Explain why.\n\n1. A player makes an illegal move in a Blitz tournament with one arbiter overseeing 20 players.\n2. A player places their king in check and presses the clock in a game with a time control of 90 minutes plus a 30-second increment.\n3. A player's flag falls in a Rapid game with one arbiter responsible for three boards.",
+      "images": []
+    },
+    {
+      "id": 20,
+      "section": "Questions on Laws of Chess (55 Marks)",
+      "marks": "2 marks",
+      "question": "Player A offers a draw before moving. Player B asks to see the move first. Player A states that he no longer wants to offer a draw and completes his move. Player B tries to accept the draw. What is the correct arbiter's decision?\n\n- The game should continue as Player B did not accept the original offer. No penalty applied to either player.\n- The game should continue with Player A penalised for making an illegal draw offer.\n- The game ends in a draw.\n- Both players are defaulted for having a disagreement.",
+      "images": []
+    },
+    {
+      "id": 21,
+      "section": "Questions on Laws of Chess (55 Marks)",
+      "marks": "1 mark",
+      "question": "When can a player leave the playing area when it is his move?",
+      "images": []
+    },
+    {
+      "id": 22,
+      "section": "Questions on Tournaments (6 marks)",
+      "marks": "3 marks",
+      "question": "A player wishes to appeal the decision of an arbiter. What three conditions must the appeal satisfy in order to be heard?",
+      "images": []
+    },
+    {
+      "id": 23,
+      "section": "Questions on Tournaments (6 marks)",
+      "marks": "3 marks",
+      "question": "Questions about round-robin tournaments (all-play-all):\n\n1. In a 7 player round-robin tournament which player gets the bye in round 5?\n2. In a 12 player round-robin tournament in which two rounds does player 8 get consecutive blacks?\n3. Why should the draw for a round-robin tournament always be random?",
+      "images": []
+    },
+    {
+      "id": 24,
+      "section": "Questions on Tie-Breaks (6 marks)",
+      "marks": "2 marks",
+      "question": "What is meant by Buchholz Cut 1 and Median Buchholz?",
+      "images": []
+    },
+    {
+      "id": 25,
+      "section": "Questions on Tie-Breaks (6 marks)",
+      "marks": "2 marks",
+      "question": "International Open Tournament Table:\n\n| nr | Name | tot | R1 | R2 | R3 | R4 | R5 |\n| :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |\n| 1 | Player 1 | 4.0 | 6w1 | 4b1 | 2w½ | 3b½ | 5w1 |\n| 2 | Player 2 | 4.0 | 7b1 | 3w½ | 1b½ | 4w1 | 8b1 |\n| 3 | Player 3 | 3.5 | 8w1 | 2b½ | 5w1 | 1w½ | 4b½ |\n| 4 | Player 4 | 2.5 | 9b1 | 1w0 | 7b1 | 2b0 | 3w½ |\n| 5 | Player 5 | 2.5 | 10w1 | 6b½ | 3b0 | 7w1 | 1b0 |\n| 6 | Player 6 | 2.5 | 1b0 | 5w½ | 9b1 | 8w½ | 10b½ |\n| 7 | Player 7 | 1.5 | 2w0 | 10b1 | 4w0 | 5b0 | 9w½ |\n| 8 | Player 8 | 1.5 | 3b0 | 9w½ | 10b½ | 6b½ | 2w0 |\n| 9 | Player 9 | 1.5 | 4w0 | 8b½ | 6w0 | 10w½ | 7b½ |\n| 10 | Player 10 | 1.5 | 5b0 | 7w0 | 8w½ | 9b½ | 6w½ |\n\nWhich player wins if the tie break is Buchholz? Show working.",
+      "images": []
+    },
+    {
+      "id": 26,
+      "section": "Questions on Tie-Breaks (6 marks)",
+      "marks": "1 mark",
+      "question": "Is it true, that in an Armageddon play-off White will qualify if the game ends in a draw?",
+      "images": []
+    },
+    {
+      "id": 27,
+      "section": "Questions on Tie-Breaks (6 marks)",
+      "marks": "1 mark",
+      "question": "Does a virtual opponent be used in calculating of tie break?",
+      "images": []
+    },
+    {
+      "id": 28,
+      "section": "Questions on Swiss Pairing (10 marks)",
+      "marks": "2 marks",
+      "question": "Player A was due to play Player B in round 2 but defaulted because he took ill. He returned and was paired against Player B in round 5. Could this be correct? Explain your answer.",
+      "images": []
+    },
+    {
+      "id": 29,
+      "section": "Questions on Swiss Pairing (10 marks)",
+      "marks": "1 mark",
+      "question": "Why is it important that an arbiter knows how to do a pairing when it has been done by computer?",
+      "images": []
+    },
+    {
+      "id": 30,
+      "section": "Questions on Swiss Pairing (10 marks)",
+      "marks": "3 marks",
+      "question": "In a Swiss system tournament with 9 rounds, after the 4th round we have the following scorebracket:\n\n| Pairing number | Colour history |\n| :--- | :--- |\n| 8 | BWBB |\n| 10 | WBBW |\n| 11 | WBWB |\n| 19 | WBWW |\n| 20 | WWBW |\n| 25 | BWWB |\n| 29 | BWWB |\n| 31 | WBWB |\n| 45 | WBBW |\n\nFollowing pairings have already been played in previous rounds: 10-25 and 19-45.\nNone of these players have been up-floated or down-floated in the last 2 rounds.\n\nWhat are the pairings of the 5th round?",
+      "images": []
+    },
+    {
+      "id": 31,
+      "section": "Questions on Swiss Pairing (10 marks)",
+      "marks": "3 marks",
+      "question": "50 players take part in a tournament. There are 21 winners in the first round. 15 of them had white. How many of these players will get a second white in round 2? Explain why.\n\nA. 6\nB. 5\nC. 4\nD. 3",
+      "images": []
+    },
+    {
+      "id": 32,
+      "section": "Questions on Swiss Pairing (10 marks)",
+      "marks": "1 mark",
+      "question": "How many rounds would be required to ensure that in a normal 54 player Swiss tournament only one player could have a 100% score?\n\nA. 5\nB. 6",
+      "images": []
+    },
+    {
+      "id": 33,
+      "section": "Questions on Titles & Rating (15 marks)",
+      "marks": "8 marks",
+      "question": "A Swiss event in England had 80 players of whom 19 are foreign (non ENG) rated. A local player named McDonalds meets the following opponents with the results as shown:\n\n| Round | Opponent | Fed | Title | Rating | Result |\n| :--- | :--- | :--- | :--- | :--- | :--- |\n| R1 | Andrews | ENG | - | 2363 | 1 |\n| R2 | Bradshaw | AUS | GM | 2528 | ½ |\n| R3 | Cooper | ENG | - | 2295 | 1 |\n| R4 | Drew | WLS | - | 1925 | 1 |\n| R5 | Edwards | SCO | IM | 2460 | 1 |\n| R6 | Fryer | ESP | GM | 2548 | 0 |\n| R7 | Green | ENG | CM | 2023 | 1 |\n| R8 | Harris | ENG | IM | 2487 | 1 |\n| R9 | Innes | ENG | - | 2373 | ½ |\n| R10 | Johnson | ENG | GM | 2484 | 1 |\n| R11 | McNab | ENG | GM | 2464 | ½ |\n\nHas McDonalds fulfilled the requirements for a GM norm? Explain your answer fully showing all working.",
+      "images": []
+    },
+    {
+      "id": 34,
+      "section": "Questions on Titles & Rating (15 marks)",
+      "marks": "2 marks",
+      "question": "In his first rated tournament a player scores 1 point from 5 games against rated opponents. However, in the next rating list his name does not appear. Which of these is the most likely reason?\n\n- He did not score enough points as 25% needed\n- He did not play enough rated opponents\n- His rating was below 1400\n- You must wait 60 days before a rating is published\n\nExplain why you think your decision is correct.",
+      "images": []
+    },
+    {
+      "id": 35,
+      "section": "Questions on Titles & Rating (15 marks)",
+      "marks": "3 marks",
+      "question": "In a 7 rounds Swiss System Tournament a player whose rating is 2556, played against the following opponents and had the following results:\n\n| Opponent's rating | Player's score |\n| :--- | :--- |\n| 2075 | 1 |\n| 2134 | 1 |\n| 2395 | 1 |\n| 2468 | 0 |\n| 2290 | 1 |\n| 2550 | ½ |\n| 2653 | ½ |\n\nCalculate his rating change from this tournament. (Show full work)",
+      "images": []
+    },
+    {
+      "id": 36,
+      "section": "Questions on Titles & Rating (15 marks)",
+      "marks": "2 marks",
+      "question": "In a 5 rounds Swiss System Tournament a player without rating scored following results:\n\n| Opponent's rating | Player's score |\n| :--- | :--- |\n| 2075 | 1 |\n| 2100 | 0 |\n| 1933 | 1 |\n| 2010 | 0 |\n| 1919 | 1 |\n\nCalculate his rating entry in FIDE rating list (Show full work).",
+      "images": []
+    },
+    {
+      "id": 37,
+      "section": "Questions on Arbiters (3 marks)",
+      "marks": "3 marks",
+      "question": "An application for a FIDE arbiter title was rejected. The candidate submitted five 'norms' as follows:\n\n- 3 national championships with 40 players and 9 rounds\n- 1 rapid tournament with 50 players and 9 rounds\n- 1 blitz tournament with 60 players and 7 rounds\n\nExplain fully why the application was rejected.",
+      "images": []
+    },
+    {
+      "id": 38,
+      "section": "Questions on Anti-Cheating (Fair Play) (5 marks)",
+      "marks": "2 marks",
+      "question": "A player approaches the arbiter and says that he thinks his opponent has a phone in his pocket as he heard a noise. He insists that the arbiter should immediately scan his opponent.\n\nWhy should the arbiter refuse? If the opponent is scanned suggest when it should be done.",
+      "images": []
+    },
+    {
+      "id": 39,
+      "section": "Questions on Anti-Cheating (Fair Play) (5 marks)",
+      "marks": "3 marks",
+      "question": "Players at an event are allowed to have their mobile phones but they must be switched off and in a bag supplied by the organiser. A 'beep' makes you suspect that a player has not switched his phone off. On the board he has king and rook. The opponent only has a king. You ask to see the phone but the player refuses.\n\nWould your decision be different if he continues to refuse?",
+      "images": []
+    }
+  ]
+}

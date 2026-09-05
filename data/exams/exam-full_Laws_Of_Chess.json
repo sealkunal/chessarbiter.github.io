@@ -1,0 +1,846 @@
+{
+  "chapter": 2,
+  "title": "Chapter 2 – FIDE Laws of Chess: Mock Exam",
+  "questions": [
+    {
+      "id": "c2q1",
+      "text": "What is the primary objective of each player in a chess game?",
+      "difficulty": "easy",
+      "article": "1.4.1",
+      "options": [
+        { "id": "a", "text": "Capture all opposing pieces" },
+        { "id": "b", "text": "Attack the opponent's king so it has no legal move to avoid capture" },
+        { "id": "c", "text": "Reach the opponent's back rank with any piece" },
+        { "id": "d", "text": "Have more pieces than the opponent after 40 moves" }
+      ],
+      "correct": "b",
+      "explanation": "The objective is to place the opponent's king under attack in such a way that the opponent has no legal move; this is checkmate."
+    },
+    {
+      "id": "c2q2",
+      "text": "A player starts the game with the king and queen reversed. The error is discovered after several moves. What should the arbiter do?",
+      "difficulty": "medium",
+      "article": "7.1",
+      "options": [
+        { "id": "a", "text": "Correct the two pieces and continue from the current position" },
+        { "id": "b", "text": "Cancel the game and arrange a new game" },
+        { "id": "c", "text": "Award a draw" },
+        { "id": "d", "text": "Allow the players to decide whether to continue" }
+      ],
+      "correct": "b",
+      "explanation": "If an illegal initial position has been set up, the game is cancelled and a new game must be played."
+    },
+    {
+      "id": "c2q3",
+      "text": "Which square must be at each player's right-hand corner when the chessboard is correctly placed?",
+      "difficulty": "easy",
+      "article": "2.1",
+      "options": [
+        { "id": "a", "text": "A black square" },
+        { "id": "b", "text": "A white square" },
+        { "id": "c", "text": "Any square, provided both players agree" },
+        { "id": "d", "text": "A square containing a rook" }
+      ],
+      "correct": "b",
+      "explanation": "The board must be placed so that a white square is at the right-hand corner of each player."
+    },
+    {
+      "id": "c2q4",
+      "text": "During play, a player consults a handwritten opening note kept in a pocket. Which statement is correct?",
+      "difficulty": "easy",
+      "article": "11.3.1",
+      "options": [
+        { "id": "a", "text": "It is allowed if the note contains only opening moves" },
+        { "id": "b", "text": "It is allowed if the opponent is thinking" },
+        { "id": "c", "text": "It is forbidden to use notes, sources of information, or advice during play" },
+        { "id": "d", "text": "It is allowed in rapid chess but not standard chess" }
+      ],
+      "correct": "c",
+      "explanation": "During play, players are forbidden to use notes, sources of information or advice, or analyse any game on another chessboard."
+    },
+    {
+      "id": "c2q5",
+      "text": "When is a player's move considered completed if it is not a promotion or castling move?",
+      "difficulty": "medium",
+      "article": "6.2.1",
+      "options": [
+        { "id": "a", "text": "When the player touches the piece" },
+        { "id": "b", "text": "When the player releases the piece on its destination square" },
+        { "id": "c", "text": "When the opponent acknowledges the move" },
+        { "id": "d", "text": "When the arbiter records the move" }
+      ],
+      "correct": "b",
+      "explanation": "A move is completed when the player has made the move and pressed the clock. For the move on the board, it is made when the piece is released on its destination square, subject to special rules for promotion and castling."
+    },
+    {
+      "id": "c2q6",
+      "text": "A player has no legal move and their king is not in check. What is the result?",
+      "difficulty": "easy",
+      "article": "5.2.1",
+      "options": [
+        { "id": "a", "text": "The player loses on stalemate" },
+        { "id": "b", "text": "The game is drawn by stalemate" },
+        { "id": "c", "text": "The player must pass their turn" },
+        { "id": "d", "text": "The arbiter adds time and play continues" }
+      ],
+      "correct": "b",
+      "explanation": "A game is drawn when the player to move has no legal move and their king is not in check. This is stalemate."
+    },
+    {
+      "id": "c2q7",
+      "text": "A pawn reaches its farthest rank. The player removes the pawn, places a knight on the promotion square, and then presses the clock. What is the promoted piece?",
+      "difficulty": "easy",
+      "article": "3.7.5",
+      "options": [
+        { "id": "a", "text": "A queen, because promotion is automatically to a queen" },
+        { "id": "b", "text": "A knight" },
+        { "id": "c", "text": "The pawn remains a pawn" },
+        { "id": "d", "text": "The arbiter chooses the promoted piece" }
+      ],
+      "correct": "b",
+      "explanation": "A pawn reaching the rank furthest from its starting position must be exchanged for a new queen, rook, bishop or knight of the same colour. The piece placed determines the promotion."
+    },
+    {
+      "id": "c2q8",
+      "text": "A player makes a first completed illegal move in a standard game. What is the normal time penalty?",
+      "difficulty": "medium",
+      "article": "7.5.5",
+      "options": [
+        { "id": "a", "text": "The offending player loses immediately" },
+        { "id": "b", "text": "Two minutes are added to the opponent's remaining time" },
+        { "id": "c", "text": "Two minutes are deducted from both players" },
+        { "id": "d", "text": "No time adjustment is made" }
+      ],
+      "correct": "b",
+      "explanation": "For the first completed illegal move by a player, the arbiter gives two minutes extra time to the opponent, unless a different penalty is specified by the competition regulations."
+    },
+    {
+      "id": "c2q9",
+      "text": "When may a player offer a draw under the Laws of Chess?",
+      "difficulty": "medium",
+      "article": "9.1.2",
+      "options": [
+        { "id": "a", "text": "Only before making a move" },
+        { "id": "b", "text": "Only after making a move and before pressing the clock" },
+        { "id": "c", "text": "Only after the opponent has pressed the clock" },
+        { "id": "d", "text": "Only when both players have fewer than five minutes remaining" }
+      ],
+      "correct": "b",
+      "explanation": "A player wishing to offer a draw must do so after making a move on the board and before pressing the clock."
+    },
+    {
+      "id": "c2q10",
+      "text": "What score is awarded to a player who wins a game?",
+      "difficulty": "easy",
+      "article": "10.1",
+      "options": [
+        { "id": "a", "text": "0 points" },
+        { "id": "b", "text": "0.5 points" },
+        { "id": "c", "text": "1 point" },
+        { "id": "d", "text": "2 points" }
+      ],
+      "correct": "c",
+      "explanation": "Unless the regulations state otherwise, a player who wins a game scores one point."
+    },
+    {
+      "id": "c2q11",
+      "text": "White touches Black's bishop while it is White's turn and a legal capture of that bishop exists. What must White do?",
+      "difficulty": "medium",
+      "article": "4.3.2",
+      "options": [
+        { "id": "a", "text": "Capture that bishop if legally possible" },
+        { "id": "b", "text": "Move any White piece" },
+        { "id": "c", "text": "Ask Black whether the bishop may be captured" },
+        { "id": "d", "text": "Move the bishop to a different square" }
+      ],
+      "correct": "a",
+      "explanation": "If a player deliberately touches one or more of the opponent's pieces, they must capture the first piece touched that can be legally captured."
+    },
+    {
+      "id": "c2q12",
+      "text": "A player makes an intended-move claim for a draw by threefold repetition. What must they do before calling the arbiter?",
+      "difficulty": "hard",
+      "article": "9.2.1",
+      "options": [
+        { "id": "a", "text": "Make the move, press the clock, and then claim" },
+        { "id": "b", "text": "Write the intended move on the scoresheet without making it" },
+        { "id": "c", "text": "Ask the opponent to confirm the repetition" },
+        { "id": "d", "text": "Wait until the position appears a fourth time" }
+      ],
+      "correct": "b",
+      "explanation": "For a claim based on an intended move, the player writes the move on the scoresheet and declares the intention to make it; the move must result in the position appearing for the third time."
+    },
+    {
+      "id": "c2q13",
+      "text": "Who decides where the chess clock is placed?",
+      "difficulty": "easy",
+      "article": "6.4",
+      "options": [
+        { "id": "a", "text": "The player with White" },
+        { "id": "b", "text": "The player with Black" },
+        { "id": "c", "text": "The arbiter" },
+        { "id": "d", "text": "The oldest player" }
+      ],
+      "correct": "c",
+      "explanation": "The arbiter decides where the chess clock is placed."
+    },
+    {
+      "id": "c2q14",
+      "text": "Which statement correctly describes the king's movement?",
+      "difficulty": "easy",
+      "article": "3.1.3",
+      "options": [
+        { "id": "a", "text": "It may move to any square, including an attacked square" },
+        { "id": "b", "text": "It moves one square in any direction, except to a square attacked by an opponent's piece" },
+        { "id": "c", "text": "It moves any number of squares diagonally" },
+        { "id": "d", "text": "It moves in an L-shape" }
+      ],
+      "correct": "b",
+      "explanation": "The king moves to an adjoining square, but it may not move to a square attacked by one or more opponent's pieces."
+    },
+    {
+      "id": "c2q15",
+      "text": "A player resigns in a position where the opponent has only a lone king and cannot possibly checkmate. What is the result?",
+      "difficulty": "hard",
+      "article": "5.1.2",
+      "options": [
+        { "id": "a", "text": "The resigning player loses" },
+        { "id": "b", "text": "The game is drawn because the opponent cannot checkmate by any possible series of legal moves" },
+        { "id": "c", "text": "The game is replayed" },
+        { "id": "d", "text": "The arbiter awards half a point to each player only if both agree" }
+      ],
+      "correct": "b",
+      "explanation": "The opponent wins by resignation unless the position is such that the opponent cannot checkmate the player's king by any possible series of legal moves; in that case the game is drawn."
+    },
+    {
+      "id": "c2q16",
+      "text": "A player uses a mobile phone in the playing venue without arbiter authorization. Which statement is correct?",
+      "difficulty": "medium",
+      "article": "11.3.2",
+      "options": [
+        { "id": "a", "text": "It is permitted if the phone is in silent mode" },
+        { "id": "b", "text": "It is permitted if the player is not at the board" },
+        { "id": "c", "text": "It is forbidden unless authorized by the arbiter" },
+        { "id": "d", "text": "It is permitted during the opponent's turn" }
+      ],
+      "correct": "c",
+      "explanation": "Without permission from the arbiter, a player is forbidden to have a mobile phone or other electronic means of communication in the playing venue."
+    },
+    {
+      "id": "c2q17",
+      "text": "A player presses the clock using the hand that is holding a captured piece. Is this permitted?",
+      "difficulty": "medium",
+      "article": "6.2.3",
+      "options": [
+        { "id": "a", "text": "Yes, provided the clock is pressed gently" },
+        { "id": "b", "text": "Yes, if the opponent does not complain" },
+        { "id": "c", "text": "No, the player must press the clock with the same hand used to make the move" },
+        { "id": "d", "text": "No, the player must always use both hands" }
+      ],
+      "correct": "c",
+      "explanation": "A player must press the clock with the same hand with which they made the move. It is forbidden to keep a finger on the clock or hover over it."
+    },
+    {
+      "id": "c2q18",
+      "text": "What should happen if a player arrives after the default time specified in the competition regulations?",
+      "difficulty": "easy",
+      "article": "6.7.1",
+      "options": [
+        { "id": "a", "text": "The player is always given five extra minutes" },
+        { "id": "b", "text": "The player loses the game unless the arbiter decides otherwise" },
+        { "id": "c", "text": "The game is automatically drawn" },
+        { "id": "d", "text": "The opponent loses the game for not waiting" }
+      ],
+      "correct": "b",
+      "explanation": "Any player who arrives at the chessboard after the default time loses the game, unless the arbiter decides otherwise."
+    },
+    {
+      "id": "c2q19",
+      "text": "A player records their moves in a language other than algebraic notation. Is this allowed?",
+      "difficulty": "medium",
+      "article": "8.1.1",
+      "options": [
+        { "id": "a", "text": "Yes, any notation system may be used" },
+        { "id": "b", "text": "No, the player must record moves in algebraic notation, preferably on a move-by-move basis" },
+        { "id": "c", "text": "Yes, if the opponent can understand the notation" },
+        { "id": "d", "text": "Only in blitz games" }
+      ],
+      "correct": "b",
+      "explanation": "During play, each player is required to record their own moves and the opponent's moves in the correct manner, move after move, in algebraic notation."
+    },
+    {
+      "id": "c2q20",
+      "text": "Which player starts the game by making the first move?",
+      "difficulty": "easy",
+      "article": "1.2",
+      "options": [
+        { "id": "a", "text": "Black" },
+        { "id": "b", "text": "White" },
+        { "id": "c", "text": "The player with the lower rating" },
+        { "id": "d", "text": "The player chosen by the arbiter after the first move" }
+      ],
+      "correct": "b",
+      "explanation": "The player with the light-coloured pieces, White, has the first move."
+    },
+    {
+      "id": "c2q21",
+      "text": "A position has appeared five times during a game. Neither player claims a draw. What should happen?",
+      "difficulty": "hard",
+      "article": "9.6.1",
+      "options": [
+        { "id": "a", "text": "The game continues because neither player claimed a draw" },
+        { "id": "b", "text": "The game is automatically drawn" },
+        { "id": "c", "text": "The player who repeated the position last loses" },
+        { "id": "d", "text": "The arbiter adds two minutes to both clocks" }
+      ],
+      "correct": "b",
+      "explanation": "The game is drawn if the same position has appeared at least five times. No claim is required."
+    },
+    {
+      "id": "c2q22",
+      "text": "A rook can move:",
+      "difficulty": "easy",
+      "article": "3.2",
+      "options": [
+        { "id": "a", "text": "Any number of squares along a rank or file, provided no piece blocks its path" },
+        { "id": "b", "text": "Only one square diagonally" },
+        { "id": "c", "text": "In an L-shape" },
+        { "id": "d", "text": "Only toward the opponent's side of the board" }
+      ],
+      "correct": "a",
+      "explanation": "The rook moves to any square along the file or rank on which it stands, provided it does not move through any piece."
+    },
+    {
+      "id": "c2q23",
+      "text": "A player deliberately touches their own rook, but the rook has no legal move. What must the player do?",
+      "difficulty": "hard",
+      "article": "4.3.1",
+      "options": [
+        { "id": "a", "text": "Move the rook anyway" },
+        { "id": "b", "text": "Lose the game" },
+        { "id": "c", "text": "Make any legal move" },
+        { "id": "d", "text": "Ask the opponent to select a move" }
+      ],
+      "correct": "c",
+      "explanation": "A player who deliberately touches one or more of their own pieces must move or capture with the first piece touched that can be legally moved or captured. If it cannot legally move, the player may make any legal move."
+    },
+    {
+      "id": "c2q24",
+      "text": "What is the normal result when a game ends in a draw?",
+      "difficulty": "easy",
+      "article": "10.2",
+      "options": [
+        { "id": "a", "text": "Each player receives one point" },
+        { "id": "b", "text": "Each player receives half a point" },
+        { "id": "c", "text": "Neither player receives points" },
+        { "id": "d", "text": "The player with White receives half a point and Black receives none" }
+      ],
+      "correct": "b",
+      "explanation": "Unless the regulations state otherwise, a draw scores half a point to each player."
+    },
+    {
+      "id": "c2q25",
+      "text": "During a game, an arbiter sees a player repeatedly distracting their opponent by talking. What is the arbiter required to protect?",
+      "difficulty": "medium",
+      "article": "12.2.5",
+      "options": [
+        { "id": "a", "text": "Only the player's right to speak freely" },
+        { "id": "b", "text": "The players from being disturbed" },
+        { "id": "c", "text": "The organiser from complaints" },
+        { "id": "d", "text": "Only the leading player's concentration" }
+      ],
+      "correct": "b",
+      "explanation": "The arbiter must ensure that the players are not disturbed."
+    },
+    {
+      "id": "c2q26",
+      "text": "In a legal initial position, where is White's king placed?",
+      "difficulty": "easy",
+      "article": "2.2",
+      "options": [
+        { "id": "a", "text": "d1" },
+        { "id": "b", "text": "e1" },
+        { "id": "c", "text": "d8" },
+        { "id": "d", "text": "e8" }
+      ],
+      "correct": "b",
+      "explanation": "In the initial position, White's king is placed on e1 and White's queen on d1."
+    },
+    {
+      "id": "c2q27",
+      "text": "A player claims a draw under the 50-move rule. The claim is incorrect. What time adjustment is normally made?",
+      "difficulty": "hard",
+      "article": "9.5.3",
+      "options": [
+        { "id": "a", "text": "Two minutes are added to the opponent's remaining time" },
+        { "id": "b", "text": "Two minutes are deducted from the claimant's remaining time" },
+        { "id": "c", "text": "Both players receive two additional minutes" },
+        { "id": "d", "text": "No clock adjustment is made" }
+      ],
+      "correct": "a",
+      "explanation": "If a draw claim is incorrect, the arbiter adds two minutes to the opponent's remaining time."
+    },
+    {
+      "id": "c2q28",
+      "text": "What should the arbiter do if a chess clock is defective during a game?",
+      "difficulty": "medium",
+      "article": "6.10",
+      "options": [
+        { "id": "a", "text": "Declare the game drawn" },
+        { "id": "b", "text": "Replace the clock and use best judgement when setting the times" },
+        { "id": "c", "text": "Restart the game" },
+        { "id": "d", "text": "Allow players to use their personal mobile-phone timers" }
+      ],
+      "correct": "b",
+      "explanation": "If a chess clock is defective, the arbiter replaces it and uses best judgement when determining the times to be shown on the replacement clock."
+    },
+    {
+      "id": "c2q29",
+      "text": "A bishop moves:",
+      "difficulty": "easy",
+      "article": "3.3",
+      "options": [
+        { "id": "a", "text": "Any number of squares diagonally, provided no piece blocks its path" },
+        { "id": "b", "text": "Any number of squares horizontally or vertically" },
+        { "id": "c", "text": "In an L-shape" },
+        { "id": "d", "text": "One square in any direction" }
+      ],
+      "correct": "a",
+      "explanation": "The bishop moves to any square along a diagonal on which it stands, provided it does not move through a piece."
+    },
+    {
+      "id": "c2q30",
+      "text": "A player has a mobile phone in their bag in the playing venue. The regulations do not provide a different penalty. What is the standard consequence if the phone is found on the player?",
+      "difficulty": "hard",
+      "article": "11.3.2.1",
+      "options": [
+        { "id": "a", "text": "A warning only" },
+        { "id": "b", "text": "The player loses the game" },
+        { "id": "c", "text": "The opponent loses the game" },
+        { "id": "d", "text": "The game is automatically drawn" }
+      ],
+      "correct": "b",
+      "explanation": "If a player has a mobile phone or other electronic means of communication in the playing venue without authorization, the player loses the game unless the competition rules specify a less severe penalty."
+    },
+    {
+      "id": "c2q31",
+      "text": "A player wishes to adjust a piece on its square without being bound by touch-move. What should the player do?",
+      "difficulty": "easy",
+      "article": "4.2",
+      "options": [
+        { "id": "a", "text": "Say 'j'adoube' or an equivalent indication before touching the piece" },
+        { "id": "b", "text": "Ask the opponent for permission after touching it" },
+        { "id": "c", "text": "Press the clock before adjusting it" },
+        { "id": "d", "text": "Call the arbiter for every adjustment" }
+      ],
+      "correct": "a",
+      "explanation": "A player may adjust one or more pieces on their squares only after first expressing their intention, for example by saying 'j'adoube' or 'I adjust'."
+    },
+    {
+      "id": "c2q32",
+      "text": "When is a player allowed to stop the chess clock?",
+      "difficulty": "medium",
+      "article": "6.12",
+      "options": [
+        { "id": "a", "text": "Whenever they wish to think longer" },
+        { "id": "b", "text": "Only to seek the arbiter's assistance, for example when a promotion piece is unavailable" },
+        { "id": "c", "text": "Whenever the opponent leaves the board" },
+        { "id": "d", "text": "Only after offering a draw" }
+      ],
+      "correct": "b",
+      "explanation": "A player may stop the clock in order to seek the arbiter's assistance, for example when promotion has occurred and the required piece is not available."
+    },
+    {
+      "id": "c2q33",
+      "text": "What is the result if a player completes a move that checkmates the opponent's king?",
+      "difficulty": "easy",
+      "article": "5.1.1",
+      "options": [
+        { "id": "a", "text": "The game is drawn" },
+        { "id": "b", "text": "The player who delivered checkmate wins, provided the move was legal" },
+        { "id": "c", "text": "The opponent must first resign" },
+        { "id": "d", "text": "The arbiter must confirm the checkmate before the game ends" }
+      ],
+      "correct": "b",
+      "explanation": "The game is won by the player who has checkmated the opponent's king with a legal move."
+    },
+    {
+      "id": "c2q34",
+      "text": "A player makes a move with two hands when only one hand is required. What may the arbiter do?",
+      "difficulty": "medium",
+      "article": "11.7",
+      "options": [
+        { "id": "a", "text": "Ignore it because the move is legal on the board" },
+        { "id": "b", "text": "Apply a penalty for infringement of the Laws" },
+        { "id": "c", "text": "Automatically declare the game lost" },
+        { "id": "d", "text": "Require the opponent to accept the move" }
+      ],
+      "correct": "b",
+      "explanation": "A player who infringes the Laws of Chess may be penalised. The arbiter determines the appropriate penalty under Article 12.9."
+    },
+    {
+      "id": "c2q35",
+      "text": "Which piece is permitted to jump over intervening pieces?",
+      "difficulty": "easy",
+      "article": "3.2",
+      "options": [
+        { "id": "a", "text": "Bishop" },
+        { "id": "b", "text": "Rook" },
+        { "id": "c", "text": "Knight" },
+        { "id": "d", "text": "Queen" }
+      ],
+      "correct": "c",
+      "explanation": "The knight may move to one of the squares nearest to it and is the only piece that may jump over other pieces."
+    },
+    {
+      "id": "c2q36",
+      "text": "After an illegal move is discovered, how far back should the position normally be reinstated?",
+      "difficulty": "medium",
+      "article": "7.5.1",
+      "options": [
+        { "id": "a", "text": "To the position immediately before the irregularity" },
+        { "id": "b", "text": "To the start of the game" },
+        { "id": "c", "text": "To the previous time control" },
+        { "id": "d", "text": "To the last move recorded by both players" }
+      ],
+      "correct": "a",
+      "explanation": "If an irregularity occurs, the position immediately before the irregularity is reinstated, including restoring clock times as accurately as possible."
+    },
+    {
+      "id": "c2q37",
+      "text": "A player makes a draw offer, then attempts to withdraw it before the opponent replies. Is withdrawal allowed?",
+      "difficulty": "medium",
+      "article": "9.1.2.2",
+      "options": [
+        { "id": "a", "text": "Yes, at any time before the opponent responds" },
+        { "id": "b", "text": "No, a draw offer cannot be withdrawn" },
+        { "id": "c", "text": "Only if the arbiter approves" },
+        { "id": "d", "text": "Only if fewer than ten moves have been played" }
+      ],
+      "correct": "b",
+      "explanation": "A draw offer cannot be withdrawn and remains valid until the opponent accepts it, rejects it orally, rejects it by touching a piece with the intention of moving or capturing it, or the game ends in another way."
+    },
+    {
+      "id": "c2q38",
+      "text": "A player's flag has fallen. The opponent has only a king and cannot possibly checkmate by any legal sequence. What is the result?",
+      "difficulty": "hard",
+      "article": "6.9",
+      "options": [
+        { "id": "a", "text": "The player whose flag fell loses" },
+        { "id": "b", "text": "The game is drawn" },
+        { "id": "c", "text": "The game is replayed" },
+        { "id": "d", "text": "The arbiter awards a win to the higher-rated player" }
+      ],
+      "correct": "b",
+      "explanation": "If a player's flag falls, the player loses unless the opponent cannot checkmate the player's king by any possible series of legal moves. In that case, the game is drawn."
+    },
+    {
+      "id": "c2q39",
+      "text": "What is the required result when a player has completed 75 moves without any pawn move or capture, unless the last move resulted in checkmate?",
+      "difficulty": "hard",
+      "article": "9.6.2",
+      "options": [
+        { "id": "a", "text": "The game is automatically drawn" },
+        { "id": "b", "text": "The player with more material wins" },
+        { "id": "c", "text": "The game continues until a player claims a draw" },
+        { "id": "d", "text": "Both players receive five additional minutes" }
+      ],
+      "correct": "a",
+      "explanation": "The game is drawn automatically if 75 moves have been completed by each player without a pawn move or capture. If the last move resulted in checkmate, that checkmate takes precedence."
+    },
+    {
+      "id": "c2q40",
+      "text": "A player wants to leave the playing venue during an ongoing game. What is required?",
+      "difficulty": "easy",
+      "article": "11.2.1",
+      "options": [
+        { "id": "a", "text": "Nothing; players may leave freely" },
+        { "id": "b", "text": "Permission from the arbiter" },
+        { "id": "c", "text": "Permission from the opponent only" },
+        { "id": "d", "text": "A written request to the organiser" }
+      ],
+      "correct": "b",
+      "explanation": "The playing venue is prescribed by the arbiter. A player may leave the playing venue only with permission from the arbiter."
+    },
+    {
+      "id": "c2q41",
+      "text": "Which move is a special move involving both the king and a rook?",
+      "difficulty": "easy",
+      "article": "3.8.2",
+      "options": [
+        { "id": "a", "text": "En passant" },
+        { "id": "b", "text": "Promotion" },
+        { "id": "c", "text": "Castling" },
+        { "id": "d", "text": "Stalemate" }
+      ],
+      "correct": "c",
+      "explanation": "Castling is a move of the king toward a rook, followed by the rook crossing over the king and being placed adjacent to it."
+    },
+    {
+      "id": "c2q42",
+      "text": "A player fails to record moves while required to do so. What may the arbiter do?",
+      "difficulty": "medium",
+      "article": "8.1.1",
+      "options": [
+        { "id": "a", "text": "Require the opponent to write both players' moves" },
+        { "id": "b", "text": "Apply an appropriate penalty" },
+        { "id": "c", "text": "Declare the game automatically drawn" },
+        { "id": "d", "text": "Ignore the failure because scoresheets are optional" }
+      ],
+      "correct": "b",
+      "explanation": "Players are required to record moves as specified. Failure to comply with the Laws may be penalised by the arbiter."
+    },
+    {
+      "id": "c2q43",
+      "text": "What is one explicit duty of an arbiter regarding fair play?",
+      "difficulty": "easy",
+      "article": "12.2.1",
+      "options": [
+        { "id": "a", "text": "Ensure fair play" },
+        { "id": "b", "text": "Advise players on the best move" },
+        { "id": "c", "text": "Provide opening preparation" },
+        { "id": "d", "text": "Guarantee every game ends decisively" }
+      ],
+      "correct": "a",
+      "explanation": "The arbiter is required to ensure fair play."
+    },
+    {
+      "id": "c2q44",
+      "text": "A player intentionally knocks several pieces over while making a move. What should happen?",
+      "difficulty": "medium",
+      "article": "7.3",
+      "options": [
+        { "id": "a", "text": "The game is automatically drawn" },
+        { "id": "b", "text": "The position should be restored, and the arbiter may penalise the player" },
+        { "id": "c", "text": "The opponent must arrange the pieces without arbiter involvement" },
+        { "id": "d", "text": "The player loses immediately in every case" }
+      ],
+      "correct": "b",
+      "explanation": "If a player displaces pieces, the arbiter restores the correct position. The arbiter may penalise the player if the displacement was improper."
+    },
+    {
+      "id": "c2q45",
+      "text": "A queen moves:",
+      "difficulty": "easy",
+      "article": "3.4",
+      "options": [
+        { "id": "a", "text": "Only diagonally" },
+        { "id": "b", "text": "Only horizontally and vertically" },
+        { "id": "c", "text": "Along a rank, file, or diagonal, provided no piece blocks its path" },
+        { "id": "d", "text": "In an L-shape" }
+      ],
+      "correct": "c",
+      "explanation": "The queen moves along the rank, file, or diagonal on which it stands, provided it does not move through a piece."
+    },
+    {
+      "id": "c2q46",
+      "text": "What must an arbiter do if a player requests an explanation of the Laws during their game?",
+      "difficulty": "medium",
+      "article": "12.6",
+      "options": [
+        { "id": "a", "text": "Give advice on which move the player should make" },
+        { "id": "b", "text": "Provide information about the Laws of Chess, but not advice about the game position" },
+        { "id": "c", "text": "Refuse all communication with players" },
+        { "id": "d", "text": "Ask the opponent to explain the rule" }
+      ],
+      "correct": "b",
+      "explanation": "The arbiter may provide information about the Laws of Chess but must not give information or advice about the game position."
+    },
+    {
+      "id": "c2q47",
+      "text": "What is the result if a player makes a valid claim that the same position has appeared three times?",
+      "difficulty": "medium",
+      "article": "9.2",
+      "options": [
+        { "id": "a", "text": "The game is drawn" },
+        { "id": "b", "text": "The player who repeated the position loses" },
+        { "id": "c", "text": "The opponent receives two minutes extra time and play continues" },
+        { "id": "d", "text": "The game is drawn only if the opponent agrees" }
+      ],
+      "correct": "a",
+      "explanation": "A game is drawn upon a correct claim by the player having the move when the same position has appeared, or will appear, for at least the third time."
+    },
+    {
+      "id": "c2q48",
+      "text": "A player deliberately presses the opponent's side of the chess clock after moving. Which statement is correct?",
+      "difficulty": "medium",
+      "article": "6.2.3",
+      "options": [
+        { "id": "a", "text": "It is allowed if the player presses it gently" },
+        { "id": "b", "text": "It is an irregularity; the player must press their own clock and may be penalised" },
+        { "id": "c", "text": "It automatically ends the game in a draw" },
+        { "id": "d", "text": "It is allowed if the opponent is absent" }
+      ],
+      "correct": "b",
+      "explanation": "Players must operate the chess clock correctly. Improper clock handling may be penalised by the arbiter."
+    },
+    {
+      "id": "c2q49",
+      "text": "A pawn may capture en passant:",
+      "difficulty": "hard",
+      "article": "3.7.3",
+      "options": [
+        { "id": "a", "text": "At any later point in the game after an opposing pawn advances two squares" },
+        { "id": "b", "text": "Only on the move immediately following the opponent's two-square pawn advance" },
+        { "id": "c", "text": "Only if the opponent agrees" },
+        { "id": "d", "text": "Only after the pawn has reached the final rank" }
+      ],
+      "correct": "b",
+      "explanation": "An en passant capture is legal only on the move immediately following the opponent's advance of a pawn by two squares."
+    },
+    {
+      "id": "c2q50",
+      "text": "What must happen when a player claims a draw under Article 9.2 or 9.3?",
+      "difficulty": "medium",
+      "article": "9.5.1",
+      "options": [
+        { "id": "a", "text": "The player must pause the clock and notify the arbiter" },
+        { "id": "b", "text": "The player must ask the opponent privately" },
+        { "id": "c", "text": "The player must make the intended move first" },
+        { "id": "d", "text": "The player must wait for the opponent's next move" }
+      ],
+      "correct": "a",
+      "explanation": "A player wishing to claim a draw must pause the chess clock and notify the arbiter."
+    },
+    {
+      "id": "c2q51",
+      "text": "A player deliberately distracts or annoys their opponent. What does the Laws of Chess prohibit?",
+      "difficulty": "easy",
+      "article": "11.5",
+      "options": [
+        { "id": "a", "text": "Only physical contact with the opponent" },
+        { "id": "b", "text": "Distracting or annoying the opponent in any manner whatsoever" },
+        { "id": "c", "text": "Only speaking while the opponent is thinking" },
+        { "id": "d", "text": "Only repeated draw offers" }
+      ],
+      "correct": "b",
+      "explanation": "It is forbidden to distract or annoy the opponent in any manner whatsoever."
+    },
+    {
+      "id": "c2q52",
+      "text": "If a player makes a move that leaves their own king in check, the move is:",
+      "difficulty": "easy",
+      "article": "3.10.2",
+      "options": [
+        { "id": "a", "text": "Legal if the opponent does not notice" },
+        { "id": "b", "text": "Illegal" },
+        { "id": "c", "text": "A draw offer" },
+        { "id": "d", "text": "Legal only in blitz" }
+      ],
+      "correct": "b",
+      "explanation": "A move is illegal if it leaves or places the player's own king under attack."
+    },
+    {
+      "id": "c2q53",
+      "text": "A player fails to press the clock after making a move. Who is responsible for ensuring the clock is pressed correctly?",
+      "difficulty": "medium",
+      "article": "6.2.1",
+      "options": [
+        { "id": "a", "text": "Only the opponent" },
+        { "id": "b", "text": "The player who made the move" },
+        { "id": "c", "text": "Only the arbiter" },
+        { "id": "d", "text": "The organiser" }
+      ],
+      "correct": "b",
+      "explanation": "After making a move, the player must press their own clock. The opponent's time should then begin to run."
+    },
+    {
+      "id": "c2q54",
+      "text": "Which penalty is available to an arbiter for an infringement of the Laws?",
+      "difficulty": "medium",
+      "article": "12.9",
+      "options": [
+        { "id": "a", "text": "A warning" },
+        { "id": "b", "text": "Increasing the opponent's remaining time" },
+        { "id": "c", "text": "Reducing the offending player's remaining time" },
+        { "id": "d", "text": "All of the above" }
+      ],
+      "correct": "d",
+      "explanation": "The arbiter may impose penalties including a warning, increasing the opponent's time, reducing the offending player's time, declaring the game lost, expulsion, and other measures."
+    },
+    {
+      "id": "c2q55",
+      "text": "When is castling not permitted?",
+      "difficulty": "hard",
+      "article": "3.8.2.2",
+      "options": [
+        { "id": "a", "text": "When the king has previously moved" },
+        { "id": "b", "text": "When the king is in check, crosses an attacked square, or lands on an attacked square" },
+        { "id": "c", "text": "When a piece stands between the king and rook" },
+        { "id": "d", "text": "All of the above" }
+      ],
+      "correct": "d",
+      "explanation": "Castling is prevented if the king or involved rook has moved, if squares between them are occupied, or if the king is in check, crosses, or finishes on an attacked square."
+    },
+    {
+      "id": "c2q56",
+      "text": "A player wants to claim a draw because 50 moves by each player have been completed without any pawn move or capture. What is the relevant rule?",
+      "difficulty": "medium",
+      "article": "9.3",
+      "options": [
+        { "id": "a", "text": "The 50-move draw claim rule" },
+        { "id": "b", "text": "The stalemate rule" },
+        { "id": "c", "text": "The touch-move rule" },
+        { "id": "d", "text": "The default-time rule" }
+      ],
+      "correct": "a",
+      "explanation": "Article 9.3 allows a player to claim a draw when the last 50 moves by each player have been completed without the movement of any pawn and without any capture."
+    },
+    {
+      "id": "c2q57",
+      "text": "A player is unable to record moves because they have less than five minutes remaining in a sudden-death final period with no increment. What should happen?",
+      "difficulty": "hard",
+      "article": "8.4",
+      "options": [
+        { "id": "a", "text": "The player may be exempt from recording moves during that period" },
+        { "id": "b", "text": "The player must stop playing until all moves are recorded" },
+        { "id": "c", "text": "The opponent must record both players' moves" },
+        { "id": "d", "text": "The game is automatically drawn" }
+      ],
+      "correct": "a",
+      "explanation": "A player is not obliged to record moves when they have less than five minutes remaining in a period and there is no additional time of 30 seconds or more added for each move."
+    },
+    {
+      "id": "c2q58",
+      "text": "What should the arbiter do when a player is found to be using an electronic device capable of communicating or receiving chess information during play?",
+      "difficulty": "hard",
+      "article": "11.3.2",
+      "options": [
+        { "id": "a", "text": "Allow the player to finish the game if they promise not to use it again" },
+        { "id": "b", "text": "Apply the prescribed penalty, normally loss of the game unless competition rules provide otherwise" },
+        { "id": "c", "text": "Give the opponent one extra minute and continue the game" },
+        { "id": "d", "text": "Automatically award a draw" }
+      ],
+      "correct": "b",
+      "explanation": "Unauthorized possession of a mobile phone or electronic communication device in the playing venue normally results in loss of the game, unless the competition rules provide a less severe penalty."
+    },
+    {
+      "id": "c2q59",
+      "text": "If a player completes a second illegal move in the same game, what is the normal result?",
+      "difficulty": "medium",
+      "article": "7.5.5",
+      "options": [
+        { "id": "a", "text": "The opponent gets two extra minutes and play continues" },
+        { "id": "b", "text": "The offending player loses the game, unless the opponent cannot possibly checkmate" },
+        { "id": "c", "text": "The game is always drawn" },
+        { "id": "d", "text": "The arbiter restarts the game" }
+      ],
+      "correct": "b",
+      "explanation": "For the second completed illegal move by the same player, the arbiter declares the game lost by that player, unless the opponent cannot checkmate by any possible series of legal moves."
+    },
+    {
+      "id": "c2q60",
+      "text": "What should an arbiter do if an irregularity occurs and exact clock times cannot be reconstructed?",
+      "difficulty": "hard",
+      "article": "7.5.1",
+      "options": [
+        { "id": "a", "text": "Set both clocks to zero" },
+        { "id": "b", "text": "Use best judgement to restore the position and set clock times as accurately as possible" },
+        { "id": "c", "text": "Declare the game drawn automatically" },
+        { "id": "d", "text": "Restart the game from move one" }
+      ],
+      "correct": "b",
+      "explanation": "When an irregularity is corrected, the arbiter reinstates the position immediately before it and uses best judgement to determine the clock times."
+    }
+  ]
+}
